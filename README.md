@@ -1,2 +1,0 @@
-# scottRuiter.github.io
- 
