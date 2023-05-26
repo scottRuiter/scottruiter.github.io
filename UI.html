@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>ProfitruiteR</title>
+    <link rel="shortcut icon" type="image/png" href="images/headshot.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+        body {
+            font-family: Arial;
+            font-size: 100%;
+            margin: 10;
+            padding: 10;
+        }
+        
+        a {
+            color: orange;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #8a6624;
+            text-decoration: underline;
+        }
+        
+        a.posttitle {
+            font-weight: bold;
+        }
+        
+        #content {
+            width: 102.5%;
+            height: 610px;
+        }
+        
+        #widget {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .wrapper.style1 {
+            margin-top: 0;
+            /* Set the desired margin-top value here */
+        }
+    </style>
+
+
+</head>
+
+<body class="homepage is-preload">
+    <div id="page-wrapper">
+
+
+        <!-- Header -->
+        <div id="header">
+
+            <!-- Inner -->
+            <header>
+
+                <h1><a href="index.html" id="logo">TopX Dashboard</a></h1>
+                <p>ai • blockchain development • llm</p>
+            </header>
+
+            <!-- </div> -->
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li> <a href="index.html">home</a></li>
+                    <li><a href="topx.html">TopX</a></li>
+                    <li><a href="resume.pdf">resume</a></li>
+                    <li><a href="UI.html">Dashboard</a></li>
+                    <li><a href="photography.html">Vision</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <section id="banner">
+        <header>
+            <p>
+                Skill Coder is a visionary entity, a master of the digital realm who weaves intricate webs of code to create innovative solutions. This tech wizard, hailing from the futuristic realm of Kyronix Altairi, is not only adept at crafting complex algorithms
+                but also possesses a keen interest in the dynamic world of trading. Their latest groundbreaking invention, DetecDrone, is a testament to their genius. DetecDrone is an advanced autonomous system, a marvel of artificial intelligence and
+                robotics. It's designed to detect, analyze, and respond to a wide array of situations, making it a versatile tool for surveillance, data collection, and even environmental monitoring. This drone, with its cutting-edge technology, is set
+                to redefine the boundaries of what's possible, just like the mythical birds that once soared the skies in ancient tales.
+            </p>
+        </header>
+    </section>
+
+    <!-- Intro -->
+    <div class="wrapper style1">
+
+        <section id="features" class="container special">
+
+            <table>
+
+                <tr>
+                    <td>
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/ETHUSD/technicals/" rel="noopener" target="_blank"><span class="blue-text">Technical Analysis of de SPY</span></a> forTradingView</div> -->
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                                {
+                                    "interval": "1W",
+                                    "width": 400,
+                                    "isTransparent": false,
+                                    "height": 450,
+                                    "autosize": true,
+                                    "symbol": "COINBASE:ETHUSDT",
+                                    "showIntervalTabs": true,
+                                    "locale": "en",
+                                    "colorTheme": "dark"
+                                }
+                            </script>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <!-- <div class="tradingview-widget-copyright"><a href="https://tradingview.com/symbols/AMEX-EWJ/technicals/" rel="noopener" target="_blank"><span class="blue-text">Technical Analysis of de EWJ</span></a> forTradingView</div> -->
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                                {
+                                    "interval": "1W",
+                                    "width": 400,
+                                    "isTransparent": false,
+                                    "height": 450,
+                                    "symbol": "COINBASE:BTCUSDT",
+                                    "autosize": true,
+                                    "showIntervalTabs": true,
+                                    "locale": "en",
+                                    "colorTheme": "dark"
+                                }
+                            </script>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <!-- <div class="tradingview-widget-copyright"><a href="https://tradingview.com/symbols/AMEX-EWG/technicals/" rel="noopener" target="_blank"><span class="blue-text">Technical Analysis of de EWG</span></a> forTradingView</div> -->
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                                {
+                                    "interval": "1W",
+                                    "width": 400,
+                                    "isTransparent": false,
+                                    "height": 450,
+                                    "symbol": "COINBASE:MATICUSD",
+                                    "showIntervalTabs": true,
+                                    "locale": "en",
+                                    "colorTheme": "dark"
+                                }
+                            </script>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <div id="content">
+                <div id="widget">
+                    <!-- TradingView Widget BEGIN -->
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget({
+                            autosize: true,
+                            symbol: "COINBASE:ETHUSDT",
+                            interval: "15",
+                            timezone: "Etc/UTC",
+                            theme: "Dark",
+                            style: "1",
+                            locale: "en",
+                            toolbar_bg: "rgba(246, 178, 107, 1)",
+                            enable_publishing: false,
+                            allow_symbol_change: true,
+                            details: true,
+                            hideideas: false,
+                            referral_id: "7552",
+                        });
+                    </script>
+                    <!-- TradingView Widget END -->
+                </div>
+            </div>
+
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            <!-- Placeholder -->
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <!-- Placeholder -->
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <!-- Placeholder -->
+                        </p>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <!-- <div class="tradingview-widget-copyright"><a href="https://tradingview.com/symbols/NASDAQ-TLT/technicals/" rel="noopener" target="_blank"><span class="blue-text">Technical Analysis of de TLT</span></a> forTradingView</div> -->
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                                {
+                                    "interval": "1W",
+                                    "width": 400,
+                                    "isTransparent": false,
+                                    "height": 450,
+                                    "symbol": "NDX",
+                                    "showIntervalTabs": true,
+                                    "locale": "en",
+                                    "colorTheme": "dark"
+                                }
+                            </script>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <!-- <div class="tradingview-widget-copyright"><a href="https://tradingview.com/symbols/AMEX-GLD/technicals/" rel="noopener" target="_blank"><span class="blue-text">Technical Analysis of de GLD</span></a> forTradingView</div> -->
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                                {
+                                    "interval": "1W",
+                                    "width": 400,
+                                    "isTransparent": false,
+                                    "height": 450,
+                                    "symbol": "SPY",
+                                    "showIntervalTabs": true,
+                                    "locale": "en",
+                                    "colorTheme": "dark"
+                                }
+                            </script>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tradingview-widget-container">
+                            <div class="tradingview-widget-container__widget"></div>
+                            <!-- <div class="tradingview-widget-copyright"><a href="https://tradingview.com/symbols/AMEX-FXE/technicals/" rel="noopener" target="_blank"><span class="blue-text">Technical Analysis of de FXE</span></a> forTradingView</div> -->
+                            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                                {
+                                    "interval": "1W",
+                                    "width": 400,
+                                    "isTransparent": false,
+                                    "height": 450,
+                                    "symbol": "META",
+                                    "showIntervalTabs": true,
+                                    "locale": "en",
+                                    "colorTheme": "dark"
+                                }
+                            </script>
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+
+    </div>
+    <!-- Footer -->
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+
+
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-12">
+
+                    <!-- Contact -->
+                    <section class="contact">
+                        <ul class="icons">
+                            <li><a href="https://www.instagram.com/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="https://twitter.com/RuiterScott" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="https://github.com/" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://www.linkedin.com/in/scottruiter" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+                        </ul>
+                    </section>
+
+                    <!-- Copyright -->
+                    <div class="copyright">
+                        <ul class="menu">
+                            <li>&copy; ProfitruiteR &trade; All rights reserved</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
