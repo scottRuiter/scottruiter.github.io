@@ -1,360 +1,203 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>ProfitruiteR</title>
-    <link rel="shortcut icon" type="image/png" href="images/headshot.png">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
-
-
-
-
-
-    <style>
-        body {
-            font-family: Arial;
-            font-size: 100%;
-            margin: 10;
-            padding: 10;
-        }
-        
-        a {
-            color: orange;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            color: #8a6624;
-            text-decoration: underline;
-        }
-        
-        a.posttitle {
-            font-weight: bold;
-        }
-        
-        #content {
-            width: 102.5%;
-            height: 610px;
-        }
-        
-        #widget {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .wrapper.style1 {
-            margin-top: 0;
-            /* Set the desired margin-top value here */
-        }
-        
-        h1 {
-            color: #000000;
-            font-family: helvetica;
-            font-size: 25px;
-            margin-top: 5px;
-            text-align: center;
-        }
-        
-        h2 {
-            color: #000000;
-            font-family: helvetica;
-            font-size: 18px;
-            text-align: center;
-            margin-top: -28px !important;
-            margin-left: 5px;
-            position: absolute;
-        }
-    </style>
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Market Snapshot | Scott Ruiter</title>
+    <meta name="description" content="TopX Snapshot — a global market overview covering indexes, forex, metals, and crypto in one glance." />
+    <link rel="icon" type="image/png" href="images/web/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 
-<body class="homepage is-preload">
-    <div id="page-wrapper">
+<body>
+    <div id="progress"></div>
 
+    <!-- Navigation -->
+    <nav class="nav">
+        <a class="nav-logo" href="index.html">
+            <img src="images/web/favicon.png" alt="" />
+            <span>Scott<b>Ruiter</b></span>
+        </a>
+        <button class="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topx.html">TopX</a></li>
+            <li><a href="UI.html">Dashboard</a></li>
+            <li><a href="overview.html" class="active">Snapshot</a></li>
+            <li><a href="photography.html">Gallery</a></li>
+            <li><a class="btn-resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+    </nav>
 
-        <!-- Header -->
-        <div id="header">
-
-            <!-- Inner -->
-            <header>
-
-                <h1><a href="index.html" id="logo">TopX Snapshot</a></h1>
-                <p>ai • blockchain development • llm</p>
-            </header>
-
-            <!-- </div> -->
-
-            <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li> <a href="index.html">Home</a></li>
-                    <li><a href="topx.html">TopX</a></li>
-                    <li><a href="resume.pdf">Resume</a></li>
-                    <li><a href="UI.html">Dashboard</a></li>
-                    <li><a href="overview.html">Snapshot</a></li>
-                    <li><a href="photography.html">Vision</a></li>
-                </ul>
-            </nav>
-
+    <!-- Page hero -->
+    <header class="page-hero" style="padding-bottom:30px;">
+        <div class="hero-bg" data-parallax="0.15" style="background-image:url('images/web/art-space.jpg')"></div>
+        <div class="section-inner">
+            <div class="section-kicker reveal">Global Overview</div>
+            <h1 class="reveal" style="--d:.08s">Market Snapshot</h1>
+            <p class="reveal" style="--d:.16s">
+                Indexes, forex, metals, and crypto — the whole board in one scroll.
+            </p>
         </div>
-    </div>
+    </header>
 
-    <div class="tradingview-widget-copyright"><a href="https://t.me/TopXProfits" rel="noopener" target="_blank"><span class="blue-text">TopX</span></a> by Kyronix Altairi</div>
+    <section class="section" style="padding-top:40px;">
+        <div class="section-inner">
 
-    <div class="tradingview-widget-container">
-        <h2> Market Indexes </h2>
-        <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <div class="tradingview-widget-copyright"><a href="https://t.me/TopXProfits" rel="noopener" target="_blank"><span class="blue-text">TopX</span></a> by Kyronix Altairi</div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-                {
-                    "symbols": [{
-                        "description": "S&P 500",
-                        "proName": "OANDA:SPX500USD"
-                    }, {
-                        "description": "TA 35",
-                        "proName": "TASE:TA35"
-                    }, {
-                        "description": "SMI",
-                        "proName": "SIX:SMI"
-                    }, {
-                        "description": "XU 100",
-                        "proName": "BIST:XU100"
-                    }, {
-                        "description": "NI 225",
-                        "proName": "OANDA:JP225USD"
-                    }],
-                    "colorTheme": "dark",
-                    "isTransparent": false,
-                    "showSymbolLogo": true,
-                    "locale": "en"
-                }
-            </script>
-        </div>
-        <h2> Forex & Metals </h2>
-        <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <div class="tradingview-widget-copyright"><a href="https://t.me/TopXProfits" rel="noopener" target="_blank"><span class="blue-text">TopX</span></a> by Kyronix Altairi</div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-                {
-                    "symbols": [{
-                        "description": "USD/CHF",
-                        "proName": "FX_IDC:USDCHF"
-                    }, {
-                        "description": "FEDERAL FUNDS RATE",
-                        "proName": "ECONOMICS:USINTR"
-                    }, {
-                        "description": "USD/EUR",
-                        "proName": "FX_IDC:USDEUR"
-                    }, {
-                        "description": "1kg Gold/CHF",
-                        "proName": "FX_IDC:INGCHF"
-                    }, {
-                        "description": "1kg Silver/CHF",
-                        "proName": "FX_IDC:SBNCHF"
-                    }],
-                    "colorTheme": "dark",
-                    "isTransparent": false,
-                    "showSymbolLogo": true,
-                    "locale": "en"
-                }
-            </script>
-        </div>
-        <h2> Crypto </h2>
-        <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <div class="tradingview-widget-copyright"><a href="https://t.me/TopXProfits" rel="noopener" target="_blank"><span class="blue-text">TopX</span></a> by Kyronix Altairi</div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-                {
-                    "symbols": [{
-                        "description": "BTC/USD",
-                        "proName": "COINBASE:BTCUSD"
-                    }, {
-                        "description": "ETH/USD",
-                        "proName": "COINBASE:ETHUSD"
-                    }, {
-                        "description": "IOT/USD",
-                        "proName": "BINANCE:IOTAUSD"
-                    }, {
-                        "description": "PNT/USD",
-                        "proName": "BINANCE:PNTUSDT"
-                    }, {
-                        "description": "SSV/USD",
-                        "proName": "BINANCE:SSVUSD"
-                    }],
-                    "colorTheme": "dark",
-                    "isTransparent": false,
-                    "showSymbolLogo": true,
-                    "locale": "en"
-                }
-            </script>
-        </div>
-        <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <div class="tradingview-widget-copyright"><a href="https://t.me/TopXProfits" rel="noopener" target="_blank"><span class="blue-text">TopX</span></a> by Kyronix Altairi</div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-                {
-                    "symbols": [{
-                        "description": "0x/USD",
-                        "proName": "BINANCE:ZRXUSD"
-                    }, {
-                        "description": "KNC/USD",
-                        "proName": "BINANCE:KNCUSD"
-                    }, {
-                        "description": "BNT/USD",
-                        "proName": "BINANCE:BNTUSD"
-                    }, {
-                        "description": "UFT/USD",
-                        "proName": "BINANCE:UFTBUSD"
-                    }, {
-                        "description": "DATA/USD",
-                        "proName": "BINANCE:DATAUSD"
-                    }],
-                    "colorTheme": "dark",
-                    "isTransparent": false,
-                    "showSymbolLogo": true,
-                    "locale": "en"
-                }
-            </script>
-        </div>
-        <h2> Charts</h2>
-        <div class="tradingview-widget-container">
-            <div id="tradingview_e8748"></div>
-
-            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-            <script type="text/javascript">
-                new TradingView.MediumWidget({
-                    "symbols": [
-                        [
-                            "S&P 500",
-                            "OANDA:SPX500USD|ALL"
-                        ],
-                        [
-                            "FEDERAL FUNDS RATE",
-                            "ECONOMICS:USINTR|ALL"
-                        ],
-                        [
-                            "TA 35",
-                            "TASE:TA35|ALL"
-                        ],
-                        [
-                            "SMI",
-                            "SIX:SMI|ALL"
-                        ],
-                        [
-                            "XU 100",
-                            "BIST:XU100|ALL"
-                        ],
-                        [
-                            "NI 225",
-                            "OANDA:JP225USD|ALL"
-                        ],
-                        [
-                            "BTC/USD",
-                            "COINBASE:BTCUSD|ALL"
-                        ],
-                        [
-                            "ETH/USD",
-                            "COINBASE:ETHUSD|ALL"
-                        ],
-                        [
-                            "IOT/USD",
-                            "BINANCE:IOTAUSD|ALL"
-                        ],
-                        [
-                            "Gold Silver Ratio/USD",
-                            "FX_IDC:AUGUSD|ALL"
-                        ],
-                        [
-                            "1kg Gold/CHF",
-                            "FX_IDC:INGCHF|ALL"
-                        ],
-                        [
-                            "1kg Silver/CHF",
-                            "FX_IDC:SBNCHF|ALL"
-                        ]
-                    ],
-                    "chartOnly": false,
-                    "width": "100%",
-                    "height": "500px",
-                    "locale": "en",
-                    "colorTheme": "dark",
-                    "gridLineColor": "rgba(240, 243, 250, 0)",
-                    "fontColor": "#787B86",
-                    "isTransparent": false,
-                    "autosize": true,
-                    "showFloatingTooltip": true,
-                    "showVolume": false,
-                    "scalePosition": "no",
-                    "scaleMode": "Normal",
-                    "fontFamily": "Trebuchet MS, sans-serif",
-                    "noTimeScale": false,
-                    "chartType": "area",
-                    "lineColor": "#2962FF",
-                    "bottomColor": "rgba(41, 98, 255, 0)",
-                    "topColor": "rgba(41, 98, 255, 0.3)",
-                    "container_id": "tradingview_e8748"
-                });
-            </script>
-        </div>
-    </div>
-    <div class="tradingview-widget-copyright"><a href="https://t.me/TopXProfits" rel="noopener" target="_blank"><span class="blue-text">TopX</span></a> by Kyronix Altairi</div>
-
-
-    <!-- Footer -->
-    <div id="footer">
-        <div class="container">
-            <div class="row">
-
-
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-12">
-
-                    <!-- Contact -->
-                    <section class="contact">
-                        <ul class="icons">
-                            <li><a href="https://t.me/TopXProfits" class="icon fa-telegram"><span
-                                        class="label">Instagram</span></a></li>
-                            <li><a href="https://twitter.com/RuiterScott" class="icon fa-twitter"><span
-                                        class="label">Twitter</span></a></li>
-                            <li><a href="https://github.com/scottRuiter" class="icon fa-github"><span
-                                        class="label">GitHub</span></a></li>
-                            <li><a href="https://www.linkedin.com/in/scottruiter" class="icon fa-linkedin"><span
-                                        class="label">Linkedin</span></a></li>
-                        </ul>
-                    </section>
-
-                    <!-- Copyright -->
-                    <div class="copyright">
-                        <ul class="menu">
-                            <li>&copy; ProfitruiteR &trade; All rights reserved</li>
-                        </ul>
-                    </div>
+            <div class="widget-block reveal">
+                <h3>Market Indexes</h3>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                        {
+                            "symbols": [
+                                { "description": "S&P 500", "proName": "OANDA:SPX500USD" },
+                                { "description": "TA 35", "proName": "TASE:TA35" },
+                                { "description": "SMI", "proName": "SIX:SMI" },
+                                { "description": "XU 100", "proName": "BIST:XU100" },
+                                { "description": "NI 225", "proName": "OANDA:JP225USD" }
+                            ],
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "showSymbolLogo": true,
+                            "locale": "en"
+                        }
+                    </script>
                 </div>
             </div>
+
+            <div class="widget-block reveal">
+                <h3>Forex &amp; Metals</h3>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                        {
+                            "symbols": [
+                                { "description": "USD/CHF", "proName": "FX_IDC:USDCHF" },
+                                { "description": "FEDERAL FUNDS RATE", "proName": "ECONOMICS:USINTR" },
+                                { "description": "USD/EUR", "proName": "FX_IDC:USDEUR" },
+                                { "description": "1kg Gold/CHF", "proName": "FX_IDC:INGCHF" },
+                                { "description": "1kg Silver/CHF", "proName": "FX_IDC:SBNCHF" }
+                            ],
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "showSymbolLogo": true,
+                            "locale": "en"
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <div class="widget-block reveal">
+                <h3>Crypto Majors</h3>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                        {
+                            "symbols": [
+                                { "description": "BTC/USD", "proName": "COINBASE:BTCUSD" },
+                                { "description": "ETH/USD", "proName": "COINBASE:ETHUSD" },
+                                { "description": "SOL/USD", "proName": "COINBASE:SOLUSD" },
+                                { "description": "ADA/USD", "proName": "COINBASE:ADAUSD" },
+                                { "description": "LINK/USD", "proName": "COINBASE:LINKUSD" }
+                            ],
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "showSymbolLogo": true,
+                            "locale": "en"
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <div class="widget-block reveal">
+                <h3>DeFi &amp; Data</h3>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                        {
+                            "symbols": [
+                                { "description": "0x/USD", "proName": "BINANCE:ZRXUSD" },
+                                { "description": "KNC/USD", "proName": "BINANCE:KNCUSD" },
+                                { "description": "BNT/USD", "proName": "BINANCE:BNTUSD" },
+                                { "description": "UFT/USD", "proName": "BINANCE:UFTBUSD" },
+                                { "description": "DATA/USD", "proName": "BINANCE:DATAUSD" }
+                            ],
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "showSymbolLogo": true,
+                            "locale": "en"
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <div class="widget-block reveal">
+                <h3>Long-Range Charts</h3>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+                        {
+                            "symbols": [
+                                ["S&P 500", "OANDA:SPX500USD|ALL"],
+                                ["FEDERAL FUNDS RATE", "ECONOMICS:USINTR|ALL"],
+                                ["TA 35", "TASE:TA35|ALL"],
+                                ["SMI", "SIX:SMI|ALL"],
+                                ["XU 100", "BIST:XU100|ALL"],
+                                ["NI 225", "OANDA:JP225USD|ALL"],
+                                ["BTC/USD", "COINBASE:BTCUSD|ALL"],
+                                ["ETH/USD", "COINBASE:ETHUSD|ALL"],
+                                ["1kg Gold/CHF", "FX_IDC:INGCHF|ALL"],
+                                ["1kg Silver/CHF", "FX_IDC:SBNCHF|ALL"]
+                            ],
+                            "chartOnly": false,
+                            "width": "100%",
+                            "height": 500,
+                            "locale": "en",
+                            "colorTheme": "dark",
+                            "gridLineColor": "rgba(240, 243, 250, 0)",
+                            "fontColor": "#8fa1b8",
+                            "isTransparent": true,
+                            "autosize": true,
+                            "showFloatingTooltip": true,
+                            "showVolume": false,
+                            "chartType": "area",
+                            "lineColor": "#4fd1ff",
+                            "bottomColor": "rgba(79, 209, 255, 0)",
+                            "topColor": "rgba(79, 209, 255, 0.25)"
+                        }
+                    </script>
+                </div>
+            </div>
+
         </div>
-    </div>
+    </section>
 
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <small>&copy; Scott Ruiter &middot; ProfitruiteR&trade; &middot; Market data by <a href="https://www.tradingview.com" target="_blank" rel="noopener">TradingView</a></small>
+            <div class="footer-social">
+                <a href="https://github.com/scottRuiter" aria-label="GitHub" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/scottruiter" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M1.15 4.4h2.9v9.6h-2.9V4.4zM2.6 0a1.73 1.73 0 1 1 0 3.46A1.73 1.73 0 0 1 2.6 0zM5.9 4.4h2.78v1.31h.04c.39-.73 1.33-1.5 2.75-1.5 2.94 0 3.48 1.93 3.48 4.45V14h-2.9V9.23c0-1.14-.02-2.6-1.59-2.6-1.59 0-1.83 1.24-1.83 2.52V14H5.9V4.4z"/></svg>
+                </a>
+                <a href="https://twitter.com/RuiterScott" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M12.6 0.75h2.45l-5.36 6.13L16 15.25h-4.94L7.19 10.2l-4.42 5.05H.31l5.74-6.56L0 .75h5.06l3.5 4.62L12.6.75zm-.86 13.03h1.36L4.32 2.15H2.87l8.87 11.63z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/site.js"></script>
 </body>
 
 </html>

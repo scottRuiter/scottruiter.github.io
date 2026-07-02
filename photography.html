@@ -1,132 +1,232 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>ProfitruiteR</title>
-    <link rel="shortcut icon" type="image/png" href="images/headshot.png">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery | Scott Ruiter</title>
+    <meta name="description" content="Photography and AI art by Scott Ruiter — travel, engineering, generative art, and life behind the lens." />
+    <link rel="icon" type="image/png" href="images/web/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 
-<body class="homepage is-preload">
-    <div id="page-wrapper">
-        <!-- Header -->
-        <div id="header">
-            <!-- Inner -->
-            <header>
-                <h1><a href="index.html" id="logo">photography</a></h1>
-                <p>abstract • life<br>creative • nature</p>
-            </header>
-            <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="topx.html">TopX</a></li>
-                    <li><a href="resume.pdf">Resume</a></li>
-                    <li><a href="UI.html">Dashboard</a></li>
-                    <li><a href="overview.html">Snapshot</a></li>
-                    <li><a href="photography.html">Vision</a></li>
-                </ul>
-            </nav>
+<body>
+    <div id="progress"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a class="nav-logo" href="index.html">
+            <img src="images/web/favicon.png" alt="" />
+            <span>Scott<b>Ruiter</b></span>
+        </a>
+        <button class="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topx.html">TopX</a></li>
+            <li><a href="UI.html">Dashboard</a></li>
+            <li><a href="overview.html">Snapshot</a></li>
+            <li><a href="photography.html" class="active">Gallery</a></li>
+            <li><a class="btn-resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page hero -->
+    <header class="page-hero">
+        <div class="hero-bg" data-parallax="0.15" style="background-image:url('images/web/travel-pagoda.jpg')"></div>
+        <div class="section-inner">
+            <div class="section-kicker reveal">Gallery</div>
+            <h1 class="reveal" style="--d:.08s">Behind the <span class="grad" style="background:linear-gradient(92deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent;">lens</span></h1>
+            <p class="reveal" style="--d:.16s">
+                Travel photography, engineering macro shots, AI-generated art, and the sugar gliders
+                that run the household. Click any image to view it full size.
+            </p>
         </div>
+    </header>
 
-        <!-- Banner -->
-        <!-- <section id="banner">
-            <header>
-                <h2>What is <strong>DetecDrone</strong>?</h2>
-                <p>
-                    Yesterday's soaring mythical birds are today's groundbreaking technology. <bold >Here's why</bold>.
-                </p>
-            </header>
-        </section> -->
-
-        <!-- Intro -->
-        <div class="wrapper style1">
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <img src="images/background.jpg" style="width:100%">
-                    <div class="text">Blocked</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <img src="images/background2.jpg" style="width:100%">
-                    <div class="text">RenderTest</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <img src="images/aphrodite.png" style="width:100%">
-                    <div class="text">Aphrodite</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <img src="images/glider1.png" style="width:100%">
-                    <div class="text">Athena, Aphrodite, Nike, Phoebe</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <img src="images/background1.jpg" style="width:100%">
-                    <div class="text">Always with her here</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <img src="images/20180916_013027.png" style="width:100%">
-                    <div class="text">My first two :)</div>
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- Gallery -->
+    <section class="section" style="padding-top:30px;">
+        <div class="section-inner">
+            <div class="filters reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="travel">Travel</button>
+                <button class="filter-btn" data-filter="engineering">Engineering</button>
+                <button class="filter-btn" data-filter="art">AI Art</button>
+                <button class="filter-btn" data-filter="life">Life</button>
             </div>
-            <br>
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+
+            <div class="gallery">
+                <!-- Travel -->
+                <div class="g-item reveal" data-cat="travel">
+                    <img src="images/web/travel-pagoda.jpg" alt="Pagoda rising above the trees" loading="lazy" />
+                    <div class="cap">Pagoda in the light</div>
+                </div>
+                <div class="g-item reveal" data-cat="travel">
+                    <img src="images/web/travel-buddha.jpg" alt="Stone Buddha statue" loading="lazy" />
+                    <div class="cap">Stone Buddha</div>
+                </div>
+                <div class="g-item reveal" data-cat="travel">
+                    <img src="images/web/travel-altar.jpg" alt="Temple altar with flowers and offerings" loading="lazy" />
+                    <div class="cap">Temple altar</div>
+                </div>
+                <div class="g-item reveal" data-cat="travel">
+                    <img src="images/web/travel-temple-flowers.jpg" alt="Temple gate with flower arrangements" loading="lazy" />
+                    <div class="cap">Temple in bloom</div>
+                </div>
+                <div class="g-item reveal" data-cat="travel">
+                    <img src="images/web/travel-2026-sign.jpg" alt="2026 lakeside sign" loading="lazy" />
+                    <div class="cap">Welcoming 2026</div>
+                </div>
+                <div class="g-item reveal" data-cat="travel">
+                    <img src="images/web/travel-park.jpg" alt="Park pathway and monument" loading="lazy" />
+                    <div class="cap">Park pathway</div>
+                </div>
+                <div class="g-item reveal" data-cat="travel">
+                    <img src="images/web/travel-shrine.jpg" alt="Shrine with red and gold banners" loading="lazy" />
+                    <div class="cap">Shrine banners</div>
+                </div>
+                <div class="g-item reveal" data-cat="travel">
+                    <img src="images/web/travel-waterfall-bridge.jpg" alt="Railroad bridge over an autumn waterfall" loading="lazy" />
+                    <div class="cap">Autumn falls</div>
+                </div>
+
+                <!-- Engineering -->
+                <div class="g-item reveal" data-cat="engineering">
+                    <img src="images/web/connector-tray-1.jpg" alt="High-density connector tray macro" loading="lazy" />
+                    <div class="cap">High-density connector array</div>
+                </div>
+                <div class="g-item reveal" data-cat="engineering">
+                    <img src="images/web/connector-tray-2.jpg" alt="Connector pin field macro" loading="lazy" />
+                    <div class="cap">Pin field, up close</div>
+                </div>
+                <div class="g-item reveal" data-cat="engineering">
+                    <img src="images/web/connector-tray-3.jpg" alt="Connector tray detail" loading="lazy" />
+                    <div class="cap">The geometry I inspect</div>
+                </div>
+                <div class="g-item reveal" data-cat="engineering">
+                    <img src="images/web/pc-build-1.jpg" alt="Custom PC build with RGB lighting" loading="lazy" />
+                    <div class="cap">Custom build</div>
+                </div>
+                <div class="g-item reveal" data-cat="engineering">
+                    <img src="images/web/pc-build-2.jpg" alt="Watercooled PC build" loading="lazy" />
+                    <div class="cap">Cooling loop</div>
+                </div>
+
+                <!-- AI Art -->
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-eye.jpg" alt="AI-generated painted eye" loading="lazy" />
+                    <div class="cap">Vision, literally</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-milkyway.jpg" alt="AI art — milky way over mountains" loading="lazy" />
+                    <div class="cap">Milky way</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-lotus.jpg" alt="AI art — lotus flower" loading="lazy" />
+                    <div class="cap">Lotus</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-lion.jpg" alt="AI art — ornate lion" loading="lazy" />
+                    <div class="cap">Ornate lion</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-flower-path.jpg" alt="AI art — flower path to the sky" loading="lazy" />
+                    <div class="cap">Flower path</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-crystal-world.jpg" alt="AI art — crystal ring world" loading="lazy" />
+                    <div class="cap">Crystal world</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-lotus-glow.jpg" alt="AI art — glowing lotus" loading="lazy" />
+                    <div class="cap">Glow lotus</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-island.jpg" alt="AI art — island lagoon" loading="lazy" />
+                    <div class="cap">Lagoon</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-starry-night.jpg" alt="AI art — cats watching a starry night" loading="lazy" />
+                    <div class="cap">Starry night, observed</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-space.jpg" alt="AI art — planets over a galaxy" loading="lazy" />
+                    <div class="cap">Deep field</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-cyber-lion.jpg" alt="AI art — cybernetic lion" loading="lazy" />
+                    <div class="cap">Cyber lion</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-colosseum.jpg" alt="AI art — colosseum at night" loading="lazy" />
+                    <div class="cap">Colosseum nights</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-neon-ring.jpg" alt="AI art — neon ring over water" loading="lazy" />
+                    <div class="cap">Neon ring</div>
+                </div>
+                <div class="g-item reveal" data-cat="art">
+                    <img src="images/web/art-ghost.jpg" alt="AI art — glitch ghost" loading="lazy" />
+                    <div class="cap">Glitch ghost</div>
+                </div>
+
+                <!-- Life -->
+                <div class="g-item reveal" data-cat="life">
+                    <img src="images/web/life-gliders-1.jpg" alt="Two sugar gliders peeking from their cage" loading="lazy" />
+                    <div class="cap">My first two :)</div>
+                </div>
+                <div class="g-item reveal" data-cat="life">
+                    <img src="images/web/life-gliders-2.jpg" alt="Sugar gliders nested in fleece" loading="lazy" />
+                    <div class="cap">Athena, Aphrodite, Nike, Phoebe</div>
+                </div>
+                <div class="g-item reveal" data-cat="life">
+                    <img src="images/web/life-glider-3.jpg" alt="Sugar glider on a hand" loading="lazy" />
+                    <div class="cap">Aphrodite</div>
+                </div>
+                <div class="g-item reveal" data-cat="life">
+                    <img src="images/web/life-cat-candles.jpg" alt="Cat by candle light" loading="lazy" />
+                    <div class="cap">Candle season</div>
+                </div>
+                <div class="g-item reveal" data-cat="life">
+                    <img src="images/web/life-pumpkin.jpg" alt="Pumpkin and incense smoke" loading="lazy" />
+                    <div class="cap">October table</div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Footer -->
-        <div id="footer">
-            <div class="container">
-                <div class="row"></div>
-                <hr />
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Contact -->
-                        <section class="contact">
-                            <ul class="icons">
-                                <li><a href="https://t.me/TopXProfits" class="icon fa-telegram"><span class="label">Instagram</span></a></li>
-                                <li><a href="https://twitter.com/RuiterScott" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                                <li><a href="https://github.com/scottRuiter" class="icon fa-github"><span class="label">GitHub</span></a></li>
-                                <li><a href="https://www.linkedin.com/in/scottruiter" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-                            </ul>
-                        </section>
-                        <!-- Copyright -->
-                        <div class="copyright">
-                            <ul class="menu">
-                                <li>&copy; ProfitruiteR &trade; All rights reserved</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.dropotron.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-        <!-- Carousel Script -->
-        <script>
-            // Carousel code here
-        </script>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer">
+        <button class="lb-close" aria-label="Close">&times;</button>
+        <button class="lb-prev" aria-label="Previous image">&#10094;</button>
+        <img src="" alt="" />
+        <button class="lb-next" aria-label="Next image">&#10095;</button>
+        <div class="lb-cap"></div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <small>&copy; Scott Ruiter &middot; ProfitruiteR&trade; &middot; New York, USA</small>
+            <div class="footer-social">
+                <a href="https://github.com/scottRuiter" aria-label="GitHub" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/scottruiter" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M1.15 4.4h2.9v9.6h-2.9V4.4zM2.6 0a1.73 1.73 0 1 1 0 3.46A1.73 1.73 0 0 1 2.6 0zM5.9 4.4h2.78v1.31h.04c.39-.73 1.33-1.5 2.75-1.5 2.94 0 3.48 1.93 3.48 4.45V14h-2.9V9.23c0-1.14-.02-2.6-1.59-2.6-1.59 0-1.83 1.24-1.83 2.52V14H5.9V4.4z"/></svg>
+                </a>
+                <a href="https://twitter.com/RuiterScott" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M12.6 0.75h2.45l-5.36 6.13L16 15.25h-4.94L7.19 10.2l-4.42 5.05H.31l5.74-6.56L0 .75h5.06l3.5 4.62L12.6.75zm-.86 13.03h1.36L4.32 2.15H2.87l8.87 11.63z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
 </body>
 
 </html>

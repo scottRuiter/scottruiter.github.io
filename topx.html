@@ -1,222 +1,359 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>ProfitruiteR</title>
-    <link rel="shortcut icon" type="image/png" href="images/headshot.png">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TopX | Scott Ruiter</title>
+    <meta name="description" content="TopX — Scott Ruiter's independent R&D: blockchain engineering, financial LLMs, AI trading agents, reinforcement learning gyms, and EVM research." />
+    <link rel="icon" type="image/png" href="images/web/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 
-<body class="homepage is-preload">
-    <div id="page-wrapper">
+<body>
+    <div id="progress"></div>
 
-        <!-- Header -->
-        <div id="header">
+    <!-- Navigation -->
+    <nav class="nav">
+        <a class="nav-logo" href="index.html">
+            <img src="images/web/favicon.png" alt="" />
+            <span>Scott<b>Ruiter</b></span>
+        </a>
+        <button class="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topx.html" class="active">TopX</a></li>
+            <li><a href="UI.html">Dashboard</a></li>
+            <li><a href="overview.html">Snapshot</a></li>
+            <li><a href="photography.html">Gallery</a></li>
+            <li><a class="btn-resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+    </nav>
 
-            <!-- Inner -->
-            <header>
-                <h1><a href="index.html" id="logo">TopX Topics</a></h1>
-                <p>AI • Blockchain Development • Large Language Models (LLM)</p>
-            </header>
-
-            <!-- Navigation -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="topx.html">TopX</a></li>
-                    <li><a href="resume.pdf">Resume</a></li>
-                    <li><a href="UI.html">Dashboard</a></li>
-                    <li><a href="overview.html">Snapshot</a></li>
-                    <li><a href="photography.html">Vision</a></li>
-                </ul>
-            </nav>
-
+    <!-- Page hero -->
+    <header class="page-hero">
+        <div class="hero-bg" data-parallax="0.15" style="background-image:url('images/web/topx-eye-machine.jpg')"></div>
+        <div class="section-inner">
+            <div class="section-kicker reveal">Independent R&amp;D</div>
+            <h1 class="reveal" style="--d:.08s">The <span style="background:linear-gradient(92deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent;">TopX</span> ecosystem</h1>
+            <p class="reveal" style="--d:.16s">
+                Founded in 2013 — intelligent systems at the intersection of AI, blockchain, algorithmic
+                trading, and advanced automation: financial LLMs, reinforcement-learning trading gyms,
+                multi-modal agents, and EVM development.
+            </p>
         </div>
+    </header>
 
-        <!-- Intro Section -->
-        <div class="wrapper style1">
-            <section id="features" class="container special">
+    <!-- Mission -->
+    <section class="section" style="padding-top:30px;">
+        <div class="section-inner">
+            <div class="section-kicker reveal">The Mission</div>
+            <h2 class="reveal">Intelligent infrastructure that can measure, decide, adapt, and scale</h2>
+            <p class="section-lead reveal" style="margin-bottom:20px;">
+                Since 2013, TopX has been my platform for building intelligent systems at the intersection of AI,
+                blockchain, algorithmic trading, and advanced automation. The work spans decentralized infrastructure,
+                machine learning, computer vision, financial modeling, and Web3 application development.
+            </p>
+            <p class="section-lead reveal" style="margin-bottom:20px;">
+                I design automated trading strategies using ThinkScript, PineScript, and Python — market-responsive
+                algorithms, signal-generation logic, and backtesting frameworks that evaluate performance, risk, and
+                repeatability across changing market conditions. On the blockchain side, I research and prototype
+                decentralized applications, tokenization systems, NFT marketplace components, and Ethereum-based
+                architectures, with a focus on secure smart-contract design, scalable system architecture, and
+                cross-contract communication.
+            </p>
+            <p class="section-lead reveal" style="margin-bottom:0;">
+                Alongside this work I lead advanced vision and automation initiatives at Universal Instruments —
+                a rare bridge between real-world industrial automation and emerging computational technologies.
+                Rlab, my founder-led software and engineering lab, gives this work a home: practical prototype
+                systems across AI agents, manufacturing data systems, financial modeling, blockchain engineering,
+                automation tooling, and technical documentation.
+            </p>
+        </div>
+    </section>
 
-                <div class="row">
-                    <div class="profile">
-                        <a class="image featured"><img src="images/headshot.png" alt="TopX Topics Profile Image" /></a>
-                    </div>
-                    <div class="description">
-                        <p>
-                            Delving deep into the realms of consciousness and the unconscious mind, our everyday actions intertwine with our aspirations and dreams.
-                            <br><br>We are not mere machines programmed for efficiency; our unique traits and fortunate quirks inspire art, music, poetry, and a profound appreciation for beauty and the unconventional.
-                            <br><br>Designers breathe life and personality into objects, bringing our visions and future aspirations to fruition, even those we are yet to conceive.
-                            <br><br>Innovative development and evolutionary progress stem from the accumulation of incremental predispositions, which can be reconfigured into advantageous setups.
-                            <br><br>Our greatest fear isn't inadequacy but the realization of our immense potential. It is our brilliance, not our darkness, that can be daunting. We question our worthiness to shine, yet we are all destined to illuminate the world, much like children do.
-                        </p>
+    <!-- TopX Analyzer -->
+    <section class="section alt">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Manufacturing Meets TopX</div>
+            <h2 class="reveal">TopX Inspection Analyzer</h2>
+            <p class="section-lead reveal">
+                Where the portfolio touches the factory floor — software that makes inspection data easier
+                to understand, validate, and act on after measurement.
+            </p>
+            <div class="grid cols-2" style="align-items:center; gap:48px;">
+                <div class="reveal-l">
+                    <img src="images/web/ai-tool-analyzer.jpg" alt="TopX Inspection Analyzer — 3D coplanarity, heatmaps, and tolerance-ring analytics" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" loading="lazy" />
+                </div>
+                <div class="reveal-r">
+                    <ul style="color:var(--text-dim); line-height:1.7; padding-left:18px;">
+                        <li>Offline-first analytics suite that monitors inspection CSV output and aggregates pin-level data into interactive dashboards.</li>
+                        <li>3D coplanarity and seating-plane analysis, spatial heatmaps, tolerance-ring pin maps, deviation analysis, and repeatability review.</li>
+                        <li>Source correlation across inspection platforms, best-fit registration, drift timelines, and pin-risk reporting.</li>
+                        <li>Shareable interactive HTML reports, printable views, and customer-facing result communication — component-level reporting engineered for validation workflows.</li>
+                    </ul>
+                    <div class="tags" style="margin-top:18px;">
+                        <span class="tag">3D Coplanarity</span><span class="tag">Pin Maps</span>
+                        <span class="tag">Drift Timelines</span><span class="tag">Report Exports</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Blockchain Engineering Section -->
-                <header class="space">
-                    <h2>Blockchain Engineering</h2>
-                </header>
-
-                <div class="content-section">
-                    <h3>Solidity Developer</h3>
+    <!-- Blockchain Engineering -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-kicker reveal">On-Chain</div>
+            <h2 class="reveal">Blockchain engineering</h2>
+            <p class="section-lead reveal">
+                Smart-contract development and system architecture on the Ethereum Virtual Machine —
+                from token standards to full DeFi platforms.
+            </p>
+            <div class="grid cols-2">
+                <div class="card reveal">
+                    <h3>Solidity Development</h3>
                     <ul>
                         <li>Developed multiple decentralized applications (DApps) utilizing ERC standards on the Ethereum blockchain.</li>
                         <li>Implemented ERC-20 token contracts, facilitating the creation and management of custom tokens for various projects.</li>
                         <li>Designed and launched an ERC-721 non-fungible token (NFT) marketplace, enabling the trading of unique digital assets.</li>
                         <li>Collaborated with cross-functional teams to integrate ERC-1155 tokens into gaming platforms, enhancing in-game item ownership and interoperability.</li>
                     </ul>
-
-                    <h3>Blockchain Solution Architect</h3>
+                    <div class="tags">
+                        <span class="tag">Solidity</span><span class="tag">ERC-20</span><span class="tag">ERC-721</span><span class="tag">ERC-1155</span>
+                    </div>
+                </div>
+                <div class="card reveal" style="--d:.08s">
+                    <h3>Blockchain Solution Architecture</h3>
                     <ul>
                         <li>Architected and developed scalable, secure DApps on the Ethereum platform leveraging the Ethereum Virtual Machine (EVM).</li>
-                        <li>Implemented cross-contract communication and interoperability using EVM-based protocols such as ERC-20, ERC-721, and ERC-1155.</li>
+                        <li>Implemented cross-contract communication and interoperability using EVM-based protocols.</li>
                         <li>Utilized EVM debugging tools and conducted audits to ensure contract reliability, security, and compliance with best practices.</li>
-                        <li>Designed and implemented custom EVM-based solutions for decentralized finance (DeFi) applications, including lending and staking platforms.</li>
+                        <li>Designed custom EVM-based solutions for decentralized finance (DeFi) applications, including lending and staking platforms.</li>
+                        <li>Applied blockchain systems to improve transparency, governance, fundraising, and financial coordination.</li>
                     </ul>
-                </div>
-
-                <!-- TopXFin & TopXAgents Section -->
-                <header class="space">
-                    <h2>TopXFin & TopXAgents</h2>
-                </header>
-
-                <div class="content-section">
-                    <h3>TopXFin - Financial LLM and ML GPT Data Processing</h3>
-                    <ul>
-                        <li>Directed the development of TopXFin, an advanced financial large language model (LLM) and machine learning (ML) GPT platform.</li>
-                        <li>Employed ML algorithms and GPT models to process and analyze extensive financial datasets.</li>
-                        <li>Applied Natural Language Processing (NLP) techniques to extract critical information from legal, psychological, and financial documents.</li>
-                        <li>Designed and developed sophisticated data processing pipelines and algorithms to deliver precise financial insights and predictions.</li>
-                    </ul>
-
-                    <h3>TopXAgents - AI Agents for Reinforcement Learning</h3>
-                    <ul>
-                        <li>Engineered TopXAgents, a cutting-edge AI system comprising agents capable of solving complex problems across mechanical, electrical, mechatronic, mathematical, and software disciplines.</li>
-                        <li>Designed and trained AI agents using advanced machine learning techniques to optimize problem-solving tasks across multiple domains.</li>
-                        <li>Implemented deep learning architectures, including recurrent neural networks (RNNs) and transformers, for agent training and decision-making processes.</li>
-                        <li>Developed novel algorithms for adaptive learning, enabling agents to continuously enhance their problem-solving capabilities and adapt to new challenges.</li>
-                    </ul>
-                </div>
-
-                <!-- EVM Research Section -->
-                <header class="space">
-                    <h2>EVM Research</h2>
-                </header>
-
-                <div class="content-section">
-                    <h3>EVM Researcher</h3>
-                    <ul>
-                        <li>Conducted comprehensive research on the Ethereum Virtual Machine (EVM) and its underlying technologies.</li>
-                        <li>Explored optimizations and enhancements to improve EVM performance and scalability.</li>
-                        <li>Investigated layer-2 scaling solutions such as Plasma, Optimistic Rollups, and Sidechains to address EVM scalability challenges.</li>
-                        <li>Developed RPC (Remote Procedure Call) interfaces to interact with the EVM and facilitate DApp integration.</li>
-                    </ul>
-
-                    <h3>EVM Development</h3>
-                    <ul>
-                        <li>Implemented advanced trading processes, including flash swaps, margin trading, and algorithmic trading strategies on the EVM.</li>
-                        <li>Designed trading contracts with sophisticated features like limit orders, stop-loss orders, and algorithmic order matching.</li>
-                    </ul>
-                </div>
-
-                <!-- TopX Trading Section -->
-                <header class="space">
-                    <h2>TopX Trading</h2>
-                </header>
-
-                <div class="content-section">
-                    <h3>TopX Reinforcement Gym for Trading Processes</h3>
-                    <ul>
-                        <li>Developed the TopX Reinforcement Gym, a dynamic training environment where AI agents use reinforcement learning to optimize trading strategies.</li>
-                        <li>Trained agents to simulate various trading environments, learning from historical data to execute optimal buy and sell decisions.</li>
-                        <li>Implemented a reward-based reinforcement model where agents continuously improve their decision-making capabilities based on trading outcomes.</li>
-                        <li>Integrated multi-timeframe analysis, allowing agents to evaluate short, medium, and long-term market trends for more robust strategy implementation.</li>
-                    </ul>
-
-                    <h3>Algorithmic Trading Strategies</h3>
-                    <ul>
-                        <li>Designed and implemented algorithmic trading strategies utilizing technical indicators and price action analysis.</li>
-                        <li>Backtested trading algorithms to validate performance and optimize parameters for diverse market conditions.</li>
-                        <li>Monitored and refined trading systems to adapt to evolving market dynamics and ensure sustained profitability.</li>
-                    </ul>
-                    
-                    <h3>Data-Driven Decision Making</h3>
-                    <ul>
-                        <li>Utilized advanced data analytics to inform trading decisions and strategy development.</li>
-                        <li>Integrated real-time data feeds to ensure timely and accurate execution of trading strategies.</li>
-                        <li>Leveraged machine learning models to predict market trends and enhance the accuracy of trading signals.</li>
-                    </ul>
-                </div>
-
-                <!-- Multi-Modal Agents Section -->
-                <header class="space">
-                    <h2>Multi-Modal Agents for Profession-Specific SLM Cognition Analysis</h2>
-                </header>
-
-                <div class="content-section">
-                    <h3>SLM Cognition Analysis</h3>
-                    <ul>
-                        <li>Developed multi-modal AI agents capable of profession-specific cognition analysis using sophisticated SLM (Specialized Language Models).</li>
-                        <li>Implemented multi-modal data fusion, enabling agents to combine inputs from diverse sources, such as text, visuals, and audio, for comprehensive analysis.</li>
-                        <li>Trained agents on domain-specific language models to deliver precise cognitive analysis in fields such as finance, healthcare, and law.</li>
-                        <li>Leveraged profession-specific agents to solve complex tasks, integrating sector-specific knowledge and learning from real-time data interactions.</li>
-                    </ul>
-
-                    <h3>Advanced Cognitive Analysis for Professional Domains</h3>
-                    <ul>
-                        <li>Utilized transformers and attention mechanisms to enable agents to understand and prioritize relevant information across multi-modal inputs.</li>
-                        <li>Designed the system to adapt to evolving professional requirements, allowing agents to continuously refine their cognition models based on sector-specific feedback.</li>
-                        <li>Implemented systems capable of generating insights, summaries, and actionable recommendations for various professional industries.</li>
-                    </ul>
-                </div>
-
-            </section>
-        </div>
-
-        <!-- Footer -->
-        <div id="footer">
-            <div class="container">
-                <div class="row"></div>
-                <hr />
-                <div class="row">
-                    <div class="col-12">
-
-                        <!-- Contact -->
-                        <section class="contact">
-                            <ul class="icons">
-                                <li><a href="https://t.me/TopXProfits" class="icon fa-telegram"><span class="label">Telegram</span></a></li>
-                                <li><a href="https://twitter.com/RuiterScott" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                                <li><a href="https://github.com/scottRuiter" class="icon fa-github"><span class="label">GitHub</span></a></li>
-                                <li><a href="https://www.linkedin.com/in/scottruiter" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                            </ul>
-                        </section>
-
-                        <!-- Copyright -->
-                        <div class="copyright">
-                            <ul class="menu">
-                                <li>&copy; ProfitruiteR™. All rights reserved.</li>
-                            </ul>
-                        </div>
+                    <div class="tags">
+                        <span class="tag">EVM</span><span class="tag">DeFi</span><span class="tag">Contract Audits</span><span class="tag">Governance</span>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
+    <!-- TopXFin & TopXAgents -->
+    <section class="section alt">
+        <div class="section-inner">
+            <div class="section-kicker reveal">The Platforms</div>
+            <h2 class="reveal">TopXFin &amp; TopXAgents</h2>
+            <p class="section-lead reveal">
+                Two research platforms: one extracts actionable insight from noisy financial information,
+                the other builds AI agents that reason, learn, and automate.
+            </p>
+            <div class="grid cols-2">
+                <div class="card reveal">
+                    <h3>TopXFin — Financial LLM &amp; ML Data Processing</h3>
+                    <ul>
+                        <li>Directed the development of TopXFin, an advanced financial large language model (LLM) and machine-learning GPT platform.</li>
+                        <li>Combined machine learning, natural language processing, market data, and predictive analytics to extract actionable insight from noisy information.</li>
+                        <li>Applied NLP techniques to extract critical information from legal, psychological, and financial documents.</li>
+                        <li>Designed sophisticated data-processing pipelines and algorithms delivering precise financial insights and predictions.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">LLM</span><span class="tag">NLP</span><span class="tag">Predictive Analytics</span><span class="tag">ML Pipelines</span>
+                    </div>
+                </div>
+                <div class="card reveal" style="--d:.08s">
+                    <h3>TopXAgents — Adaptive AI Agents</h3>
+                    <ul>
+                        <li>Engineered TopXAgents, a system of AI agents solving complex problems across mechanical, electrical, mechatronic, mathematical, and software disciplines.</li>
+                        <li>Designed and trained agents using advanced machine-learning techniques to optimize problem-solving across multiple domains.</li>
+                        <li>Implemented deep-learning architectures — recurrent neural networks (RNNs) and transformers — for agent training and decision-making.</li>
+                        <li>Developed novel adaptive-learning algorithms enabling agents to continuously enhance their capabilities through continuous optimization.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">AI Agents</span><span class="tag">Transformers</span><span class="tag">RNNs</span><span class="tag">Adaptive Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote band -->
+    <div class="band">
+        <div class="band-bg" data-parallax="0.22" style="background-image:url('images/web/topx-banner.jpg')"></div>
+        <div class="band-content reveal">
+            <blockquote>
+                &ldquo;A reward-based reinforcement model where agents continuously improve their
+                decision-making based on trading outcomes.&rdquo;
+            </blockquote>
+            <cite>— TopX Reinforcement Gym</cite>
+        </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- EVM Research -->
+    <section class="section alt">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Protocol Layer</div>
+            <h2 class="reveal">EVM research &amp; development</h2>
+            <p class="section-lead reveal">
+                Research into Ethereum Virtual Machine performance — scalability, layer-2 integration,
+                off-chain computation, and protocol-level improvements for faster, more efficient
+                decentralized systems.
+            </p>
+            <div class="grid cols-2">
+                <div class="card reveal">
+                    <h3>EVM Research</h3>
+                    <ul>
+                        <li>Conducted comprehensive research on the Ethereum Virtual Machine and its underlying technologies.</li>
+                        <li>Explored optimizations and enhancements to improve EVM performance and scalability.</li>
+                        <li>Investigated layer-2 scaling solutions — Plasma, Optimistic Rollups, and sidechains — plus off-chain computation to address scalability challenges.</li>
+                        <li>Developed RPC (Remote Procedure Call) interfaces to interact with the EVM and facilitate DApp integration.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Layer-2</span><span class="tag">Rollups</span><span class="tag">Off-Chain Compute</span><span class="tag">RPC</span>
+                    </div>
+                </div>
+                <div class="card reveal" style="--d:.08s">
+                    <h3>On-Chain Trading Development</h3>
+                    <ul>
+                        <li>Implemented advanced trading processes on the EVM, including flash swaps, margin trading, and algorithmic strategies.</li>
+                        <li>Designed trading contracts with sophisticated features — limit orders, stop-loss orders, and algorithmic order matching.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Flash Swaps</span><span class="tag">Margin Trading</span><span class="tag">Order Matching</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Trading -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Trading Systems</div>
+            <h2 class="reveal">TopX Trading</h2>
+            <p class="section-lead reveal">
+                A reinforcement gym where AI agents learn to trade — plus the algorithmic strategies
+                and data infrastructure behind them.
+            </p>
+            <div class="grid cols-3">
+                <div class="card reveal">
+                    <h3>Reinforcement Gym</h3>
+                    <ul>
+                        <li>Developed the TopX Reinforcement Gym, a dynamic training environment where AI agents use reinforcement learning to optimize trading strategies.</li>
+                        <li>Trained agents to simulate varied trading environments, learning from historical data to execute optimal buy and sell decisions.</li>
+                        <li>Implemented a reward-based reinforcement model where agents continuously improve decision-making from trading outcomes.</li>
+                        <li>Integrated multi-timeframe analysis so agents evaluate short, medium, and long-term trends for more robust strategies.</li>
+                    </ul>
+                </div>
+                <div class="card reveal" style="--d:.08s">
+                    <h3>Algorithmic Strategies</h3>
+                    <ul>
+                        <li>Designed and implemented algorithmic trading strategies utilizing technical indicators and price-action analysis.</li>
+                        <li>Built strategies in ThinkScript, PineScript, and Python for market-specific conditions.</li>
+                        <li>Backtested algorithms to validate performance and optimize parameters for diverse market conditions.</li>
+                        <li>Monitored and refined trading systems to adapt to evolving market dynamics and ensure sustained performance.</li>
+                    </ul>
+                </div>
+                <div class="card reveal" style="--d:.16s">
+                    <h3>Data-Driven Decisions</h3>
+                    <ul>
+                        <li>Utilized advanced data analytics to inform trading decisions and strategy development.</li>
+                        <li>Integrated real-time data feeds to ensure timely and accurate execution of trading strategies.</li>
+                        <li>Leveraged machine-learning models to predict market trends and enhance the accuracy of trading signals.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-modal agents -->
+    <section class="section alt">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Research Frontier</div>
+            <h2 class="reveal">Multi-modal agents for profession-specific cognition</h2>
+            <p class="section-lead reveal">
+                Specialized language models (SLMs) fused with multi-modal inputs — text, visuals,
+                audio — for cognitive analysis in finance, healthcare, and law.
+            </p>
+            <div class="grid cols-2">
+                <div class="card reveal">
+                    <h3>SLM Cognition Analysis</h3>
+                    <ul>
+                        <li>Developed multi-modal AI agents capable of profession-specific cognition analysis using specialized language models.</li>
+                        <li>Implemented multi-modal data fusion, enabling agents to combine text, visual, and audio inputs for comprehensive analysis.</li>
+                        <li>Trained agents on domain-specific language models to deliver precise cognitive analysis in finance, healthcare, and law.</li>
+                        <li>Leveraged profession-specific agents to solve complex tasks, integrating sector knowledge and learning from real-time data interactions.</li>
+                    </ul>
+                </div>
+                <div class="card reveal" style="--d:.08s">
+                    <h3>Professional-Domain Intelligence</h3>
+                    <ul>
+                        <li>Utilized transformers and attention mechanisms so agents understand and prioritize relevant information across multi-modal inputs.</li>
+                        <li>Designed the system to adapt to evolving professional requirements, refining cognition models from sector-specific feedback.</li>
+                        <li>Implemented systems that generate insights, summaries, and actionable recommendations for professional industries.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NFT strip -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-kicker reveal">On-Chain Art</div>
+            <h2 class="reveal">The TopX Doge Division</h2>
+            <p class="section-lead reveal">Original NFT character art from the TopX collection.</p>
+            <div class="grid cols-3">
+                <div class="g-item reveal"><img src="images/web/nft-chad.jpg" alt="TopX NFT — Chad of Chads" loading="lazy" /><div class="cap">Chad of Chads</div></div>
+                <div class="g-item reveal" style="--d:.06s"><img src="images/web/nft-laser.jpg" alt="TopX NFT — Laser Eyes Go David" loading="lazy" /><div class="cap">Laser Eyes Go David</div></div>
+                <div class="g-item reveal" style="--d:.12s"><img src="images/web/nft-wenmoon.jpg" alt="TopX NFT — Wen Moon Alex" loading="lazy" /><div class="cap">Wen Moon Alex</div></div>
+                <div class="g-item reveal"><img src="images/web/nft-miner.jpg" alt="TopX NFT — Doge Miner Elite" loading="lazy" /><div class="cap">Doge Miner Elite</div></div>
+                <div class="g-item reveal" style="--d:.06s"><img src="images/web/nft-coldstorage.jpg" alt="TopX NFT — Cold Storage Chad" loading="lazy" /><div class="cap">Cold Storage Chad</div></div>
+                <div class="g-item reveal" style="--d:.12s"><img src="images/web/nft-redcandle.jpg" alt="TopX NFT — Red Candle Basher" loading="lazy" /><div class="cap">Red Candle Basher</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="contact-card reveal">
+                <h2>Follow the research</h2>
+                <p>Live market dashboards and a global market snapshot — the data side of TopX.</p>
+                <div class="contact-links">
+                    <a class="btn btn-primary" href="UI.html">Open the Dashboard</a>
+                    <a class="btn btn-ghost" href="overview.html">Global Market Snapshot</a>
+                    <a class="btn btn-ghost" href="index.html#contact">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <small>&copy; Scott Ruiter &middot; ProfitruiteR&trade; &middot; New York, USA</small>
+            <div class="footer-social">
+                <a href="https://github.com/scottRuiter" aria-label="GitHub" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/scottruiter" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M1.15 4.4h2.9v9.6h-2.9V4.4zM2.6 0a1.73 1.73 0 1 1 0 3.46A1.73 1.73 0 0 1 2.6 0zM5.9 4.4h2.78v1.31h.04c.39-.73 1.33-1.5 2.75-1.5 2.94 0 3.48 1.93 3.48 4.45V14h-2.9V9.23c0-1.14-.02-2.6-1.59-2.6-1.59 0-1.83 1.24-1.83 2.52V14H5.9V4.4z"/></svg>
+                </a>
+                <a href="https://twitter.com/RuiterScott" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M12.6 0.75h2.45l-5.36 6.13L16 15.25h-4.94L7.19 10.2l-4.42 5.05H.31l5.74-6.56L0 .75h5.06l3.5 4.62L12.6.75zm-.86 13.03h1.36L4.32 2.15H2.87l8.87 11.63z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
 </body>
 
 </html>

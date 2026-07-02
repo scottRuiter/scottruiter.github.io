@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
-    <title>ProfitruiteR</title>
+    <title>Testbed | ProfitruiteR</title>
     <link rel="shortcut icon" type="image/png" href="images/headshot.png">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
@@ -180,35 +180,27 @@
 
     <!-- TradingView Widget BEGIN -->
     <div class="tradingview-widget-container">
-        <div id="tv-medium-widget"></div>
+        <div class="tradingview-widget-container__widget"></div>
         <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/COINBASE-BTCUSD/" rel="noopener" target="_blank"><span class="blue-text">BTC</span></a>, <a href="https://www.tradingview.com/symbols/COINBASE-ETHUSD/" rel="noopener" target="_blank"><span class="blue-text">ETH</span></a>            <span class="blue-text">and</span> <a href="https://www.tradingview.com/symbols/BITFINEX-IOTUSD/" rel="noopener" target="_blank"><span class="blue-text">IOT Quotes</span></a> by TradingView</div>
-        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-        <script type="text/javascript">
-            new TradingView.MediumWidget({
-                "container_id": "tv-medium-widget",
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+            {
                 "symbols": [
-                    [
-                        "BTC",
-                        "COINBASE:BTCUSD|12m"
-                    ],
-                    [
-                        "ETH",
-                        "COINBASE:ETHUSD|12m"
-                    ],
-                    [
-                        "IOT",
-                        "BINANCE:IOTAUSD|12m"
-                    ]
+                    ["BTC", "COINBASE:BTCUSD|12M"],
+                    ["ETH", "COINBASE:ETHUSD|12M"],
+                    ["IOT", "BINANCE:IOTAUSD|12M"]
                 ],
-                "greyText": "Quotes by",
+                "chartOnly": false,
+                "width": "100%",
+                "height": 500,
+                "locale": "en",
+                "colorTheme": "dark",
                 "gridLineColor": "#e9e9ea",
                 "fontColor": "#83888D",
-                "underLineColor": "#dbeffb",
                 "trendLineColor": "#4bafe9",
-                "width": "100%",
-                "height": "100%",
-                "locale": "en"
-            });
+                "isTransparent": false,
+                "autosize": true,
+                "chartType": "area"
+            }
         </script>
     </div>
     <!-- TradingView Widget END -->
@@ -236,32 +228,6 @@
     <!-- TradingView Widget END -->
 
 
-    <div id="footer">
-        <div class="container">
-            <div class="row"></div>
-            <hr />
-            <div class="row">
-                <div class="col-12">
-                    <!-- Contact -->
-                    <section class="contact">
-                        <ul class="icons">
-                            <li><a href="https://t.me/TopXProfits" class="icon fa-telegram"><span class="label">Instagram</span></a></li>
-                            <li><a href="https://twitter.com/RuiterScott" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                            <li><a href="https://github.com/scottRuiter" class="icon fa-github"><span class="label">GitHub</span></a></li>
-                            <li><a href="https://www.linkedin.com/in/scottruiter" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-                        </ul>
-                    </section>
-                    <!-- Copyright -->
-                    <div class="copyright">
-                        <ul class="menu">
-                            <li>&copy; ProfitruiteR &trade; All rights reserved</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <div id="footer">
         <div class="container">
@@ -272,10 +238,9 @@
                     <!-- Contact -->
                     <section class="contact">
                         <ul class="icons">
-                            <li><a href="https://www.instagram.com/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
                             <li><a href="https://twitter.com/RuiterScott" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                            <li><a href="https://github.com/" class="icon fa-github"><span class="label">GitHub</span></a></li>
-                            <li><a href="https://www.linkedin.com/in/scottruiter" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+                            <li><a href="https://github.com/scottRuiter" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://www.linkedin.com/in/scottruiter" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
                         </ul>
                     </section>
                     <!-- Copyright -->
@@ -300,7 +265,5 @@
     <script src="assets/js/main.js"></script>
 
 </body>
-
-</html>
 
 </html>

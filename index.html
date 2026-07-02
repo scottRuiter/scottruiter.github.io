@@ -1,153 +1,606 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>ProfitruiteR</title>
-    <link rel="shortcut icon" type="image/png" href="images/headshot.png">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scott A. Ruiter | Industrial Computer Vision, 3D Metrology &amp; AI Automation</title>
+    <meta name="description" content="Scott A. Ruiter — industrial computer-vision and 3D metrology systems leader. Cognex VisionPro, 3D laser line-scan inspection, fixtureless metrology, AI-assisted engineering tools, and global factory deployment." />
+    <meta property="og:title" content="Scott A. Ruiter | Industrial Computer Vision, 3D Metrology & AI Automation" />
+    <meta property="og:description" content="From pixels to production decisions — advanced inspection systems, traceable data, and AI-assisted engineering for high-precision manufacturing." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://scottruiter.github.io/" />
+    <meta property="og:image" content="https://scottruiter.github.io/images/web/ai-hero-vision.jpg" />
+    <link rel="icon" type="image/png" href="images/web/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 
-<body class="homepage is-preload">
-    <div id="page-wrapper">
+<body>
+    <div id="progress"></div>
 
-        <!-- Header -->
-        <div id="header">
+    <!-- Navigation -->
+    <nav class="nav">
+        <a class="nav-logo" href="index.html">
+            <img src="images/web/favicon.png" alt="" />
+            <span>Scott<b>Ruiter</b></span>
+        </a>
+        <button class="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#software">Software</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="topx.html">TopX</a></li>
+            <li><a href="photography.html">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="btn-resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+    </nav>
 
-            <!-- Inner -->
-            <header>
-                <h1><a href="index.html" id="logo">ProfitruiteR</a></h1>
-                <p>AI • Blockchain Development • Large Language Models (LLM)</p>
-            </header>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-bg" data-parallax="0.18" style="background-image:url('images/web/ai-hero-vision.jpg')"></div>
+        <div class="hero-inner">
+            <div class="hero-kicker reveal">Industrial Computer Vision &middot; 3D Metrology &middot; AI Automation</div>
+            <h1 class="reveal" style="--d:.08s">Scott A. Ruiter<br /><span class="grad">From Pixels to Production Decisions</span></h1>
+            <p class="hero-sub reveal" style="--d:.16s">
+                I design and execute <strong>advanced machine-vision, 3D metrology, and AI-assisted inspection
+                systems</strong> for complex manufacturing environments — combining Cognex VisionPro, industrial
+                software, 2D/3D inspection, traceability, AOI cross-validation, production deployment, and applied
+                AI research to turn difficult factory problems into reliable engineering systems.
+            </p>
+            <div class="hero-ctas reveal" style="--d:.24s">
+                <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">View Resume &darr;</a>
+                <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat reveal" style="--d:.3s">
+                    <div class="num"><span data-count="15">0</span><sup>+</sup></div>
+                    <div class="lbl">Years Building Production Systems</div>
+                </div>
+                <div class="stat reveal" style="--d:.38s">
+                    <div class="num"><span data-count="6">0</span></div>
+                    <div class="lbl">Countries of Factory Deployment</div>
+                </div>
+                <div class="stat reveal" style="--d:.46s">
+                    <div class="num">2D&hairsp;/&hairsp;3D</div>
+                    <div class="lbl">Hybrid Coordinate Metrology</div>
+                </div>
+                <div class="stat reveal" style="--d:.54s">
+                    <div class="num">C#&hairsp;&middot;&hairsp;Py</div>
+                    <div class="lbl">Vision Software &amp; Applied AI</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-cue">Scroll</div>
+    </header>
 
-            <!-- Navigation -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="topx.html">TopX</a></li>
-                    <li><a href="resume.pdf">Resume</a></li>
-                    <li><a href="UI.html">Dashboard</a></li>
-                    <li><a href="overview.html">Snapshot</a></li>
-                    <li><a href="photography.html">Vision</a></li>
-                </ul>
-            </nav>
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="section-inner">
+            <div class="grid cols-2" style="align-items:center; gap:56px;">
+                <div class="reveal-l">
+                    <div class="section-kicker">About</div>
+                    <h2>Inspection systems that survive real factories</h2>
+                    <p style="color:var(--text-dim); margin-bottom:16px;">
+                        I am an industrial computer-vision and 3D metrology systems leader focused on building
+                        inspection, automation, and data systems that work under real production conditions. I
+                        specialize in turning difficult inspection problems into working production systems:
+                        calibrated vision workflows, 3D line-scan inspection, fixtureless coordinate alignment,
+                        weak-feature recovery, barcode-linked traceability, AOI cross-validation, runtime
+                        diagnostics, and customer-reviewable acceptance outputs.
+                    </p>
+                    <p style="color:var(--text-dim); margin-bottom:16px;">
+                        My career has moved across software development, electronics manufacturing, machine vision,
+                        process engineering, AI research, blockchain systems, and algorithmic trading. That
+                        combination gives me a practical engineering perspective: I understand the software, the
+                        machine, the factory, the operator, the data, and the customer requirement.
+                    </p>
+                    <p style="color:var(--text-dim); margin-bottom:16px;">
+                        Today I lead advanced vision and field-engineering work involving calibrated inspection, 3D
+                        line scan, high-density connector validation, traceability outputs, customer deployment
+                        support, and technical training. Through Rlab and TopX, I continue to explore AI agents,
+                        financial ML, blockchain/EVM systems, multimodal reasoning, and software tools that
+                        accelerate engineering work.
+                    </p>
+                    <p style="color:var(--text-dim);">
+                        Manufacturing vision problems are rarely solved by one tool or one algorithm. They require
+                        optics, lighting, calibration, software architecture, data structure, tolerancing, customer
+                        constraints, operator workflow, and production reality to work together. The best system is
+                        not just the one that finds the feature — it is the one that
+                        <b style="color:var(--text);">tells the engineer why it passed, why it failed, where the
+                        data came from, what changed, and what action should happen next</b>.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Cognex VisionPro</span>
+                        <span class="tag">QuickBuild &amp; Designer</span>
+                        <span class="tag">3D Line-Scan</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Fixtureless Metrology</span>
+                        <span class="tag">Traceability</span>
+                        <span class="tag">Applied AI</span>
+                    </div>
+                </div>
+                <div class="reveal-r">
+                    <img src="images/web/connector-tray-2.jpg" alt="High-density connector array under inspection" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" />
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Quote band -->
+    <div class="band">
+        <div class="band-bg" data-parallax="0.22" style="background-image:url('images/web/hero-eye.jpg')"></div>
+        <div class="band-content reveal">
+            <blockquote>
+                &ldquo;Engineering inspection systems that explain themselves.&rdquo;
+            </blockquote>
+            <cite>— building the bridge between machine vision, 3D metrology, AI systems, and manufacturing intelligence</cite>
         </div>
     </div>
 
-    <!-- Intro Section -->
-    <div class="wrapper style1">
-        <section id="features" class="container special">
-            <div class="row">
-                <div class="profile">
-                    <a class="image featured"><img src="images\Profit - Promo.png" alt="ProfitruiteR Promo Image" /></a>
+    <!-- Expertise -->
+    <section class="section alt" id="expertise">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Core Positioning</div>
+            <h2 class="reveal">Four disciplines, one pipeline</h2>
+            <p class="section-lead reveal">
+                My work bridges vision engineering, industrial software, manufacturing intelligence,
+                and applied AI — from photons to pass/fail to production learning.
+            </p>
+            <div class="grid cols-2">
+                <div class="card reveal">
+                    <div class="icon">&#9673;</div>
+                    <h3>Vision Engineering</h3>
+                    <p>Cognex VisionPro, QuickBuild, and Designer workflows — PMAlign, Blob, Caliper, 2D/3D
+                       correlation, calibrated transforms, 3D range/height images, overlay graphics, radial error
+                       analysis, and deterministic image-processing pipelines.</p>
+                    <div class="tags">
+                        <span class="tag">PMAlign</span><span class="tag">Blob</span><span class="tag">Caliper</span>
+                        <span class="tag">Calibrated Transforms</span><span class="tag">Radial Error Analysis</span>
+                    </div>
                 </div>
-                <div class="description">
-                    <p>
-                        I hold a degree in <a href="https://www.baker.edu/academics/undergraduate-studies/college-of-information-technology-and-engineering/computer-science-concentration-in-computer-programming/">Electrical Engineering and Computer Science</a> with a minor in <a href="https://www.baker.edu/academics/undergraduate-studies/college-of-information-technology-and-engineering/computer-science-concentration-in-computer-programming/">Computer Vision</a> from Baker College. As the founder of Rlab, I lead software development efforts specializing in Cognex Vision, OpenCV, and custom software applications for both local and national projects. Currently, I spearhead <a href="https://www.uic.com/">Vision Processes</a> at UIC, while advising C-level executives on cutting-edge innovations.
-                    </p>
-                    <p>
-                        My extensive expertise spans AI research, blockchain engineering, and algorithmic trading. I apply my technical background to craft and lead innovative business strategies designed to solve complex problems and drive the future of technology. As an active researcher, my work focuses on 3D Line Scan Technology, Optical Distortion Correction, and developing technology solutions for mission-critical manufacturing processes.
-                    </p>
-                    <p>
-                        My unique blend of technical and business acumen is further enriched by a prior degree in Culinary Arts and Business Management. This diversity in experience allows me to excel both in technical development and business strategy, offering holistic solutions that push the boundaries of innovation.
-                    </p>
+                <div class="card reveal" style="--d:.08s">
+                    <div class="icon">&#10148;</div>
+                    <h3>Industrial Software</h3>
+                    <p>C#, Python, C++, and .NET for VisionPro scripting, tool-block architecture, expression
+                       routing, TCP/IP integration, Windows automation, data parsing, CSV/BMP generation, SQL data
+                       models, traceability, and result archival.</p>
+                    <div class="tags">
+                        <span class="tag">C# / .NET</span><span class="tag">Python</span><span class="tag">TCP/IP</span>
+                        <span class="tag">Tool-Block Architecture</span><span class="tag">Runtime Diagnostics</span>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Experience Section -->
-            <header class="space">
-                <h2>Professional Experience</h2>
-            </header>
-            
-            <p><b>Universal Instruments Corporation</b></p>
-            <p>Application Specialist III</p>
-            <p>Nov 2018 - Present | Conklin, New York</p>
-            <ul>
-                <li>Designed and integrated vision solutions for manufacturing automation.</li>
-                <li>Developed and maintained custom software for machine control and vision processes.</li>
-                <li>Led customer demonstrations and provided sales support for key projects.</li>
-                <li>Advised on New Product Introductions (NPI) and designed tailored vision solutions.</li>
-                <li>Diagnosed and resolved technical issues with machine hardware.</li>
-            </ul>
-
-            <p><b>Rlab Development</b></p>
-            <p>Founder</p>
-            <p>Oct 2014 - Present | Greater Grand Rapids, Michigan</p>
-            <ul>
-                <li>Led a distributed team in developing custom solutions for dynamic manufacturing datasets.</li>
-                <li>Researched and developed automated trading strategies using ThinkScript, PineScript, and Python.</li>
-                <li>Developed and optimized trading algorithms for market-specific conditions.</li>
-                <li>Implemented backtesting frameworks to validate strategies in real-time scenarios.</li>
-            </ul>
-
-            <!-- Research Section -->
-            <header class="space">
-                <h2>Current Research</h2>
-            </header>
-
-            <ol class="list">
-                <li>Exploring Web3 technologies for financial transparency.</li>
-                <li>Investigating the tensions between scale-based mutual aid technologies and traditional values of solidarity and trust.</li>
-                <li>Researching the use of blockchain for facilitating fundraising in public services.</li>
-                <li>Examining the integration of blockchain technologies into mainstream industries.</li>
-            </ol>
-
-            <!-- Projects Section -->
-            <header class="space">
-                <h2>Highlighted Projects</h2>
-            </header>
-
-            <ul>
-                <li><b>Rlab Software Development:</b> Founded Rlab, specializing in computer vision and custom software development.</li>
-                <li><b>Vision Processes at UIC:</b> Led vision process improvements and advised on key projects for innovation at UIC.</li>
-                <li><b>Automated Trading Strategies:</b> Developed, tested, and optimized trading algorithms for dynamic market conditions.</li>
-                <li><b>Blockchain Research:</b> Conducted in-depth experiments on Solidity, liquidity pools, and EVM-based technologies.</li>
-            </ul>
-
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <div id="footer">
-        <div class="container">
-            <div class="row"></div>
-            <hr />
-            <div class="row">
-                <div class="col-12">
-                    <!-- Contact -->
-                    <section class="contact">
-                        <ul class="icons">
-                            <li><a href="https://t.me/TopXProfits" class="icon fa-telegram"><span class="label">Telegram</span></a></li>
-                            <li><a href="https://twitter.com/RuiterScott" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                            <li><a href="https://github.com/scottRuiter" class="icon fa-github"><span class="label">GitHub</span></a></li>
-                            <li><a href="https://www.linkedin.com/in/scottruiter" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                        </ul>
-                    </section>
-
-                    <!-- Copyright -->
-                    <div class="copyright">
-                        <ul class="menu">
-                            <li>&copy; ProfitruiteR™. All rights reserved.</li>
-                        </ul>
+                <div class="card reveal">
+                    <div class="icon">&#9881;</div>
+                    <h3>Manufacturing Intelligence</h3>
+                    <p>SMT/THT, high-density connector inspection, press-fit validation, odd-form automation, AOI
+                       comparison, NPI and PPAP support, defect review, RMA feedback loops, drift detection, and
+                       production-quality analytics.</p>
+                    <div class="tags">
+                        <span class="tag">SMT / THT</span><span class="tag">Press-Fit</span><span class="tag">AOI Cross-Validation</span>
+                        <span class="tag">NPI / PPAP</span><span class="tag">Drift Detection</span>
+                    </div>
+                </div>
+                <div class="card reveal" style="--d:.08s">
+                    <div class="icon">&#10022;</div>
+                    <h3>Applied AI &amp; Systems Research</h3>
+                    <p>AI agents, financial LLM/ML data processing, NLP pipelines, reinforcement-learning concepts,
+                       multimodal SLM cognition analysis, Solidity/EVM research, DeFi architecture concepts, and
+                       algorithmic trading and backtesting.</p>
+                    <div class="tags">
+                        <span class="tag">AI Agents</span><span class="tag">LLM / RAG</span><span class="tag">NLP Pipelines</span>
+                        <span class="tag">Reinforcement Learning</span><span class="tag">EVM / Solidity</span>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Client marquee -->
+    <div class="marquee" aria-label="Client programs supported">
+        <div class="marquee-track">
+            <span>NVIDIA</span><span>Amazon</span><span>Cisco</span><span>Celestica</span>
+            <span>Fabrinet</span><span>Ingrasys</span><span>Amphenol</span><span>Raytheon</span><span>Arista</span>
+            <span>NVIDIA</span><span>Amazon</span><span>Cisco</span><span>Celestica</span>
+            <span>Fabrinet</span><span>Ingrasys</span><span>Amphenol</span><span>Raytheon</span><span>Arista</span>
+        </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Signature impact -->
+    <section class="section" id="impact">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Signature Engineering Impact</div>
+            <h2 class="reveal">Hard problems, shipped solutions</h2>
+            <p class="section-lead reveal">
+                The work I am known for — inspection concepts that moved from idea to patent filing,
+                production deployment, and customer acceptance.
+            </p>
+            <div class="grid cols-2">
+                <div class="card project-card reveal">
+                    <div class="thumb"><img src="images/web/ai-tool-gridgen.jpg" alt="Fixtureless grid inspection — drill-drawing nominals to calibrated pin grid" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>Fixtureless Grid Inspection</h3>
+                        <p>Patent-pending concepts for fixtureless inspection using drill-drawing nominal
+                           coordinates, calibrated transforms, N-point fitting, best-fit alignment, radial
+                           deviation analysis, and per-pin acceptance logic — inspecting high-density features
+                           without depending on fixed mechanical fixturing.</p>
+                        <div class="tags">
+                            <span class="tag">Patent-Pending</span><span class="tag">Best-Fit Alignment</span><span class="tag">Radial Tolerance Scoring</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card project-card reveal" style="--d:.08s">
+                    <div class="thumb"><img src="images/web/ai-band-weaklead.jpg" alt="Weak-lead recovery — adaptive thresholding and weighted centroid extraction" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>Weak-Lead Recovery</h3>
+                        <p>CPU-based weak-feature recovery workflows that analyze local ROIs, normalize contrast,
+                           apply adaptive weak thresholding, select top-percent bright pixels, compute weighted
+                           centroids, and output confidence values, CSV fields, and optional overlay graphics.</p>
+                        <div class="tags">
+                            <span class="tag">Adaptive Thresholding</span><span class="tag">Weighted Centroids</span><span class="tag">Confidence Output</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card project-card reveal">
+                    <div class="thumb"><img src="images/web/ai-tool-ljx.jpg" alt="3D line-scan inspection — laser profilometry and height maps" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>3D Line-Scan Inspection</h3>
+                        <p>Inline 2D/3D inspection using range/height images, line-scan profile data, VisionPro 3D
+                           tools, 2D tool-conversion methods, overlay graphics, barcode-linked traceability, and
+                           customer-reviewable evidence packages — extracting real metrology from depth data.</p>
+                        <div class="tags">
+                            <span class="tag">Range / Height Images</span><span class="tag">Profile Data</span><span class="tag">Evidence Packages</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card project-card reveal" style="--d:.08s">
+                    <div class="thumb"><img src="images/web/connector-tray-1.jpg" alt="High-density connector and press-fit inspection" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>Connector, Press-Fit &amp; AOI/RMA Analytics</h3>
+                        <p>Pin-location validation, tolerance scoring, and traceable customer review outputs for
+                           difficult connector and press-fit scenarios — plus smart closed-loop concepts connecting
+                           inspection outputs, trace files, cross-platform measurement drift, RMA feedback, and
+                           containment decisions into production-quality intelligence.</p>
+                        <div class="tags">
+                            <span class="tag">Pin Validation</span><span class="tag">RMA Feedback Loops</span><span class="tag">Drift Detection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Philosophy band -->
+    <div class="band">
+        <div class="band-bg" data-parallax="0.22" style="background-image:url('images/web/ai-band-weaklead.jpg')"></div>
+        <div class="band-content reveal">
+            <blockquote>
+                &ldquo;I build systems for the real world, not just clean demos. The best system is not just the
+                one that finds the feature — it is the one that explains itself.&rdquo;
+            </blockquote>
+            <cite>— engineering philosophy</cite>
+        </div>
+    </div>
+
+    <!-- Software & tools -->
+    <section class="section alt" id="software">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Software &amp; Tools I Build</div>
+            <h2 class="reveal">AI-assisted engineering tools</h2>
+            <p class="section-lead reveal">
+                Beyond inspection deployments, I design and ship the software around the process — training
+                platforms, analytics suites, coordinate generators, knowledge systems, and proprietary sensor
+                interfaces.
+            </p>
+            <div class="grid cols-3">
+                <div class="card project-card reveal">
+                    <div class="thumb"><img src="images/web/ai-tool-forge.jpg" alt="VisionPro Forge — offline machine-vision training platform" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>VisionPro Forge</h3>
+                        <p>Offline training platform for Cognex VisionPro engineers — structured curriculum across
+                           2D/3D tools, calibration and fixturing theory, script families, learning paths, quizzes,
+                           and certification finals. Ships as a self-contained desktop package for factory
+                           training with no internet required.</p>
+                        <div class="tags">
+                            <span class="tag">Python / Flask</span><span class="tag">Curriculum Engine</span><span class="tag">Certification</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card project-card reveal" style="--d:.08s">
+                    <div class="thumb"><img src="images/web/ai-tool-analyzer.jpg" alt="TopX Inspection Analyzer — inspection CSV analytics dashboards" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>TopX Inspection Analyzer</h3>
+                        <p>Offline-first analytics suite that monitors inspection CSV output and turns pin-level
+                           data into process intelligence: spatial heatmaps, 3D coplanarity and seating-plane
+                           analysis, tolerance-ring pin maps, repeatability review, source correlation, best-fit
+                           registration, and shareable customer reports.</p>
+                        <div class="tags">
+                            <span class="tag">3D Coplanarity</span><span class="tag">Pin Maps</span><span class="tag">Report Exports</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card project-card reveal" style="--d:.16s">
+                    <div class="thumb"><img src="images/web/ai-tool-gridgen.jpg" alt="Pin Grid Generator — nominal coordinate model builder" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>Pin Grid Generator</h3>
+                        <p>Coordinate-model builder that converts drill-drawing and CSV nominal data into
+                           inspection-ready pin grids — the nominal-geometry backbone behind fixtureless grid
+                           inspection, rough pose alignment, calibrated transforms, and per-pin tolerance
+                           scoring.</p>
+                        <div class="tags">
+                            <span class="tag">Nominal Models</span><span class="tag">Drill Drawings</span><span class="tag">Grid Synthesis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card project-card reveal">
+                    <div class="thumb"><img src="images/web/ai-tool-knowledge.jpg" alt="Knowledge Chat — local RAG knowledge base and chat" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>Knowledge Chat</h3>
+                        <p>Local retrieval-augmented knowledge base for engineering organizations — document
+                           ingestion, vector search, streaming chat over Word/PDF libraries, multi-provider LLM
+                           support, industry-signal radar, and evidence-weighted forecasting. Built with FastAPI,
+                           React, and a local vector database.</p>
+                        <div class="tags">
+                            <span class="tag">RAG</span><span class="tag">FastAPI + React</span><span class="tag">Local LLMs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card project-card reveal" style="--d:.08s">
+                    <div class="thumb"><img src="images/web/ai-tool-ljx.jpg" alt="Proprietary 3D laser line-scan acquisition interface" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>LJX 3D Acquisition Interface</h3>
+                        <p>Proprietary C# interface bridging Keyence LJ-X laser profilometer heads directly into
+                           Cognex VisionPro — high-speed profile streaming over Ethernet, external batch-start
+                           control, model-based Y/Z pitch management, and calibrated height/luminance range images
+                           ready for 3D tooling.</p>
+                        <div class="tags">
+                            <span class="tag">C# / VisionPro</span><span class="tag">Keyence LJ-X</span><span class="tag">Range Images</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card project-card reveal" style="--d:.16s">
+                    <div class="thumb"><img src="images/web/connector-tray-3.jpg" alt="Advanced vision systems at Universal Instruments" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>Advanced Vision Systems at UIC</h3>
+                        <p>The flagship: production-ready VisionPro/QuickBuild/Designer workflows for SMT/THT,
+                           odd-form, press-fit, and high-density connector inspection — rough pose alignment,
+                           calibrated fixture transforms, per-feature measurement, operator review, customer
+                           acceptance, and barcode-linked traceability.</p>
+                        <div class="tags">
+                            <span class="tag">VisionPro</span><span class="tag">Production Deployment</span><span class="tag">Traceability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global deployment -->
+    <section class="section" id="global">
+        <div class="section-inner">
+            <div class="grid cols-2" style="align-items:center; gap:56px;">
+                <div class="reveal-l">
+                    <div class="section-kicker">Global Factory Deployment</div>
+                    <h2>Hands-on execution in real factories</h2>
+                    <p style="color:var(--text-dim); margin-bottom:16px;">
+                        My field-execution work spans advanced manufacturing sites across
+                        <b style="color:var(--text);">Vietnam, Mexico, the United States, Taiwan, and
+                        Thailand</b> — including Guadalajara and Mexicali, Houston, and broader Asia-Pacific and
+                        North American production environments.
+                    </p>
+                    <p style="color:var(--text-dim); margin-bottom:16px;">
+                        The value is not travel or installation support. It is getting inspection systems
+                        configured, validated, trained, debugged, documented, accepted, and moved to production
+                        readiness: machine qualification, sample testing, customer training, defect review,
+                        output-format confirmation, repeatability review, action-list creation, and final handoff.
+                    </p>
+                    <p style="color:var(--text-dim);">
+                        I have worked through the practical challenges that appear when vision systems move from
+                        development to customer factories — lighting variation, calibration drift, fixture
+                        differences, weak features, data-output mismatches, operator workflow, and production
+                        pressure. That field experience shapes how I build: for factories, customers, technicians,
+                        engineers, and operators who need clear results, reliable data, and actionable feedback.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Vietnam</span>
+                        <span class="tag">Guadalajara, MX</span>
+                        <span class="tag">Mexicali, MX</span>
+                        <span class="tag">Houston, TX</span>
+                        <span class="tag">Taiwan</span>
+                        <span class="tag">Thailand</span>
+                        <span class="tag">United States</span>
+                    </div>
+                </div>
+                <div class="reveal-r">
+                    <img src="images/web/ai-band-global.jpg" alt="Global deployment map — Vietnam, Mexico, United States, Taiwan, Thailand" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section alt" id="experience">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Career</div>
+            <h2 class="reveal">Professional experience</h2>
+            <p class="section-lead reveal">More than a decade across vision engineering, SMT/THT process leadership, and founder-led R&amp;D.</p>
+            <div class="timeline">
+                <div class="tl-item reveal">
+                    <div class="when">Nov 2018 — Present</div>
+                    <h3>Application Specialist III — Advanced Vision &amp; Field Engineering Support</h3>
+                    <div class="where"><b>Universal Instruments Corporation</b> &middot; New York, USA</div>
+                    <ul>
+                        <li>Lead advanced vision application development and deployment for SMT/THT, odd-form, press-fit, high-density connector, and precision automation inspection processes.</li>
+                        <li>Architect VisionPro, QuickBuild, and Designer workflows for rough pose alignment, calibrated fixture transforms, local feature search, per-feature measurement, pass/fail logic, operator review, customer acceptance, and production traceability.</li>
+                        <li>Develop 3D line-scan inspection workflows using range and height images, profile data, 3D rendering, and 2D tool-conversion methods to extract metrology from depth-based image data.</li>
+                        <li>Build the software and data systems around inspection: barcode-linked CSV files, bitmap graphics, measured/nominal/tolerance values, pass/fail flags, defect descriptions, review overlays, runtime diagnostics, and result archival.</li>
+                        <li>Solve instability in real deployments — isolating failures caused by lighting, clipping, calibration mismatch, weak-pixel response, data mapping, sensor behavior, fixture differences, and cross-platform measurement drift.</li>
+                        <li>Translate complex inspection requirements into build instructions, operator guides, engineering specifications, and acceptance criteria for engineers, vendors, operators, customers, and executives.</li>
+                        <li>Support the full technical path from pre-deployment engineering through onsite installation, machine qualification, customer training, repeatability review, and final handoff across Vietnam, Mexico, the US, Taiwan, and Thailand.</li>
+                    </ul>
+                    <div class="tl-impact">
+                        <b>Selected impact:</b> expanded inspection capability from 2D-only vision into combined 2D/3D
+                        coordinate metrology with a production-ready laser line-scan / Cognex hybrid architecture,
+                        developed patent-pending fixtureless grid inspection concepts, and built inspection systems that
+                        help manufacturing teams improve yield, reduce deployment risk, and scale production for the
+                        hardware demands of the AI era.
+                    </div>
+                </div>
+                <div class="tl-item reveal">
+                    <div class="when">Oct 2014 — Present</div>
+                    <h3>Founder — AI Systems &amp; Blockchain Research Developer</h3>
+                    <div class="where"><b>Rlab Software Development / TopX Portfolio</b> &middot; United States</div>
+                    <ul>
+                        <li>Build prototype systems and research concepts at the intersection of AI agents, manufacturing data systems, financial modeling, blockchain engineering, automation tooling, and technical documentation.</li>
+                        <li>Develop TopXFin — a financial LLM/ML data-processing platform concept using GPT models, machine-learning algorithms, and NLP extraction for large financial, legal, and document-heavy datasets.</li>
+                        <li>Develop TopXAgents — an AI-agent system concept for solving mechanical, electrical, mechatronic, mathematical, and software problems using adaptive learning and domain-specialized reasoning.</li>
+                        <li>Research algorithmic trading (indicators, price-action logic, backtesting, ML trend prediction, signal generation) and blockchain/EVM systems (Solidity, ERC-20/721/1155, DeFi architecture, layer-2 scaling) — see the <a href="topx.html">TopX page</a> for the full portfolio.</li>
+                    </ul>
+                </div>
+                <div class="tl-item reveal">
+                    <div class="when">Jun 2013 — Sep 2018</div>
+                    <h3>SMT/THT Equipment &amp; Process Leader <span style="color:var(--text-dim); font-weight:500;">(prior: Equipment Leader / Programmer)</span></h3>
+                    <div class="where"><b>Ram Electronics Inc.</b> &middot; Fruitport, Michigan</div>
+                    <ul>
+                        <li>Led SMT/THT process engineering, equipment programming, maintenance, CAD PCB registration, component vision programming, changeover flow, NPI support, production audits, and process improvement in a high-mix electronics manufacturing environment.</li>
+                        <li>Led engineering for dozens of NPIs across all SMT/THT phases, from PPAP and placement routing to ramp-up and AI-optimized routing with UPS+ software.</li>
+                        <li>Engineered processes aligned with ISO 9001, J-STD-001 Class 2/3 PCBA compliance, and DFMEA methodologies; certified IPC-A-610 and J-STD-001 (CIS).</li>
+                        <li>Built data models and a centralized data lake for enterprise analytics; deployed QuickBooks Enterprise as a full-scale manufacturing ERP; administered Windows Server, SQL Server, IIS, and Active Directory.</li>
+                        <li>4+ years of hands-on preventative maintenance and field repair — reducing OEM escalations, maximizing uptime, and minimizing repair cost.</li>
+                    </ul>
+                </div>
+                <div class="tl-item reveal">
+                    <div class="when">Apr 2012 — Aug 2013</div>
+                    <h3>Chef</h3>
+                    <div class="where"><b>Grand Theatre</b> &middot; Grand Haven, Michigan</div>
+                    <ul>
+                        <li>Ran back-of-house operations as the Executive Chef's point person through $3M+ peak seasons — voluntarily stepping down from management to finish a Computer Science degree.</li>
+                        <li>Even here, the engineering showed up: restructured the POS database using object-oriented principles, significantly improving system organization.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Foundation</div>
+            <h2 class="reveal">Education &amp; certifications</h2>
+            <div class="grid cols-2" style="margin-top:40px;">
+                <div class="card reveal">
+                    <div class="icon">&#127891;</div>
+                    <h3>B.S. Computer Science</h3>
+                    <p>Baker College Center for Graduate Studies &middot; 2010 — 2013</p>
+                </div>
+                <div class="card reveal" style="--d:.08s">
+                    <div class="icon">&#128200;</div>
+                    <h3>A.S. Business, Management &amp; Marketing</h3>
+                    <p>Baker College of Muskegon &middot; 2002 — 2006</p>
+                </div>
+                <div class="card reveal">
+                    <div class="icon">&#10004;</div>
+                    <h3>Certifications &amp; Honors</h3>
+                    <ul>
+                        <li>J-STD-001 Certified IPC Specialist (CIS) &amp; IPC-A-610</li>
+                        <li>CompTIA A+</li>
+                        <li>R programming series — Entry Level R, Introduction to R, Intro to Statistics with R</li>
+                        <li>Dean's List</li>
+                    </ul>
+                </div>
+                <div class="card reveal" style="--d:.08s">
+                    <div class="icon">&#127760;</div>
+                    <h3>Top Skills &amp; Languages</h3>
+                    <ul>
+                        <li>Process Optimization (Manufacturing)</li>
+                        <li>Computer Vision &amp; 3D Metrology</li>
+                        <li>Photophysics</li>
+                        <li>English (native) &middot; Spanish (elementary)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beyond work -->
+    <section class="section alt" id="beyond">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Beyond the Factory</div>
+            <h2 class="reveal">Independent R&amp;D and creative work</h2>
+            <div class="grid cols-3" style="margin-top:40px;">
+                <a href="topx.html" class="card project-card reveal" style="color:inherit;">
+                    <div class="thumb"><img src="images/web/topx-eye-machine.jpg" alt="TopX — AI, trading, and blockchain research" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>TopX &rarr;</h3>
+                        <p>TopXFin, TopXAgents, reinforcement-learning trading research, and EVM/Solidity systems.</p>
+                    </div>
+                </a>
+                <a href="UI.html" class="card project-card reveal" style="--d:.08s; color:inherit;">
+                    <div class="thumb"><img src="images/web/pc-build-1.jpg" alt="TopX live market dashboard" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>Market Dashboard &rarr;</h3>
+                        <p>Live crypto, forex, and index data with technical analysis, powered by TradingView.</p>
+                    </div>
+                </a>
+                <a href="photography.html" class="card project-card reveal" style="--d:.16s; color:inherit;">
+                    <div class="thumb"><img src="images/web/travel-pagoda.jpg" alt="Photography and AI art gallery" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>Gallery &rarr;</h3>
+                        <p>Travel photography, AI-generated art, and life behind the lens.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="section-inner">
+            <div class="contact-card reveal">
+                <div class="section-kicker">Contact</div>
+                <h2>Let's build something measurable</h2>
+                <p>
+                    I am interested in advanced engineering work involving machine vision, 3D inspection,
+                    AI-assisted automation, manufacturing intelligence, technical leadership, customer deployment,
+                    and applied R&amp;D. Based in New York, USA —
+                    <b style="color:var(--text);">open to relocation and international assignments</b>.
+                </p>
+                <div class="contact-links">
+                    <a class="btn btn-primary" href="mailto:scott.a.ruiter@gmail.com">scott.a.ruiter@gmail.com</a>
+                    <a class="btn btn-ghost" href="tel:+16165026608">(616) 502-6608</a>
+                    <a class="btn btn-ghost" href="https://www.linkedin.com/in/scottruiter" target="_blank" rel="noopener">LinkedIn</a>
+                    <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <small>&copy; Scott Ruiter &middot; ProfitruiteR&trade; &middot; New York, USA</small>
+            <div class="footer-social">
+                <a href="https://github.com/scottRuiter" aria-label="GitHub" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/scottruiter" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M1.15 4.4h2.9v9.6h-2.9V4.4zM2.6 0a1.73 1.73 0 1 1 0 3.46A1.73 1.73 0 0 1 2.6 0zM5.9 4.4h2.78v1.31h.04c.39-.73 1.33-1.5 2.75-1.5 2.94 0 3.48 1.93 3.48 4.45V14h-2.9V9.23c0-1.14-.02-2.6-1.59-2.6-1.59 0-1.83 1.24-1.83 2.52V14H5.9V4.4z"/></svg>
+                </a>
+                <a href="https://twitter.com/RuiterScott" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M12.6 0.75h2.45l-5.36 6.13L16 15.25h-4.94L7.19 10.2l-4.42 5.05H.31l5.74-6.56L0 .75h5.06l3.5 4.62L12.6.75zm-.86 13.03h1.36L4.32 2.15H2.87l8.87 11.63z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
 </body>
 
 </html>

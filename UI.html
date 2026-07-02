@@ -1,430 +1,253 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>ProfitruiteR</title>
-    <link rel="shortcut icon" type="image/png" href="images/headshot.png">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
-
-
-
-
-
-    <style>
-        body {
-            font-family: Arial;
-            font-size: 100%;
-            margin: 10;
-            padding: 10;
-        }
-        
-        a {
-            color: orange;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            color: #8a6624;
-            text-decoration: underline;
-        }
-        
-        a.posttitle {
-            font-weight: bold;
-        }
-        
-        #content {
-            width: 102.5%;
-            height: 610px;
-        }
-        
-        #widget {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .wrapper.style1 {
-            margin-top: 0;
-            /* Set the desired margin-top value here */
-        }
-    </style>
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TopX Dashboard | Scott Ruiter</title>
+    <meta name="description" content="TopX Dashboard — live crypto market data, technical analysis, and multi-timeframe charts powered by TradingView." />
+    <link rel="icon" type="image/png" href="images/web/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 
-<body class="homepage is-preload">
-    <div id="page-wrapper">
+<body>
+    <div id="progress"></div>
 
+    <!-- Navigation -->
+    <nav class="nav">
+        <a class="nav-logo" href="index.html">
+            <img src="images/web/favicon.png" alt="" />
+            <span>Scott<b>Ruiter</b></span>
+        </a>
+        <button class="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topx.html">TopX</a></li>
+            <li><a href="UI.html" class="active">Dashboard</a></li>
+            <li><a href="overview.html">Snapshot</a></li>
+            <li><a href="photography.html">Gallery</a></li>
+            <li><a class="btn-resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+    </nav>
 
-        <!-- Header -->
-        <div id="header">
-
-            <!-- Inner -->
-            <header>
-
-                <h1><a href="index.html" id="logo">TopX Dashboard</a></h1>
-                <p>ai • blockchain development • llm</p>
-            </header>
-
-            <!-- </div> -->
-
-            <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li> <a href="index.html">Home</a></li>
-                    <li><a href="topx.html">TopX</a></li>
-                    <li><a href="resume.pdf">Resume</a></li>
-                    <li><a href="UI.html">Dashboard</a></li>
-                    <li><a href="overview.html">Snapshot</a></li>
-                    <li><a href="photography.html">Vision</a></li>
-                </ul>
-            </nav>
-
-        </div>
-    </div>
-
-    <!-- Banner -->
-    <section id="banner">
-        <header>
-            <p>
-                __________ is a visionary entity, a master of the digital realm who weaves intricate webs of code to create innovative solutions. This tech wizard, hailing from the futuristic realm of Kyronix Altairi, is not only adept at crafting complex algorithms
-                but also possesses a keen interest in the dynamic world of trading. Their latest groundbreaking invention, __________, is a testament to their genius. __________ is an advanced autonomous system, a marvel of artificial intelligence and
-                robotics. It's designed to detect, analyze, and respond to a wide array of situations, making it a versatile tool for surveillance, data collection, and even environmental monitoring. This drone, with its cutting-edge technology, is set
-                to redefine the boundaries of what's possible, just like the mythical birds that once soared the skies in ancient tales.
+    <!-- Page hero -->
+    <header class="page-hero" style="padding-bottom:30px;">
+        <div class="hero-bg" data-parallax="0.15" style="background-image:url('images/web/topx-starburst.jpg')"></div>
+        <div class="section-inner">
+            <div class="section-kicker reveal">Live Markets</div>
+            <h1 class="reveal" style="--d:.08s">TopX Dashboard</h1>
+            <p class="reveal" style="--d:.16s">
+                Real-time crypto tickers, technical analysis, and multi-timeframe charts —
+                the market at a glance, powered by TradingView.
             </p>
-        </header>
+        </div>
+    </header>
 
-        <input type="button" class="button" value="Purchase TopX Products">
-
-    </section>
-
-
-
+    <!-- Ticker tape -->
     <div class="tradingview-widget-container">
         <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright"><a href="https://t.me/TopXProfits" rel="noopener" target="_blank"><span class="blue-text">TopX</span></a> by Kyronix Altairi</div>
         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
             {
-                "symbols": [{
-                    "description": "",
-                    "proName": "COINBASE:BTCUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:ETHUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:LINKUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:LTCUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:BCHUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:ETCUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:ALGOUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:XLMUSD"
-                }, {
-                    "description": "",
-                    "proName": "BINANCE:XRPUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:EOSUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:ATOMUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:ADAUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:DOTUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:UNIUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:MATICUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:SOLUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:DOGEUSD"
-                }, {
-                    "description": "",
-                    "proName": "BINANCE:VETUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:ICPUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:FILUSD"
-                }, {
-                    "description": "",
-                    "proName": "BINANCE:TRXUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:AAVEUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:XTZUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:GRTUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:MKRUSD"
-                }],
+                "symbols": [
+                    { "description": "", "proName": "COINBASE:BTCUSD" },
+                    { "description": "", "proName": "COINBASE:ETHUSD" },
+                    { "description": "", "proName": "COINBASE:LINKUSD" },
+                    { "description": "", "proName": "COINBASE:LTCUSD" },
+                    { "description": "", "proName": "COINBASE:BCHUSD" },
+                    { "description": "", "proName": "COINBASE:ETCUSD" },
+                    { "description": "", "proName": "COINBASE:ALGOUSD" },
+                    { "description": "", "proName": "COINBASE:XLMUSD" },
+                    { "description": "", "proName": "BINANCE:XRPUSD" },
+                    { "description": "", "proName": "COINBASE:EOSUSD" },
+                    { "description": "", "proName": "COINBASE:ATOMUSD" },
+                    { "description": "", "proName": "COINBASE:ADAUSD" },
+                    { "description": "", "proName": "COINBASE:DOTUSD" },
+                    { "description": "", "proName": "COINBASE:UNIUSD" },
+                    { "description": "", "proName": "COINBASE:MATICUSD" },
+                    { "description": "", "proName": "COINBASE:SOLUSD" },
+                    { "description": "", "proName": "COINBASE:DOGEUSD" },
+                    { "description": "", "proName": "BINANCE:VETUSD" },
+                    { "description": "", "proName": "COINBASE:ICPUSD" },
+                    { "description": "", "proName": "COINBASE:FILUSD" },
+                    { "description": "", "proName": "BINANCE:TRXUSD" },
+                    { "description": "", "proName": "COINBASE:AAVEUSD" },
+                    { "description": "", "proName": "COINBASE:XTZUSD" },
+                    { "description": "", "proName": "COINBASE:GRTUSD" },
+                    { "description": "", "proName": "COINBASE:MKRUSD" }
+                ],
                 "colorTheme": "dark",
-                "isTransparent": false,
+                "isTransparent": true,
                 "displayMode": "adaptive",
                 "locale": "en"
             }
         </script>
     </div>
 
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright"><a href="https://t.me/TopXProfits" rel="noopener" target="_blank"><span class="blue-text">TopX</span></a> by Kyronix Altairi</div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-            {
-                "symbols": [{
-                    "description": "",
-                    "proName": "COINBASE:BTCUSD"
-                }, {
-                    "description": "",
-                    "proName": "COINBASE:ETHUSD"
-                }],
-                "colorTheme": "dark",
-                "isTransparent": false,
-                "locale": "en"
-            }
-        </script>
-    </div>
+    <section class="section" style="padding-top:40px;">
+        <div class="section-inner">
 
-
-
-    <div class="tradingview-widget-container center">
-        <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright"><a href="https://t.me/TopXProfits" rel="noopener" target="_blank"><span class="blue-text">TopX</span></a> by Kyronix Altairi</div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-            {
-                "showIntervalTabs": true,
-                "width": "100%",
-                "colorTheme": "dark",
-                "isTransparent": false,
-                "locale": "en",
-                "symbol": "COINBASE:BTCUSD",
-                "interval": "1W",
-                "height": 500
-            }
-        </script>
-    </div>
-
-
-    <div class="tradingview-widget-container">
-        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-        <script type="text/javascript">
-            new TradingView.widget({
-
-                "symbol": "BINANCE:ETHUSD",
-                "colorTheme": "dark",
-                "interval": "D",
-                "width": "100%",
-                "timezone": "Etc/UTC",
-                "theme": "Dark",
-                "style": "1",
-                "locale": "en",
-                "toolbar_bg": "#f1f3f6",
-                "enable_publishing": false,
-                "hide_side_toolbar": false,
-                "allow_symbol_change": true,
-                "studies": [
-                    "RSI@tv-basicstudies",
-                    "StochasticRSI@tv-basicstudies"
-                ]
-
-            });
-        </script>
-        <div class="tradingview-widget-copyright"><a href="https://t.me/TopXProfits" rel="noopener" target="_blank"><span class="blue-text">TopX</span></a> by Kyronix Altairi</div>
-
-    </div>
-
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-        <div id="tv-medium-widget"></div>
-        <div class="tradingview-widget-copyright"><a href="https://t.me/TopXProfits" rel="noopener" target="_blank"><span class="blue-text">TopX</span></a> by Kyronix Altairi</div>
-        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-        <script type="text/javascript">
-            new TradingView.MediumWidget({
-                "container_id": "tv-medium-widget",
-                "symbols": [
-                    [
-                        "BTC",
-                        "COINBASE:BTCUSD|12m"
-                    ],
-                    [
-                        "ETH",
-                        "COINBASE:ETHUSD|12m"
-                    ],
-                    [
-                        "IOT",
-                        "BINANCE:IOTAUSD|12m"
-                    ],
-                    [
-                        "MATIC",
-                        "COINBASE:MATICUSD|12m"
-                    ],
-                    [
-                        "ADA",
-                        "COINBASE:ADAUSD|12m"
-                    ],
-                    [
-                        "SHIB",
-                        "COINBASE:SHIBUSD|12m"
-                    ],
-                    [
-                        "DOGE",
-                        "COINBASE:DOGEUSD|12m"
-                    ],
-                    [
-                        "ETC",
-                        "COINBASE:ETCUSD|12m"
-                    ],
-                    [
-                        "BNB",
-                        "BINANCE:BNBUSD|12m"
-                    ],
-                    [
-                        "SOL",
-                        "COINBASE:SOLUSD|12m"
-                    ],
-                    [
-                        "TRX",
-                        "BINANCE:TRXUSD|12m"
-                    ],
-                    [
-                        "AVAX",
-                        "COINBASE:AVAXUSD|12m"
-                    ],
-                    [
-                        "ATOM",
-                        "COINBASE:ATOMUSD|12m"
-                    ],
-                    [
-                        "UNI",
-                        "COINBASE:UNIUSD|12m"
-                    ],
-                    [
-                        "XLM",
-                        "COINBASE:XLMUSD|12m"
-                    ],
-                    [
-                        "ICP",
-                        "COINBASE:ICPUSD|12m"
-                    ],
-                    [
-                        "BCH",
-                        "COINBASE:BCHUSD|12m"
-                    ]
-                ],
-                "greyText": "Quotes by",
-                "colorTheme": "dark",
-                "gridLineColor": "#e9e9ea",
-                "fontColor": "#83888D",
-                "underLineColor": "#dbeffb",
-                "trendLineColor": "#4bafe9",
-                "width": "100%",
-
-                "locale": "en"
-            });
-        </script>
-    </div>
-    <!-- TradingView Widget END -->
-
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright"><a href="https://t.me/TopXProfits" rel="noopener" target="_blank"><span class="blue-text">TopX</span></a> by Kyronix Altairi</div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-            {
-                "symbol": "CRYPTOCAP:ETH.D",
-                "width": "100%",
-                "height": "100%",
-                "locale": "en",
-                "dateRange": "12m",
-                "colorTheme": "dark",
-                "trendLineColor": "rgba(164, 194, 244, 1)",
-                "underLineColor": "rgba(201, 218, 248, 0.15)",
-                "isTransparent": false,
-                "autosize": true,
-                "largeChartUrl": ""
-            }
-        </script>
-    </div>
-    <!-- TradingView Widget END -->
-
-
-
-
-    <!-- Footer -->
-    <div id="footer">
-        <div class="container">
-            <div class="row">
-
-
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-12">
-
-                    <!-- Contact -->
-                    <section class="contact">
-                        <ul class="icons">
-                            <li><a href="https://t.me/TopXProfits" class="icon fa-telegram"><span
-                                        class="label">Instagram</span></a></li>
-                            <li><a href="https://twitter.com/RuiterScott" class="icon fa-twitter"><span
-                                        class="label">Twitter</span></a></li>
-                            <li><a href="https://github.com/scottRuiter" class="icon fa-github"><span
-                                        class="label">GitHub</span></a></li>
-                            <li><a href="https://www.linkedin.com/in/scottruiter" class="icon fa-linkedin"><span
-                                        class="label">Linkedin</span></a></li>
-                        </ul>
-                    </section>
-
-                    <!-- Copyright -->
-                    <div class="copyright">
-                        <ul class="menu">
-                            <li>&copy; ProfitruiteR &trade; All rights reserved</li>
-                        </ul>
-                    </div>
+            <div class="widget-block reveal">
+                <h3>Majors</h3>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                        {
+                            "symbols": [
+                                { "description": "", "proName": "COINBASE:BTCUSD" },
+                                { "description": "", "proName": "COINBASE:ETHUSD" }
+                            ],
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "locale": "en"
+                        }
+                    </script>
                 </div>
             </div>
+
+            <div class="widget-block reveal">
+                <h3>Technical Analysis — BTC/USD</h3>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                        {
+                            "showIntervalTabs": true,
+                            "width": "100%",
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "locale": "en",
+                            "symbol": "COINBASE:BTCUSD",
+                            "interval": "1W",
+                            "height": 450
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <div class="widget-block reveal">
+                <h3>Advanced Chart — ETH/USD</h3>
+                <div class="tradingview-widget-container">
+                    <div id="tv-advanced-chart"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget({
+                            "container_id": "tv-advanced-chart",
+                            "symbol": "BINANCE:ETHUSD",
+                            "interval": "D",
+                            "width": "100%",
+                            "height": 560,
+                            "timezone": "Etc/UTC",
+                            "theme": "dark",
+                            "style": "1",
+                            "locale": "en",
+                            "enable_publishing": false,
+                            "hide_side_toolbar": false,
+                            "allow_symbol_change": true,
+                            "studies": [
+                                "RSI@tv-basicstudies",
+                                "StochasticRSI@tv-basicstudies"
+                            ]
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <div class="widget-block reveal">
+                <h3>12-Month Overview — Top Assets</h3>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+                        {
+                            "symbols": [
+                                ["BTC", "COINBASE:BTCUSD|12M"],
+                                ["ETH", "COINBASE:ETHUSD|12M"],
+                                ["SOL", "COINBASE:SOLUSD|12M"],
+                                ["ADA", "COINBASE:ADAUSD|12M"],
+                                ["DOGE", "COINBASE:DOGEUSD|12M"],
+                                ["BNB", "BINANCE:BNBUSD|12M"],
+                                ["AVAX", "COINBASE:AVAXUSD|12M"],
+                                ["MATIC", "COINBASE:MATICUSD|12M"],
+                                ["ATOM", "COINBASE:ATOMUSD|12M"],
+                                ["UNI", "COINBASE:UNIUSD|12M"],
+                                ["XLM", "COINBASE:XLMUSD|12M"],
+                                ["ICP", "COINBASE:ICPUSD|12M"],
+                                ["BCH", "COINBASE:BCHUSD|12M"],
+                                ["ETC", "COINBASE:ETCUSD|12M"],
+                                ["TRX", "BINANCE:TRXUSD|12M"]
+                            ],
+                            "chartOnly": false,
+                            "width": "100%",
+                            "height": 500,
+                            "locale": "en",
+                            "colorTheme": "dark",
+                            "gridLineColor": "rgba(240, 243, 250, 0)",
+                            "trendLineColor": "#4fd1ff",
+                            "fontColor": "#8fa1b8",
+                            "isTransparent": true,
+                            "autosize": true,
+                            "chartType": "area"
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <div class="widget-block reveal">
+                <h3>ETH Dominance</h3>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                        {
+                            "symbol": "CRYPTOCAP:ETH.D",
+                            "width": "100%",
+                            "height": 300,
+                            "locale": "en",
+                            "dateRange": "12m",
+                            "colorTheme": "dark",
+                            "trendLineColor": "rgba(79, 209, 255, 1)",
+                            "underLineColor": "rgba(79, 209, 255, 0.15)",
+                            "isTransparent": true,
+                            "autosize": true,
+                            "largeChartUrl": ""
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <div class="contact-card reveal" style="margin-top:40px;">
+                <h2>Want the systems behind the charts?</h2>
+                <p>Explore the TopX research — trading gyms, financial LLMs, and EVM development.</p>
+                <div class="contact-links">
+                    <a class="btn btn-primary" href="topx.html">Explore TopX</a>
+                    <a class="btn btn-ghost" href="overview.html">Global Market Snapshot</a>
+                </div>
+            </div>
+
         </div>
-    </div>
+    </section>
 
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <small>&copy; Scott Ruiter &middot; ProfitruiteR&trade; &middot; Market data by <a href="https://www.tradingview.com" target="_blank" rel="noopener">TradingView</a></small>
+            <div class="footer-social">
+                <a href="https://github.com/scottRuiter" aria-label="GitHub" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/scottruiter" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M1.15 4.4h2.9v9.6h-2.9V4.4zM2.6 0a1.73 1.73 0 1 1 0 3.46A1.73 1.73 0 0 1 2.6 0zM5.9 4.4h2.78v1.31h.04c.39-.73 1.33-1.5 2.75-1.5 2.94 0 3.48 1.93 3.48 4.45V14h-2.9V9.23c0-1.14-.02-2.6-1.59-2.6-1.59 0-1.83 1.24-1.83 2.52V14H5.9V4.4z"/></svg>
+                </a>
+                <a href="https://twitter.com/RuiterScott" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 16 16"><path d="M12.6 0.75h2.45l-5.36 6.13L16 15.25h-4.94L7.19 10.2l-4.42 5.05H.31l5.74-6.56L0 .75h5.06l3.5 4.62L12.6.75zm-.86 13.03h1.36L4.32 2.15H2.87l8.87 11.63z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/site.js"></script>
 </body>
 
 </html>

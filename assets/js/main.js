@@ -204,42 +204,53 @@
 
     });
 
-    var slideIndex = 0;
+    // Slideshow (photography page).
+    var slideIndex = 1;
     var slideShowInterval;
 
-    function startSlideShow() {
+    function showSlide(n) {
         var slides = $(".mySlides");
         var dots = $(".dot");
-        slides.each(function(index, slide) {
-            $(slide).css("display", "none");
-        });
-        dots.each(function(index, dot) {
-            $(dot).removeClass("active");
-        });
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1; }
-        $(slides[slideIndex - 1]).css("display", "block");
-        $(dots[slideIndex - 1]).addClass("active");
-    }
 
-    function stopSlideShow() {
-        clearInterval(slideShowInterval);
+        if (slides.length === 0)
+            return;
+
+        if (n > slides.length) n = 1;
+        if (n < 1) n = slides.length;
+        slideIndex = n;
+
+        slides.css("display", "none").removeClass("fade");
+        dots.removeClass("active");
+
+        $(slides[slideIndex - 1]).css("display", "block").addClass("fade");
+        $(dots[slideIndex - 1]).addClass("active");
+
+        $(".numbertext").text(slideIndex + " / " + slides.length);
     }
 
     function restartSlideShow() {
-        stopSlideShow();
-        slideShowInterval = setInterval(startSlideShow, 5000); // Change slide every 5 seconds
+        clearInterval(slideShowInterval);
+        slideShowInterval = setInterval(function() {
+            showSlide(slideIndex + 1);
+        }, 5000); // Change slide every 5 seconds
     }
 
-    $(window).on('load', function() {
+    // Exposed globally for the inline onclick handlers in photography.html.
+    window.plusSlides = function(n) {
+        showSlide(slideIndex + n);
         restartSlideShow();
-    });
+    };
 
-    // Hook up next/previous and dot navigation to restart the slideshow
-    $('.prev, .next').click(restartSlideShow);
-    $('.dot').click(function() {
-        slideIndex = $(this).index();
+    window.currentSlide = function(n) {
+        showSlide(n);
         restartSlideShow();
+    };
+
+    $(function() {
+        if ($(".mySlides").length > 0) {
+            showSlide(1);
+            restartSlideShow();
+        }
     });
 
 })(jQuery);
