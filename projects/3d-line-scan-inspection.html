@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D Line-Scan Inspection | Scott A. Ruiter</title>
+    <meta name="description" content="Production 3D laser line-scan inspection using Keyence LJ-X profilometry, Cognex VisionPro 3D tools, range/height images, and traceable metrology output." />
+    <meta property="og:title" content="3D Line-Scan Inspection | Scott A. Ruiter" />
+    <meta property="og:description" content="Inline 2D/3D inspection with range images, profile data, overlay graphics, and customer-reviewable evidence packages." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://scottruiter.github.io/projects/3d-line-scan-inspection.html" />
+    <meta property="og:image" content="https://scottruiter.github.io/images/web/ai-tool-ljx.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="../images/web/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="canonical" href="https://scottruiter.github.io/projects/3d-line-scan-inspection.html" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"CreativeWork","name":"3D Line-Scan / Laser Inspection","author":{"@type":"Person","name":"Scott A. Ruiter","url":"https://scottruiter.github.io/"},"about":"3D laser line-scan inspection with Keyence LJ-X and Cognex VisionPro"}
+    </script>
+</head>
+<body>
+    <div id="progress"></div>
+    <nav class="nav">
+        <a class="nav-logo" href="../index.html"><img src="../images/web/favicon.png" alt="" width="30" height="30" /><span>Scott<b>Ruiter</b></span></a>
+        <button class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#impact">Impact</a></li>
+            <li><a href="../notes/">Notes</a></li>
+            <li><a href="../topx.html">TopX</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a class="btn-resume" href="../resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero">
+        <div class="hero-bg" data-parallax="0.12" style="background-image:url('../images/web/ai-tool-ljx.jpg')"></div>
+        <div class="section-inner">
+            <div class="section-kicker reveal">Case Study</div>
+            <h1 class="reveal" style="--d:.08s">3D Line-Scan / Laser Inspection</h1>
+            <p class="reveal" style="--d:.16s">Production deployment of depth-based metrology — range and height images, profile data, VisionPro 3D tooling, and traceable customer evidence.</p>
+            <div class="project-hero-meta reveal" style="--d:.24s">
+                <span class="tag">Keyence LJ-X</span><span class="tag">VisionPro 3D</span><span class="tag">Range Images</span><span class="tag">Global Deployment</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top:30px;">
+        <div class="section-inner project-split">
+            <div class="reveal-l">
+                <h2>Problem</h2>
+                <p class="prose">Fine-pitch connector and assembly features need height, coplanarity, and profile data that 2D vision alone cannot reliably extract. Customers also require traceable evidence packages, not just a pass/fail bit.</p>
+                <h2>Approach</h2>
+                <div class="prose">
+                    <ul>
+                        <li>Integrate Keyence LJ-X laser profilometer heads into Cognex VisionPro via a proprietary C# acquisition interface.</li>
+                        <li>Configure Ethernet streaming, external batch-start control, and model-based Y/Z pitch management.</li>
+                        <li>Convert range/height images into VisionPro 3D tools and 2D tool-conversion workflows.</li>
+                        <li>Validate baseline repeatability, multi-component testing, and output formats before production handoff.</li>
+                        <li>Support onsite deployment across Vietnam, Mexico, the US, Taiwan, and Thailand.</li>
+                    </ul>
+                </div>
+                <h2>Result</h2>
+                <p class="prose">Expanded UIC inspection capability from 2D-only workflows into a production-ready laser line-scan / Cognex hybrid architecture with reviewable metrology output and field-validated repeatability.</p>
+                <div class="metric-grid">
+                    <div class="metric"><div class="val">2D/3D</div><div class="lbl">Hybrid metrology</div></div>
+                    <div class="metric"><div class="val">6</div><div class="lbl">Deployment regions</div></div>
+                    <div class="metric"><div class="val">CSV+BMP</div><div class="lbl">Evidence output</div></div>
+                </div>
+                <h2>My role</h2>
+                <p class="prose">Lead vision engineer for acquisition, tooling, and deployment — I wrote the proprietary C# interface that streams LJ-X profiles into VisionPro (Ethernet configuration, external batch-start control, model-based Y/Z pitch management), built the 3D tool workflows, and ran onsite qualification, training, and handoff.</p>
+                <h2>Stack</h2>
+                <div class="tags" style="margin-bottom:28px;">
+                    <span class="tag">Keyence LJ-X series</span><span class="tag">Cognex VisionPro 3D</span><span class="tag">C# / .NET</span>
+                    <span class="tag">CogImage16Range</span><span class="tag">TCP/IP streaming</span><span class="tag">Height / luminance images</span>
+                </div>
+            </div>
+            <div class="reveal-r">
+                <img src="../images/web/ai-tool-ljx.jpg" alt="Laser profilometer scanning a connector with 3D height map overlay" width="640" height="427" loading="lazy" style="border-radius:var(--radius); border:1px solid var(--line); margin-bottom:20px;" />
+                <img src="../images/web/connector-tray-3.jpg" alt="Connector tray inspection geometry" width="640" height="480" loading="lazy" style="border-radius:var(--radius); border:1px solid var(--line);" />
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Related</div>
+            <div class="grid cols-3">
+                <a href="topx-inspection-analyzer.html" class="card note-card reveal" style="color:inherit;"><h3>TopX Inspection Analyzer</h3><p>3D coplanarity, seating-plane analysis, and pin-level analytics from inspection CSV.</p><span class="read-more">Read case study &rarr;</span></a>
+                <a href="../notes/3d-line-scan-deployment.html" class="card note-card reveal" style="--d:.08s; color:inherit;"><h3>Deploying across regions</h3><p>What changes when vision systems leave the lab and enter customer factories.</p><span class="read-more">Read note &rarr;</span></a>
+                <a href="../photography.html?filter=engineering" class="card note-card reveal" style="--d:.16s; color:inherit;"><h3>Engineering gallery</h3><p>Connector macro photography from the field and the bench.</p><span class="read-more">View photos &rarr;</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="footer-inner"><small>&copy; Scott Ruiter &middot; <a href="../index.html">Home</a></small></div></footer>
+    <script src="../assets/js/site.js"></script>
+</body>
+</html>

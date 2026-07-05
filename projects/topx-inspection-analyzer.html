@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TopX Inspection Analyzer | Scott A. Ruiter</title>
+    <meta name="description" content="Offline-first inspection analytics: 3D coplanarity, tolerance-ring pin maps, drift timelines, source correlation, and shareable customer reports from inspection CSV output." />
+    <meta property="og:title" content="TopX Inspection Analyzer | Scott A. Ruiter" />
+    <meta property="og:description" content="Turn inspection CSV output into process intelligence — pin maps, 3D coplanarity, repeatability review, and customer-facing reports." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://scottruiter.github.io/projects/topx-inspection-analyzer.html" />
+    <meta property="og:image" content="https://scottruiter.github.io/images/web/ai-tool-analyzer.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="../images/web/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="canonical" href="https://scottruiter.github.io/projects/topx-inspection-analyzer.html" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"TopX Inspection Analyzer","applicationCategory":"Industrial analytics","operatingSystem":"Windows","author":{"@type":"Person","name":"Scott A. Ruiter","url":"https://scottruiter.github.io/"},"description":"Offline-first Flask application for inspection CSV monitoring, 3D coplanarity analysis, pin maps, and customer report export."}
+    </script>
+</head>
+<body>
+    <div id="progress"></div>
+    <nav class="nav">
+        <a class="nav-logo" href="../index.html"><img src="../images/web/favicon.png" alt="" width="30" height="30" /><span>Scott<b>Ruiter</b></span></a>
+        <button class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#impact">Impact</a></li>
+            <li><a href="../notes/">Notes</a></li>
+            <li><a href="../topx.html">TopX</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a class="btn-resume" href="../resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero">
+        <div class="hero-bg" data-parallax="0.12" style="background-image:url('../images/web/ai-tool-analyzer.jpg')"></div>
+        <div class="section-inner">
+            <div class="section-kicker reveal">Case Study</div>
+            <h1 class="reveal" style="--d:.08s">TopX Inspection Analyzer</h1>
+            <p class="reveal" style="--d:.16s">Offline-first analytics that makes inspection data easier to understand, validate, and act on after measurement — from pin-level CSV to customer acceptance.</p>
+            <div class="project-hero-meta reveal" style="--d:.24s">
+                <span class="tag">Python / Flask</span><span class="tag">3D Coplanarity</span><span class="tag">Pin Maps</span><span class="tag">Report Export</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top:30px;">
+        <div class="section-inner project-split">
+            <div class="reveal-l">
+                <h2>Problem</h2>
+                <p class="prose">Inspection systems generate large volumes of CSV, bitmap, and DAT output. Engineers need to review repeatability, spatial drift, coplanarity, and pin-level risk — often offline, often under production pressure, and often without a unified analytics tool.</p>
+                <h2>Approach</h2>
+                <div class="prose">
+                    <ul>
+                        <li>Monitor folders recursively for InspectionResults and PinsFound CSV families.</li>
+                        <li>Parse and cache pin-level data for low-latency dashboard responses.</li>
+                        <li>Render spatial heatmaps, 3D coplanarity/seating-plane views, and tolerance-ring pin maps.</li>
+                        <li>Compare sources across platforms with best-fit registration and drift timelines.</li>
+                        <li>Export shareable interactive HTML reports and printable customer views.</li>
+                    </ul>
+                </div>
+                <h2>Result</h2>
+                <p class="prose">A self-contained analytics suite that closes the loop between raw inspection output and customer-reviewable acceptance — supporting validation workflows, defect drilldowns, and production-quality intelligence.</p>
+                <div class="metric-grid">
+                    <div class="metric"><div class="val">120&micro;m</div><div class="lbl">Pin map rings</div></div>
+                    <div class="metric"><div class="val">12+</div><div class="lbl">Analytics tabs</div></div>
+                    <div class="metric"><div class="val">Offline</div><div class="lbl">Factory-ready</div></div>
+                </div>
+                <h2>My role</h2>
+                <p class="prose">Sole designer and developer — architecture, CSV/DAT parsers, the in-memory inspection cache, every visualization (ECharts + ECharts GL), the report-export pipeline, licensing and customer/internal mode gating, and the in-app wiki and help system.</p>
+                <h2>Stack</h2>
+                <div class="tags" style="margin-bottom:28px;">
+                    <span class="tag">Python / Flask</span><span class="tag">ECharts + GL</span><span class="tag">Vendored offline assets</span>
+                    <span class="tag">Best-fit registration</span><span class="tag">HTML / Word / PPT export</span><span class="tag">License gating</span>
+                </div>
+            </div>
+            <div class="reveal-r">
+                <img src="../images/web/ai-tool-analyzer.jpg" alt="Inspection analytics dashboard with 3D heatmap and tolerance scatter plots" width="640" height="427" loading="lazy" style="border-radius:var(--radius); border:1px solid var(--line); margin-bottom:20px;" />
+                <img src="../images/web/connector-tray-1.jpg" alt="High-density connector inspection target" width="640" height="480" loading="lazy" style="border-radius:var(--radius); border:1px solid var(--line);" />
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Capabilities</div>
+            <div class="grid cols-2">
+                <div class="card reveal"><h3>Process intelligence</h3><ul><li>Overview, process health, deviation analysis</li><li>Spatial heatmap and repeatability review</li><li>Pin explorer and inspection list views</li></ul></div>
+                <div class="card reveal" style="--d:.08s"><h3>3D metrology views</h3><ul><li>3D coplanarity with seating-plane analysis</li><li>Radial XYZ charts with tolerance rings</li><li>Optiviz DAT correlation and source matching</li></ul></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="footer-inner"><small>&copy; Scott Ruiter &middot; <a href="../index.html">Home</a> &middot; <a href="../topx.html">TopX</a></small></div></footer>
+    <script src="../assets/js/site.js"></script>
+</body>
+</html>

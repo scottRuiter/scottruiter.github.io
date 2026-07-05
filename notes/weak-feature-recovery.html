@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Why Weak-Feature Recovery Fails in Production | Scott A. Ruiter</title>
+    <meta name="description" content="Adaptive thresholding, ROI normalization, weighted centroids, and confidence output for weak pin and lead recovery in production vision systems." />
+    <meta property="og:title" content="Why Weak-Feature Recovery Fails in Production" />
+    <meta property="og:description" content="Weak features don't fail because the algorithm is dumb — they fail because production needs a defensible measurement, not a found blob." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://scottruiter.github.io/notes/weak-feature-recovery.html" />
+    <meta property="og:image" content="https://scottruiter.github.io/images/web/ai-band-weaklead.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://scottruiter.github.io/notes/weak-feature-recovery.html" />
+    <link rel="icon" type="image/png" href="../images/web/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Why Weak-Feature Recovery Fails in Production",
+        "author": { "@type": "Person", "name": "Scott A. Ruiter", "url": "https://scottruiter.github.io/" },
+        "image": "https://scottruiter.github.io/images/web/ai-band-weaklead.jpg",
+        "about": "Machine vision weak-feature recovery for high-density connector inspection"
+    }
+    </script>
+</head>
+<body>
+    <div id="progress"></div>
+    <nav class="nav">
+        <a class="nav-logo" href="../index.html"><img src="../images/web/favicon.png" alt="" width="30" height="30" /><span>Scott<b>Ruiter</b></span></a>
+        <button class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#impact">Impact</a></li>
+            <li><a href="index.html" class="active">Notes</a></li>
+            <li><a href="../topx.html">TopX</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a class="btn-resume" href="../resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero">
+        <div class="hero-bg" data-parallax="0.12" style="background-image:url('../images/web/ai-band-weaklead.jpg')"></div>
+        <div class="section-inner">
+            <div class="section-kicker reveal">Engineering Note &middot; Vision Engineering</div>
+            <h1 class="reveal" style="--d:.08s">Why weak-feature recovery fails in production</h1>
+            <p class="reveal" style="--d:.16s">And what to build instead of turning up the gain forever.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top:30px;">
+        <div class="section-inner prose reveal">
+            <p>Every vision engineer has watched it happen: the connector inspection that ran clean for weeks
+            starts missing pins. The pins are there. A human can see them. The tool cannot. The usual response —
+            lower the threshold, widen the search region, raise the exposure — works for a shift and then breaks
+            something else, because the underlying problem was never the threshold.</p>
+
+            <p>Weak pins and leads do not fail because the algorithm is too dumb. They fail because the signal
+            is buried in lighting variation, clipping, neighbor overlap, oxidation, plating differences, and
+            sensor noise — and because production teams need a <b>defensible measurement</b>, not just a found
+            blob. A recovery strategy that cannot explain <i>why</i> it found a feature will eventually report
+            a feature that is not there, and that failure mode is worse than a miss.</p>
+
+            <h2>Why the naive fixes break</h2>
+            <ul>
+                <li><b>Global thresholds</b> assume the whole image shares one illumination state. High-density
+                arrays never do — corner pins and center pins live in different lighting worlds.</li>
+                <li><b>More gain or exposure</b> rescues dim features by clipping bright ones, trading a visible
+                failure for a silent one two rows away.</li>
+                <li><b>Bigger search regions</b> invite neighbor capture: the tool locks onto the adjacent pin
+                and reports a plausible-looking, wrong position. No error is raised. The CSV looks fine.</li>
+            </ul>
+
+            <h2>The workflow that survives</h2>
+            <p>The weak-lead recovery approach I run in production is CPU-based and deliberately boring:</p>
+            <ul>
+                <li><b>Local ROI per expected site.</b> The nominal grid (from the drill drawing or CSV model)
+                tells you where each pin should be, so each recovery runs in a small window with its own
+                statistics.</li>
+                <li><b>Contrast normalization inside the ROI.</b> Every window is stretched to its own dynamic
+                range before any decision is made — corner pins and center pins now compete on equal terms.</li>
+                <li><b>Adaptive weak thresholding.</b> The threshold derives from the ROI's own histogram, then
+                the top-percent bright pixels are selected explicitly rather than hoping a fixed cut catches them.</li>
+                <li><b>Weighted centroid, not blob center.</b> Intensity-weighted centroids degrade gracefully as
+                signal fades; binary blob centers jump.</li>
+                <li><b>Confidence as a first-class output.</b> Each recovery exports a confidence score, CSV
+                fields, and an optional overlay graphic. Low-confidence hits route to review instead of silently
+                passing.</li>
+            </ul>
+
+            <h2>The output is the product</h2>
+            <p>The recovery math matters less than what leaves the tool. A weak-feature result that ships with
+            measured position, deviation from nominal, confidence, and an overlay bitmap can be defended in a
+            customer meeting, correlated against AOI, and audited after an RMA. That is the difference between
+            an algorithm and a production system.</p>
+
+            <h2>Field reality</h2>
+            <p>When a connector inspection program moves to a new factory — Vietnam, Guadalajara, a new line in
+            Thailand — weak-feature behavior is the first thing that changes. Different ambient light, different
+            plating vendor, different operator handling. A workflow that exposes confidence and overlay evidence
+            survives that transition and the escalations that follow. One that hides the decision behind a single
+            pass/fail bit does not.</p>
+
+            <p style="margin-top:32px;"><a href="../projects/fixtureless-grid-inspection.html">&larr; Fixtureless grid inspection case study</a> &middot; <a href="index.html">All notes</a> &middot; <a href="csv-to-acceptance.html">Next: from CSV to acceptance &rarr;</a></p>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="footer-inner"><small>&copy; Scott Ruiter &middot; <a href="../index.html">Home</a> &middot; <a href="index.html">Notes</a></small></div></footer>
+    <script src="../assets/js/site.js"></script>
+</body>
+</html>

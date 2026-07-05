@@ -8,7 +8,10 @@ collaborators. Tagline: *From pixels to production decisions.*
 
 | Page | File | Description |
 | --- | --- | --- |
-| Home | `index.html` | Immersive one-pager: hero, core positioning (4 disciplines), client marquee, signature engineering impact, software & tools (VisionPro Forge, TopX Inspection Analyzer, Pin Grid Generator, Knowledge Chat, LJX 3D interface), global deployment, experience timeline, education, contact |
+| Home | `index.html` | Immersive one-pager: recruiter summary, core positioning, signature impact, interactive alignment demo, software & tools, global deployment, engineering notes links, experience, contact |
+| Resume | `resume.html` | Web resume synced with site content (print-friendly); PDF at `resume.pdf` |
+| Projects | `projects/*.html` | Case studies: fixtureless grid inspection, 3D line-scan, TopX Inspection Analyzer |
+| Notes | `notes/` | Engineering write-ups on weak features, CSV acceptance, and global deployment |
 | TopX | `topx.html` | Independent R&D: blockchain engineering, financial LLMs, AI trading agents, EVM research, NFT art |
 | Dashboard | `UI.html` | Live crypto market data and technical analysis (TradingView widgets) |
 | Snapshot | `overview.html` | Global market overview: indexes, forex, metals, crypto |

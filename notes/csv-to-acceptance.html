@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>From CSV Output to Customer Acceptance | Scott A. Ruiter</title>
+    <meta name="description" content="How inspection CSV, bitmap overlays, and analytics turn raw pass/fail output into customer-reviewable acceptance evidence." />
+    <meta property="og:title" content="From CSV Output to Customer Acceptance" />
+    <meta property="og:description" content="Inspection data should explain itself after the measurement is done — the minimum viable evidence package for production vision." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://scottruiter.github.io/notes/csv-to-acceptance.html" />
+    <meta property="og:image" content="https://scottruiter.github.io/images/web/ai-tool-analyzer.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://scottruiter.github.io/notes/csv-to-acceptance.html" />
+    <link rel="icon" type="image/png" href="../images/web/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "From CSV Output to Customer Acceptance",
+        "author": { "@type": "Person", "name": "Scott A. Ruiter", "url": "https://scottruiter.github.io/" },
+        "image": "https://scottruiter.github.io/images/web/ai-tool-analyzer.jpg",
+        "about": "Inspection traceability and customer acceptance evidence for manufacturing vision systems"
+    }
+    </script>
+</head>
+<body>
+    <div id="progress"></div>
+    <nav class="nav">
+        <a class="nav-logo" href="../index.html"><img src="../images/web/favicon.png" alt="" width="30" height="30" /><span>Scott<b>Ruiter</b></span></a>
+        <button class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#impact">Impact</a></li>
+            <li><a href="index.html" class="active">Notes</a></li>
+            <li><a href="../topx.html">TopX</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a class="btn-resume" href="../resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero">
+        <div class="hero-bg" data-parallax="0.12" style="background-image:url('../images/web/ai-tool-analyzer.jpg')"></div>
+        <div class="section-inner">
+            <div class="section-kicker reveal">Engineering Note &middot; Manufacturing Intelligence</div>
+            <h1 class="reveal" style="--d:.08s">From CSV output to customer acceptance</h1>
+            <p class="reveal" style="--d:.16s">Inspection data should explain itself after the measurement is done.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top:30px;">
+        <div class="section-inner prose reveal">
+            <p>Production vision is not finished when the tool finds the feature. It is finished when the
+            customer's quality engineer, your applications engineer, and the operator on the line can all
+            reconstruct what happened — which part, which pin, what was measured, against what nominal, under
+            what tolerance, and what the system decided. Most acceptance disputes I have worked through were not
+            measurement disputes. They were <b>evidence</b> disputes.</p>
+
+            <h2>The minimum viable evidence package</h2>
+            <ul>
+                <li><b>Barcode-linked CSV</b> with measured, nominal, tolerance, and deviation fields per
+                feature — one row per pin, one file per inspection, named so a human can find it six months
+                later.</li>
+                <li><b>Pass/fail flags separated from raw values.</b> When the acceptance criteria change (and
+                they will), historical data can be re-scored instead of re-measured.</li>
+                <li><b>Defect descriptions, not just codes.</b> "Pin R3-C14 radial deviation 138 µm vs 120 µm
+                tolerance" ends an argument that "FAIL 0x0E" starts.</li>
+                <li><b>Overlay bitmaps</b> showing the ROI, the found feature, and the tolerance zone — the
+                single most persuasive artifact in any customer review.</li>
+                <li><b>Runtime diagnostics</b> so instability (lighting drift, calibration mismatch, clipping)
+                is visible in the data before it becomes visible in the yield.</li>
+            </ul>
+
+            <h2>Then make the data do work</h2>
+            <p>A folder of CSVs is evidence. It is not yet intelligence. The next layer aggregates pin-level
+            output into questions engineers actually ask:</p>
+            <ul>
+                <li>Is deviation drifting over time or between platforms? (drift timelines, source correlation)</li>
+                <li>Is failure spatially clustered — a corner, a row, a fixture side? (heatmaps, pin maps with
+                tolerance rings)</li>
+                <li>Are we repeatable enough to trust the tolerance? (repeatability review, coplanarity and
+                seating-plane analysis)</li>
+                <li>Which pins are at risk before they fail? (per-pin risk tables)</li>
+            </ul>
+            <p>This is exactly the gap the <a href="../projects/topx-inspection-analyzer.html">TopX Inspection
+            Analyzer</a> was built for: it watches inspection CSV folders offline, renders those views, and
+            exports shareable interactive reports that mirror what the customer needs to sign off.</p>
+
+            <h2>The loop closes at the RMA</h2>
+            <p>When a returned board comes back with a field failure, the same barcode-linked trace lets you walk
+            from the RMA to the original inspection record, the overlay, and the measurement history of that
+            exact pin. That is when inspection stops being a gate and starts being production learning.</p>
+
+            <p style="margin-top:32px;"><a href="weak-feature-recovery.html">&larr; Previous: weak-feature recovery</a> &middot; <a href="index.html">All notes</a> &middot; <a href="3d-line-scan-deployment.html">Next: 3D deployment &rarr;</a></p>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="footer-inner"><small>&copy; Scott Ruiter &middot; <a href="../index.html">Home</a> &middot; <a href="index.html">Notes</a></small></div></footer>
+    <script src="../assets/js/site.js"></script>
+</body>
+</html>

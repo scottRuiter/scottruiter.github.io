@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deploying 3D Line-Scan Across Regions | Scott A. Ruiter</title>
+    <meta name="description" content="Field lessons from deploying 3D laser line-scan inspection across Vietnam, Mexico, the US, Taiwan, and Thailand — qualification, repeatability, training, and handoff." />
+    <meta property="og:title" content="Deploying 3D Line-Scan Across Regions" />
+    <meta property="og:description" content="The bench proves the concept. The factory proves the system — deployment lessons from six regions." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://scottruiter.github.io/notes/3d-line-scan-deployment.html" />
+    <meta property="og:image" content="https://scottruiter.github.io/images/web/ai-band-global.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://scottruiter.github.io/notes/3d-line-scan-deployment.html" />
+    <link rel="icon" type="image/png" href="../images/web/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Deploying 3D Line-Scan Across Regions",
+        "author": { "@type": "Person", "name": "Scott A. Ruiter", "url": "https://scottruiter.github.io/" },
+        "image": "https://scottruiter.github.io/images/web/ai-band-global.jpg",
+        "about": "Global factory deployment of 3D laser line-scan inspection systems"
+    }
+    </script>
+</head>
+<body>
+    <div id="progress"></div>
+    <nav class="nav">
+        <a class="nav-logo" href="../index.html"><img src="../images/web/favicon.png" alt="" width="30" height="30" /><span>Scott<b>Ruiter</b></span></a>
+        <button class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#impact">Impact</a></li>
+            <li><a href="index.html" class="active">Notes</a></li>
+            <li><a href="../topx.html">TopX</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a class="btn-resume" href="../resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero">
+        <div class="hero-bg" data-parallax="0.12" style="background-image:url('../images/web/ai-band-global.jpg')"></div>
+        <div class="section-inner">
+            <div class="section-kicker reveal">Engineering Note &middot; Field Engineering</div>
+            <h1 class="reveal" style="--d:.08s">Deploying 3D line-scan across regions</h1>
+            <p class="reveal" style="--d:.16s">The bench proves the concept. The factory proves the system.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top:30px;">
+        <div class="section-inner prose reveal">
+            <p>I have supported 3D laser line-scan inspection deployments across Vietnam, Guadalajara and
+            Mexicali in Mexico, Houston and the broader US, Taiwan, and Thailand. Every one of those programs
+            passed its bench validation before it shipped. Not one of them behaved identically once it hit the
+            customer's floor. The failures are predictable — which means they are designable-against.</p>
+
+            <h2>What actually changes in the field</h2>
+            <ul>
+                <li><b>Lighting and ambient conditions.</b> Laser triangulation is robust, but the 2D tools
+                running alongside it are not. Skylights, shift changes, and neighboring equipment all show up
+                in the data.</li>
+                <li><b>Calibration and pitch mismatch.</b> A head configured for one Y-pitch on the bench meets
+                a different transport speed in production. Height images stretch; every downstream measurement
+                inherits the error.</li>
+                <li><b>Fixture and handling differences.</b> The customer's board support is never quite the
+                demo fixture. Warp, tilt, and seating differences appear directly in coplanarity data.</li>
+                <li><b>Output-format mismatches.</b> The customer's traceability system expects columns in an
+                order nobody wrote down. This gets discovered at 11 pm during ramp.</li>
+                <li><b>Operator workflow.</b> If the review screen is confusing, operators bypass it, and the
+                inspection silently stops mattering.</li>
+            </ul>
+
+            <h2>The deployment path that works</h2>
+            <p>The full technical path I run — and the one I would hand any team deploying depth-based
+            inspection:</p>
+            <ul>
+                <li><b>Pre-deployment engineering:</b> baseline validation on representative samples, including
+                deliberately bad ones. A system that has only seen good boards is untested.</li>
+                <li><b>Onsite machine qualification:</b> component training and testing, then integrated
+                multi-component runs — interactions surface only under combined load.</li>
+                <li><b>Repeatability review before tolerance debate:</b> measure the same board thirty times
+                before arguing about limits. If the spread eats the tolerance, no threshold will save you.</li>
+                <li><b>Customer training and defect review:</b> engineers and operators need different
+                sessions. The operator needs to trust the review screen; the engineer needs to interrogate the
+                CSV.</li>
+                <li><b>Output-format confirmation, in writing,</b> against a real exported file — not a
+                screenshot of one.</li>
+                <li><b>Action-list closure and final handoff:</b> every open item owned and dated. An
+                inspection system without a closed action list is still a project, not a production asset.</li>
+            </ul>
+
+            <h2>How this changes the way I build</h2>
+            <p>After enough regional deployments, you stop designing for the demo. Runtime diagnostics go in
+            first, not last. Every measurement ships with evidence. Pitch and calibration are parameters, not
+            constants. And the review workflow is designed for the operator who will actually stand in front of
+            it — in whatever language, shift, and production pressure that factory runs on.</p>
+
+            <p style="margin-top:32px;"><a href="csv-to-acceptance.html">&larr; Previous: CSV to acceptance</a> &middot; <a href="index.html">All notes</a> &middot; <a href="../projects/3d-line-scan-inspection.html">3D line-scan case study &rarr;</a></p>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="footer-inner"><small>&copy; Scott Ruiter &middot; <a href="../index.html">Home</a> &middot; <a href="index.html">Notes</a></small></div></footer>
+    <script src="../assets/js/site.js"></script>
+</body>
+</html>

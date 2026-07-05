@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Engineering Notes | Scott A. Ruiter</title>
+    <meta name="description" content="Technical notes on machine vision, 3D metrology, weak-feature recovery, inspection data workflows, and global factory deployment." />
+    <meta property="og:title" content="Engineering Notes | Scott A. Ruiter" />
+    <meta property="og:description" content="Vision engineering write-ups — from weak features to customer acceptance." />
+    <meta property="og:url" content="https://scottruiter.github.io/notes/" />
+    <meta property="og:image" content="https://scottruiter.github.io/images/web/connector-tray-1.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="../images/web/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+<body>
+    <div id="progress"></div>
+    <nav class="nav">
+        <a class="nav-logo" href="../index.html"><img src="../images/web/favicon.png" alt="" width="30" height="30" /><span>Scott<b>Ruiter</b></span></a>
+        <button class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#impact">Impact</a></li>
+            <li><a href="index.html" class="active">Notes</a></li>
+            <li><a href="../topx.html">TopX</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a class="btn-resume" href="../resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero">
+        <div class="hero-bg" data-parallax="0.12" style="background-image:url('../images/web/hero-eye.jpg')"></div>
+        <div class="section-inner">
+            <div class="section-kicker reveal">Engineering Notes</div>
+            <h1 class="reveal" style="--d:.08s">How I think about production vision</h1>
+            <p class="reveal" style="--d:.16s">Short write-ups on the problems that appear after inspection systems leave the lab — weak features, traceability, deployment, and customer acceptance.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top:30px;">
+        <div class="section-inner">
+            <div class="grid cols-3">
+                <a href="weak-feature-recovery.html" class="card note-card reveal" style="color:inherit;">
+                    <div class="note-meta">Vision Engineering</div>
+                    <h3>Why weak-feature recovery fails in production</h3>
+                    <p>Adaptive thresholding, ROI normalization, and confidence output when pins are barely visible.</p>
+                    <span class="read-more">Read note &rarr;</span>
+                </a>
+                <a href="csv-to-acceptance.html" class="card note-card reveal" style="--d:.08s; color:inherit;">
+                    <div class="note-meta">Manufacturing Intelligence</div>
+                    <h3>From CSV output to customer acceptance</h3>
+                    <p>Trace files, overlay graphics, and analytics that explain pass/fail instead of hiding it.</p>
+                    <span class="read-more">Read note &rarr;</span>
+                </a>
+                <a href="3d-line-scan-deployment.html" class="card note-card reveal" style="--d:.16s; color:inherit;">
+                    <div class="note-meta">Field Engineering</div>
+                    <h3>Deploying 3D line-scan across regions</h3>
+                    <p>Repeatability review, operator workflow, and the gap between bench validation and factory reality.</p>
+                    <span class="read-more">Read note &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="footer-inner"><small>&copy; Scott Ruiter &middot; <a href="../index.html">Home</a></small></div></footer>
+    <script src="../assets/js/site.js"></script>
+</body>
+</html>

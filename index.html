@@ -11,11 +11,43 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://scottruiter.github.io/" />
     <meta property="og:image" content="https://scottruiter.github.io/images/web/ai-hero-vision.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Scott A. Ruiter | Industrial Computer Vision, 3D Metrology & AI Automation" />
+    <meta name="twitter:description" content="From pixels to production decisions — advanced inspection systems, traceable data, and AI-assisted engineering." />
+    <meta name="twitter:image" content="https://scottruiter.github.io/images/web/ai-hero-vision.jpg" />
+    <link rel="canonical" href="https://scottruiter.github.io/" />
     <link rel="icon" type="image/png" href="images/web/favicon.png" />
+    <link rel="preload" as="image" href="images/web/ai-hero-vision.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/site.css" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Scott A. Ruiter",
+        "url": "https://scottruiter.github.io/",
+        "jobTitle": "Application Specialist III — Advanced Vision & Field Engineering Support",
+        "worksFor": { "@type": "Organization", "name": "Universal Instruments Corporation" },
+        "email": "scott.a.ruiter@gmail.com",
+        "telephone": "+1-616-502-6608",
+        "address": { "@type": "PostalAddress", "addressRegion": "NY", "addressCountry": "US" },
+        "sameAs": [
+            "https://www.linkedin.com/in/scottruiter",
+            "https://github.com/scottRuiter",
+            "https://twitter.com/RuiterScott"
+        ],
+        "knowsAbout": [
+            "Industrial Computer Vision",
+            "3D Metrology",
+            "Cognex VisionPro",
+            "Machine Vision",
+            "Manufacturing Automation",
+            "Applied AI"
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -35,11 +67,21 @@
             <li><a href="#impact">Impact</a></li>
             <li><a href="#software">Software</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="notes/">Notes</a></li>
             <li><a href="topx.html">TopX</a></li>
             <li><a href="photography.html">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a class="btn-resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+            <li><a class="btn-resume" href="resume.html">Resume</a></li>
         </ul>
+    </nav>
+
+    <nav class="section-nav" aria-label="Page sections">
+        <a href="#about">About</a>
+        <a href="#impact">Impact</a>
+        <a href="#demo">Demo</a>
+        <a href="#software">Software</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <!-- Hero -->
@@ -55,8 +97,24 @@
                 AI research to turn difficult factory problems into reliable engineering systems.
             </p>
             <div class="hero-ctas reveal" style="--d:.24s">
-                <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">View Resume &darr;</a>
+                <a class="btn btn-primary" href="resume.html">View Resume &darr;</a>
+                <a class="btn btn-ghost" href="#impact">See Featured Work</a>
                 <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+            </div>
+            <div class="recruiter-bar reveal" style="--d:.28s">
+                <div>
+                    <div class="meta"><b>Scott A. Ruiter</b> &middot; New York, USA &middot; open to relocation and international assignments</div>
+                    <div class="chips">
+                        <span class="tag">Machine Vision &amp; 3D Metrology</span>
+                        <span class="tag">Fixtureless Inspection</span>
+                        <span class="tag">Global Factory Deployment</span>
+                        <span class="tag">AI-Assisted Engineering Tools</span>
+                    </div>
+                </div>
+                <div class="recruiter-actions">
+                    <a class="btn btn-ghost" href="https://www.linkedin.com/in/scottruiter" target="_blank" rel="noopener">LinkedIn</a>
+                    <a class="btn btn-primary" href="mailto:scott.a.ruiter@gmail.com">Email</a>
+                </div>
             </div>
             <div class="hero-stats">
                 <div class="stat reveal" style="--d:.3s">
@@ -128,7 +186,7 @@
                     </div>
                 </div>
                 <div class="reveal-r">
-                    <img src="images/web/connector-tray-2.jpg" alt="High-density connector array under inspection" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" />
+                    <img src="images/web/connector-tray-2.jpg" alt="High-density connector array under inspection" width="960" height="720" loading="lazy" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" />
                 </div>
             </div>
         </div>
@@ -213,6 +271,21 @@
         </div>
     </div>
 
+    <!-- Engineering gallery strip -->
+    <section class="section" style="padding-top:0;">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Field &amp; Bench</div>
+            <h2 class="reveal">Engineering photography</h2>
+            <p class="section-lead reveal">Real connector geometry from the bench and the factory floor — the physical context behind the inspection systems.</p>
+            <div class="eng-strip reveal">
+                <a href="photography.html?filter=engineering"><img src="images/web/connector-tray-1.jpg" alt="High-density connector tray macro" width="480" height="360" loading="lazy" /><span>Connector array</span></a>
+                <a href="photography.html?filter=engineering"><img src="images/web/connector-tray-2.jpg" alt="Pin field close-up" width="480" height="360" loading="lazy" /><span>Pin field</span></a>
+                <a href="photography.html?filter=engineering"><img src="images/web/connector-tray-3.jpg" alt="Connector tray detail" width="480" height="360" loading="lazy" /><span>Tray detail</span></a>
+                <a href="photography.html?filter=engineering"><img src="images/web/pc-build-1.jpg" alt="Custom engineering workstation build" width="480" height="360" loading="lazy" /><span>Engineering rig</span></a>
+            </div>
+        </div>
+    </section>
+
     <!-- Signature impact -->
     <section class="section" id="impact">
         <div class="section-inner">
@@ -224,55 +297,97 @@
             </p>
             <div class="grid cols-2">
                 <div class="card project-card reveal">
-                    <div class="thumb"><img src="images/web/ai-tool-gridgen.jpg" alt="Fixtureless grid inspection — drill-drawing nominals to calibrated pin grid" loading="lazy" /></div>
+                    <div class="thumb"><img src="images/web/ai-tool-gridgen.jpg" alt="Fixtureless grid inspection concept — drill-drawing nominals aligned to measured pin sites" width="640" height="427" loading="lazy" /></div>
                     <div class="body">
                         <h3>Fixtureless Grid Inspection</h3>
                         <p>Patent-pending concepts for fixtureless inspection using drill-drawing nominal
                            coordinates, calibrated transforms, N-point fitting, best-fit alignment, radial
-                           deviation analysis, and per-pin acceptance logic — inspecting high-density features
-                           without depending on fixed mechanical fixturing.</p>
-                        <div class="tags">
-                            <span class="tag">Patent-Pending</span><span class="tag">Best-Fit Alignment</span><span class="tag">Radial Tolerance Scoring</span>
+                           deviation analysis, and per-pin acceptance logic.</p>
+                        <div class="evidence">
+                            <div class="ev-row"><span class="ev-label">Problem</span><span>Fixed fixturing is slow to deploy across high-density pin grids and NPI part numbers.</span></div>
+                            <div class="ev-row"><span class="ev-label">Approach</span><span>Nominal CSV models, best-fit rigid alignment, radial tolerance scoring, traceable CSV output.</span></div>
+                            <div class="ev-row"><span class="ev-label">Result</span><span class="ev-result">Patent-pending workflow deployed for fixtureless 2D/3D metrology concepts.</span></div>
                         </div>
+                        <div class="tags">
+                            <span class="tag">Patent-Pending</span><span class="tag">Best-Fit Alignment</span>
+                        </div>
+                        <a class="card-link" href="projects/fixtureless-grid-inspection.html">Case study &rarr;</a>
                     </div>
                 </div>
                 <div class="card project-card reveal" style="--d:.08s">
-                    <div class="thumb"><img src="images/web/ai-band-weaklead.jpg" alt="Weak-lead recovery — adaptive thresholding and weighted centroid extraction" loading="lazy" /></div>
+                    <div class="thumb"><img src="images/web/ai-band-weaklead.jpg" alt="Weak-feature recovery ROI with adaptive thresholding and centroid crosshair" width="640" height="427" loading="lazy" /></div>
                     <div class="body">
                         <h3>Weak-Lead Recovery</h3>
                         <p>CPU-based weak-feature recovery workflows that analyze local ROIs, normalize contrast,
                            apply adaptive weak thresholding, select top-percent bright pixels, compute weighted
                            centroids, and output confidence values, CSV fields, and optional overlay graphics.</p>
-                        <div class="tags">
-                            <span class="tag">Adaptive Thresholding</span><span class="tag">Weighted Centroids</span><span class="tag">Confidence Output</span>
+                        <div class="evidence">
+                            <div class="ev-row"><span class="ev-label">Problem</span><span>Weak pins and leads disappear under production lighting and neighbor overlap.</span></div>
+                            <div class="ev-row"><span class="ev-label">Approach</span><span>ROI normalization, adaptive weak thresholding, weighted centroids, confidence export.</span></div>
+                            <div class="ev-row"><span class="ev-label">Result</span><span class="ev-result">Recovers features 2D tools miss and gives engineers reviewable failure evidence.</span></div>
                         </div>
+                        <div class="tags">
+                            <span class="tag">Adaptive Thresholding</span><span class="tag">Confidence Output</span>
+                        </div>
+                        <a class="card-link" href="notes/weak-feature-recovery.html">Engineering note &rarr;</a>
                     </div>
                 </div>
                 <div class="card project-card reveal">
-                    <div class="thumb"><img src="images/web/ai-tool-ljx.jpg" alt="3D line-scan inspection — laser profilometry and height maps" loading="lazy" /></div>
+                    <div class="thumb"><img src="images/web/ai-tool-ljx.jpg" alt="3D laser line-scan acquiring height profile data from a connector" width="640" height="427" loading="lazy" /></div>
                     <div class="body">
                         <h3>3D Line-Scan Inspection</h3>
                         <p>Inline 2D/3D inspection using range/height images, line-scan profile data, VisionPro 3D
-                           tools, 2D tool-conversion methods, overlay graphics, barcode-linked traceability, and
-                           customer-reviewable evidence packages — extracting real metrology from depth data.</p>
-                        <div class="tags">
-                            <span class="tag">Range / Height Images</span><span class="tag">Profile Data</span><span class="tag">Evidence Packages</span>
+                           tools, overlay graphics, barcode-linked traceability, and customer-reviewable evidence packages.</p>
+                        <div class="evidence">
+                            <div class="ev-row"><span class="ev-label">Problem</span><span>2D-only vision cannot extract height, coplanarity, and profile metrology customers require.</span></div>
+                            <div class="ev-row"><span class="ev-label">Approach</span><span>Keyence LJ-X acquisition in VisionPro, 3D tooling, repeatability validation, global handoff support.</span></div>
+                            <div class="ev-row"><span class="ev-label">Result</span><span class="ev-result">Production-ready laser line-scan / Cognex hybrid architecture across 6 deployment regions.</span></div>
                         </div>
+                        <div class="tags">
+                            <span class="tag">Range / Height Images</span><span class="tag">Evidence Packages</span>
+                        </div>
+                        <a class="card-link" href="projects/3d-line-scan-inspection.html">Case study &rarr;</a>
                     </div>
                 </div>
                 <div class="card project-card reveal" style="--d:.08s">
-                    <div class="thumb"><img src="images/web/connector-tray-1.jpg" alt="High-density connector and press-fit inspection" loading="lazy" /></div>
+                    <div class="thumb"><img src="images/web/connector-tray-1.jpg" alt="High-density connector tray photographed for inspection reference" width="640" height="480" loading="lazy" /></div>
                     <div class="body">
                         <h3>Connector, Press-Fit &amp; AOI/RMA Analytics</h3>
                         <p>Pin-location validation, tolerance scoring, and traceable customer review outputs for
-                           difficult connector and press-fit scenarios — plus smart closed-loop concepts connecting
-                           inspection outputs, trace files, cross-platform measurement drift, RMA feedback, and
-                           containment decisions into production-quality intelligence.</p>
-                        <div class="tags">
-                            <span class="tag">Pin Validation</span><span class="tag">RMA Feedback Loops</span><span class="tag">Drift Detection</span>
+                           difficult connector and press-fit scenarios — plus closed-loop quality intelligence
+                           connecting inspection outputs, drift, and RMA feedback.</p>
+                        <div class="evidence">
+                            <div class="ev-row"><span class="ev-label">Problem</span><span>Difficult connector geometry and cross-platform drift create acceptance disputes in production.</span></div>
+                            <div class="ev-row"><span class="ev-label">Approach</span><span>Pin validation, overlay review, trace files, drift analytics, containment decisions.</span></div>
+                            <div class="ev-row"><span class="ev-label">Result</span><span class="ev-result">Traceable review outputs that support customer escalation and production learning.</span></div>
                         </div>
+                        <div class="tags">
+                            <span class="tag">Pin Validation</span><span class="tag">Drift Detection</span>
+                        </div>
+                        <a class="card-link" href="projects/topx-inspection-analyzer.html">Analytics case study &rarr;</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive demo -->
+    <section class="section alt" id="demo">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Interactive</div>
+            <h2 class="reveal">Fixtureless alignment, visualized</h2>
+            <p class="section-lead reveal">Step through measured pin positions, best-fit alignment to nominal coordinates, and tolerance-ring acceptance — the core logic behind fixtureless grid inspection.</p>
+            <div class="demo-panel reveal">
+                <div class="demo-toolbar" role="group" aria-label="Demo steps">
+                    <button type="button" class="active" aria-pressed="true" data-demo-step="0">1. Raw measured</button>
+                    <button type="button" aria-pressed="false" data-demo-step="0.6">2. Best-fit align</button>
+                    <button type="button" aria-pressed="false" data-demo-step="1">3. Tolerance scoring</button>
+                </div>
+                <div class="demo-canvas-wrap">
+                    <canvas id="pin-demo-canvas" aria-label="Interactive pin grid: raw measured positions with pose error, best-fit alignment to nominal sites, and 120 micrometer tolerance-ring scoring"></canvas>
+                </div>
+                <p class="demo-readout" id="demo-readout" aria-live="polite">Click any pin to inspect its residual deviation.</p>
+                <p class="demo-caption">The raw measurement carries a systematic pose error (translation + rotation) that would fail every pin under naive comparison. Best-fit alignment removes the pose error so tolerance scoring judges only true per-pin deviation — grey dots are drill-drawing nominal sites, rings are 120&nbsp;&micro;m acceptance zones, and orange pins are genuine outliers.</p>
             </div>
         </div>
     </section>
@@ -301,7 +416,7 @@
             </p>
             <div class="grid cols-3">
                 <div class="card project-card reveal">
-                    <div class="thumb"><img src="images/web/ai-tool-forge.jpg" alt="VisionPro Forge — offline machine-vision training platform" loading="lazy" /></div>
+                    <div class="thumb"><img src="images/web/ai-tool-forge.jpg" alt="Stylized training dashboard with lesson cards, flowcharts, and a certification badge" width="640" height="427" loading="lazy" /></div>
                     <div class="body">
                         <h3>VisionPro Forge</h3>
                         <p>Offline training platform for Cognex VisionPro engineers — structured curriculum across
@@ -314,33 +429,36 @@
                     </div>
                 </div>
                 <div class="card project-card reveal" style="--d:.08s">
-                    <div class="thumb"><img src="images/web/ai-tool-analyzer.jpg" alt="TopX Inspection Analyzer — inspection CSV analytics dashboards" loading="lazy" /></div>
+                    <div class="thumb"><img src="images/web/ai-tool-analyzer.jpg" alt="TopX Inspection Analyzer dashboard with 3D analytics" width="640" height="427" loading="lazy" /></div>
                     <div class="body">
                         <h3>TopX Inspection Analyzer</h3>
                         <p>Offline-first analytics suite that monitors inspection CSV output and turns pin-level
-                           data into process intelligence: spatial heatmaps, 3D coplanarity and seating-plane
-                           analysis, tolerance-ring pin maps, repeatability review, source correlation, best-fit
-                           registration, and shareable customer reports.</p>
-                        <div class="tags">
-                            <span class="tag">3D Coplanarity</span><span class="tag">Pin Maps</span><span class="tag">Report Exports</span>
+                           data into process intelligence: spatial heatmaps, 3D coplanarity, tolerance-ring pin maps,
+                           repeatability review, source correlation, and shareable customer reports.</p>
+                        <div class="evidence">
+                            <div class="ev-row"><span class="ev-label">Result</span><span class="ev-result">Pin maps, 3D coplanarity, drift timelines, and exportable customer reports from CSV folders.</span></div>
                         </div>
+                        <div class="tags">
+                            <span class="tag">3D Coplanarity</span><span class="tag">Pin Maps</span>
+                        </div>
+                        <a class="card-link" href="projects/topx-inspection-analyzer.html">Case study &rarr;</a>
                     </div>
                 </div>
                 <div class="card project-card reveal" style="--d:.16s">
-                    <div class="thumb"><img src="images/web/ai-tool-gridgen.jpg" alt="Pin Grid Generator — nominal coordinate model builder" loading="lazy" /></div>
+                    <div class="thumb"><img src="images/web/ai-tool-gridgen.jpg" alt="Pin grid nominal coordinate model" width="640" height="427" loading="lazy" /></div>
                     <div class="body">
                         <h3>Pin Grid Generator</h3>
                         <p>Coordinate-model builder that converts drill-drawing and CSV nominal data into
                            inspection-ready pin grids — the nominal-geometry backbone behind fixtureless grid
-                           inspection, rough pose alignment, calibrated transforms, and per-pin tolerance
-                           scoring.</p>
+                           inspection.</p>
                         <div class="tags">
-                            <span class="tag">Nominal Models</span><span class="tag">Drill Drawings</span><span class="tag">Grid Synthesis</span>
+                            <span class="tag">Nominal Models</span><span class="tag">Grid Synthesis</span>
                         </div>
+                        <a class="card-link" href="projects/fixtureless-grid-inspection.html">Related case study &rarr;</a>
                     </div>
                 </div>
                 <div class="card project-card reveal">
-                    <div class="thumb"><img src="images/web/ai-tool-knowledge.jpg" alt="Knowledge Chat — local RAG knowledge base and chat" loading="lazy" /></div>
+                    <div class="thumb"><img src="images/web/ai-tool-knowledge.jpg" alt="Documents streaming into a glowing knowledge sphere connected to a chat interface" width="640" height="427" loading="lazy" /></div>
                     <div class="body">
                         <h3>Knowledge Chat</h3>
                         <p>Local retrieval-augmented knowledge base for engineering organizations — document
@@ -353,7 +471,7 @@
                     </div>
                 </div>
                 <div class="card project-card reveal" style="--d:.08s">
-                    <div class="thumb"><img src="images/web/ai-tool-ljx.jpg" alt="Proprietary 3D laser line-scan acquisition interface" loading="lazy" /></div>
+                    <div class="thumb"><img src="images/web/ai-tool-ljx.jpg" alt="Laser profilometer head projecting a blue scan line over a circuit board with a rising 3D height map" width="640" height="427" loading="lazy" /></div>
                     <div class="body">
                         <h3>LJX 3D Acquisition Interface</h3>
                         <p>Proprietary C# interface bridging Keyence LJ-X laser profilometer heads directly into
@@ -366,7 +484,7 @@
                     </div>
                 </div>
                 <div class="card project-card reveal" style="--d:.16s">
-                    <div class="thumb"><img src="images/web/connector-tray-3.jpg" alt="Advanced vision systems at Universal Instruments" loading="lazy" /></div>
+                    <div class="thumb"><img src="images/web/connector-tray-3.jpg" alt="Connector tray macro photo — production inspection geometry at Universal Instruments" width="640" height="480" loading="lazy" /></div>
                     <div class="body">
                         <h3>Advanced Vision Systems at UIC</h3>
                         <p>The flagship: production-ready VisionPro/QuickBuild/Designer workflows for SMT/THT,
@@ -419,7 +537,7 @@
                     </div>
                 </div>
                 <div class="reveal-r">
-                    <img src="images/web/ai-band-global.jpg" alt="Global deployment map — Vietnam, Mexico, United States, Taiwan, Thailand" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" />
+                    <img src="images/web/ai-band-global.jpg" alt="Stylized world map with glowing markers connecting factory sites in Vietnam, Mexico, the United States, Taiwan, and Thailand" width="960" height="640" loading="lazy" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" />
                 </div>
             </div>
         </div>
@@ -534,23 +652,30 @@
         <div class="section-inner">
             <div class="section-kicker reveal">Beyond the Factory</div>
             <h2 class="reveal">Independent R&amp;D and creative work</h2>
-            <div class="grid cols-3" style="margin-top:40px;">
-                <a href="topx.html" class="card project-card reveal" style="color:inherit;">
-                    <div class="thumb"><img src="images/web/topx-eye-machine.jpg" alt="TopX — AI, trading, and blockchain research" loading="lazy" /></div>
+            <div class="grid cols-2" style="margin-top:40px;">
+                <a href="notes/" class="card project-card reveal" style="color:inherit;">
+                    <div class="thumb"><img src="images/web/hero-eye.jpg" alt="Engineering notes on vision systems" width="640" height="427" loading="lazy" /></div>
+                    <div class="body">
+                        <h3>Engineering Notes &rarr;</h3>
+                        <p>Write-ups on weak-feature recovery, CSV-to-acceptance workflows, and global 3D deployment.</p>
+                    </div>
+                </a>
+                <a href="topx.html" class="card project-card reveal" style="--d:.08s; color:inherit;">
+                    <div class="thumb"><img src="images/web/topx-eye-machine.jpg" alt="TopX — AI, trading, and blockchain research" width="640" height="427" loading="lazy" /></div>
                     <div class="body">
                         <h3>TopX &rarr;</h3>
                         <p>TopXFin, TopXAgents, reinforcement-learning trading research, and EVM/Solidity systems.</p>
                     </div>
                 </a>
-                <a href="UI.html" class="card project-card reveal" style="--d:.08s; color:inherit;">
-                    <div class="thumb"><img src="images/web/pc-build-1.jpg" alt="TopX live market dashboard" loading="lazy" /></div>
+                <a href="UI.html" class="card project-card reveal" style="color:inherit;">
+                    <div class="thumb"><img src="images/web/pc-build-1.jpg" alt="Custom watercooled PC build powering the TopX market dashboard" width="640" height="480" loading="lazy" /></div>
                     <div class="body">
                         <h3>Market Dashboard &rarr;</h3>
                         <p>Live crypto, forex, and index data with technical analysis, powered by TradingView.</p>
                     </div>
                 </a>
                 <a href="photography.html" class="card project-card reveal" style="--d:.16s; color:inherit;">
-                    <div class="thumb"><img src="images/web/travel-pagoda.jpg" alt="Photography and AI art gallery" loading="lazy" /></div>
+                    <div class="thumb"><img src="images/web/travel-pagoda.jpg" alt="Pagoda photographed while traveling — gallery preview" width="640" height="480" loading="lazy" /></div>
                     <div class="body">
                         <h3>Gallery &rarr;</h3>
                         <p>Travel photography, AI-generated art, and life behind the lens.</p>
@@ -576,6 +701,7 @@
                     <a class="btn btn-primary" href="mailto:scott.a.ruiter@gmail.com">scott.a.ruiter@gmail.com</a>
                     <a class="btn btn-ghost" href="tel:+16165026608">(616) 502-6608</a>
                     <a class="btn btn-ghost" href="https://www.linkedin.com/in/scottruiter" target="_blank" rel="noopener">LinkedIn</a>
+                    <a class="btn btn-ghost" href="resume.html">Resume (Web)</a>
                     <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
                 </div>
             </div>
@@ -601,6 +727,7 @@
     </footer>
 
     <script src="assets/js/site.js"></script>
+    <script src="assets/js/demo.js"></script>
 </body>
 
 </html>

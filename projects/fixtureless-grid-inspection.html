@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fixtureless Grid Inspection | Scott A. Ruiter</title>
+    <meta name="description" content="Patent-pending fixtureless grid inspection using drill-drawing nominals, calibrated transforms, best-fit alignment, and radial tolerance scoring for high-density connector inspection." />
+    <meta property="og:title" content="Fixtureless Grid Inspection | Scott A. Ruiter" />
+    <meta property="og:description" content="Inspect high-density pin grids without fixed mechanical fixturing — nominal coordinates, best-fit alignment, and per-pin acceptance." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://scottruiter.github.io/projects/fixtureless-grid-inspection.html" />
+    <meta property="og:image" content="https://scottruiter.github.io/images/web/connector-tray-2.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://scottruiter.github.io/projects/fixtureless-grid-inspection.html" />
+    <link rel="icon" type="image/png" href="../images/web/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"CreativeWork","name":"Fixtureless Grid Inspection","author":{"@type":"Person","name":"Scott A. Ruiter","url":"https://scottruiter.github.io/"},"about":"Industrial computer vision and fixtureless coordinate metrology"}
+    </script>
+</head>
+<body>
+    <div id="progress"></div>
+    <nav class="nav">
+        <a class="nav-logo" href="../index.html"><img src="../images/web/favicon.png" alt="" width="30" height="30" /><span>Scott<b>Ruiter</b></span></a>
+        <button class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#impact">Impact</a></li>
+            <li><a href="../notes/">Notes</a></li>
+            <li><a href="../topx.html">TopX</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a class="btn-resume" href="../resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-hero">
+        <div class="hero-bg" data-parallax="0.12" style="background-image:url('../images/web/connector-tray-2.jpg')"></div>
+        <div class="section-inner">
+            <div class="section-kicker reveal">Case Study</div>
+            <h1 class="reveal" style="--d:.08s">Fixtureless Grid Inspection</h1>
+            <p class="reveal" style="--d:.16s">Patent-pending inspection concepts that use drill-drawing nominal coordinates, calibrated transforms, and best-fit alignment instead of fixed mechanical fixturing.</p>
+            <div class="project-hero-meta reveal" style="--d:.24s">
+                <span class="tag">Patent-Pending</span><span class="tag">VisionPro</span><span class="tag">Pin Grid Generator</span><span class="tag">Production Deployment</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top:30px;">
+        <div class="section-inner project-split">
+            <div class="reveal-l">
+                <h2>Problem</h2>
+                <p class="prose">High-density connector and press-fit arrays are expensive to fixture. Mechanical tolerance stack-up, part-to-part variation, and changeover time make fixed fixturing slow to deploy and hard to maintain across NPI part numbers.</p>
+                <h2>Approach</h2>
+                <div class="prose">
+                    <ul>
+                        <li>Import nominal pin coordinates from drill drawings or CSV models via the Pin Grid Generator.</li>
+                        <li>Perform rough pose alignment and calibrated coordinate transforms in VisionPro/QuickBuild.</li>
+                        <li>Apply N-point fitting and best-fit rigid alignment to measured feature data.</li>
+                        <li>Score each pin with radial deviation analysis and per-pin pass/fail logic.</li>
+                        <li>Output barcode-linked CSV, overlay graphics, and customer-reviewable evidence.</li>
+                    </ul>
+                </div>
+                <h2>Result</h2>
+                <p class="prose">A production-ready workflow that reduces dependence on custom fixturing, accelerates deployment across part numbers, and gives engineers traceable acceptance data they can defend in FAT/SAT and production ramp reviews. The core concepts are the subject of a patent-pending filing.</p>
+                <div class="metric-grid">
+                    <div class="metric"><div class="val">N-point</div><div class="lbl">Best-fit alignment</div></div>
+                    <div class="metric"><div class="val">120&micro;m</div><div class="lbl">Radial tolerance scale</div></div>
+                    <div class="metric"><div class="val">CSV</div><div class="lbl">Traceable output</div></div>
+                </div>
+                <h2>My role</h2>
+                <p class="prose">Concept originator and lead developer — I designed the nominal-coordinate ingestion (via the Pin Grid Generator), built the VisionPro/QuickBuild alignment and scoring workflows, defined the CSV/overlay output format, and supported validation with customers and production teams.</p>
+                <h2>Stack</h2>
+                <div class="tags" style="margin-bottom:28px;">
+                    <span class="tag">Cognex VisionPro</span><span class="tag">QuickBuild</span><span class="tag">C# ToolBlocks</span>
+                    <span class="tag">Python (grid tooling)</span><span class="tag">CSV / BMP output</span><span class="tag">Calibrated transforms</span>
+                </div>
+                <a class="btn btn-primary" href="../index.html#demo">Try the alignment demo</a>
+            </div>
+            <div class="reveal-r">
+                <img src="../images/web/connector-tray-2.jpg" alt="High-density connector pin field under inspection" width="640" height="480" loading="lazy" style="border-radius:var(--radius); border:1px solid var(--line); margin-bottom:20px;" />
+                <img src="../images/web/ai-tool-gridgen.jpg" alt="Nominal coordinate grid transforming into calibrated inspection sites" width="640" height="427" loading="lazy" style="border-radius:var(--radius); border:1px solid var(--line);" />
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt">
+        <div class="section-inner">
+            <div class="section-kicker reveal">Related</div>
+            <div class="grid cols-3">
+                <a href="topx-inspection-analyzer.html" class="card note-card reveal" style="color:inherit;"><h3>TopX Inspection Analyzer</h3><p>Turn inspection CSV output into pin maps, drift timelines, and customer reports.</p><span class="read-more">Read case study &rarr;</span></a>
+                <a href="../notes/weak-feature-recovery.html" class="card note-card reveal" style="--d:.08s; color:inherit;"><h3>Weak-Feature Recovery</h3><p>When pins are barely visible, adaptive thresholding and weighted centroids still find them.</p><span class="read-more">Read note &rarr;</span></a>
+                <a href="../index.html#impact" class="card note-card reveal" style="--d:.16s; color:inherit;"><h3>All signature impact</h3><p>Back to the homepage impact section.</p><span class="read-more">View homepage &rarr;</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="footer-inner"><small>&copy; Scott Ruiter &middot; <a href="../index.html">Home</a></small></div></footer>
+    <script src="../assets/js/site.js"></script>
+</body>
+</html>
