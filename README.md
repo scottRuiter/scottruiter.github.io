@@ -12,7 +12,7 @@ collaborators. Tagline: *From pixels to production decisions.*
 | Resume | `resume.html` | Web resume synced with site content (print-friendly); PDF at `resume.pdf` |
 | Projects | `projects/*.html` | Case studies: fixtureless grid inspection, 3D line-scan, TopX Inspection Analyzer |
 | Notes | `notes/` | Engineering write-ups on weak features, CSV acceptance, and global deployment |
-| TopX | `topx.html` | Manufacturing Meets TopX (VisionPro Forge, Inspection Analyzer, offline Knowledge Chat), blockchain/EVM, TopXFin/Agents, trading research, NFT art |
+| TopX | `topx.html` | Manufacturing Meets TopX, blockchain/EVM, TopXFin/Agents, trading research, AI art generation (SceneForge) + character series |
 | Dashboard | `UI.html` | Live crypto market data and technical analysis (TradingView widgets) |
 | Snapshot | `overview.html` | Global market overview: indexes, forex, metals, crypto |
 | Gallery | `photography.html` | Filterable photo gallery (Travel / Engineering / AI Art / Life) with lightbox |

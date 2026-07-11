@@ -18,6 +18,8 @@
 - [x] Marquee expanded: customers + platforms, regions, capabilities, tools
 - [x] Gallery: 7 fixtureless 3D scan / mesh / overlay images under Engineering
 - [x] Mobile pass: hero shows 20+ sites + 2D/3D (2×2); denser marquee; about/TopX spacing; recruiter CTAs; cache-bust CSS sitewide
+- [x] TopX toolbox: replace text-only column with full image feature rows (Pin Grid + scan mesh)
+- [x] TopX generative section: AI art / SceneForge focus; Doge Division as character series subset
 
 ## Urgent — before next push
 

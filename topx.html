@@ -5,9 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TopX | Scott A. Ruiter</title>
-    <meta name="description" content="TopX — manufacturing software (Inspection Analyzer, VisionPro Forge, Knowledge Chat) plus AI, blockchain, and algorithmic trading research." />
+    <meta name="description" content="TopX — manufacturing software (Inspection Analyzer, VisionPro Forge, Knowledge Chat), AI art generation (SceneForge), blockchain, and algorithmic trading research." />
     <meta property="og:title" content="TopX | Scott A. Ruiter" />
-    <meta property="og:description" content="Manufacturing analytics, vision training tools, RAG knowledge systems, and independent AI/blockchain research." />
+    <meta property="og:description" content="Manufacturing analytics, vision training, RAG knowledge systems, generative AI art, and independent blockchain research." />
     <meta property="og:url" content="https://scottruiter.github.io/topx.html" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://scottruiter.github.io/images/web/ai-tool-analyzer.jpg" />
@@ -166,17 +166,46 @@
         <div class="section-inner">
             <div class="section-kicker reveal">Also in the Toolbox</div>
             <h2 class="reveal">Coordinate models behind fixtureless inspection</h2>
-            <div class="grid cols-2" style="margin-top:32px; align-items:center; gap:40px;">
-                <div class="card project-card reveal">
-                    <div class="thumb"><img src="images/web/ai-tool-gridgen.jpg" alt="Pin Grid Generator" width="640" height="427" loading="lazy" /></div>
-                    <div class="body">
-                        <h3>Pin Grid Generator</h3>
-                        <p>Drill-drawing and CSV nominal data converted into inspection-ready coordinate grids — the nominal-geometry backbone behind fixtureless grid inspection.</p>
-                        <a class="card-link" href="projects/fixtureless-grid-inspection.html">Related case study &rarr;</a>
-                    </div>
+            <p class="section-lead reveal">
+                Pin Grid Generator sits under VisionPro Forge, TopX Inspection Analyzer, and Knowledge Chat —
+                it builds the nominal geometry those systems align and score against in the field.
+            </p>
+
+            <div class="grid cols-2 mfg-block" style="align-items:center; gap:48px; margin-bottom:48px;">
+                <div class="reveal-l">
+                    <img src="images/web/ai-tool-gridgen.jpg" alt="Pin Grid Generator — nominal coordinate grid with fixture plane and pin sites" width="960" height="640" loading="lazy" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" />
                 </div>
-                <div class="reveal" style="--d:.08s; color:var(--text-dim); line-height:1.7;">
-                    <p>VisionPro Forge, TopX Inspection Analyzer, and Knowledge Chat are the three manufacturing products above. Pin Grid Generator feeds the fixtureless metrology workflow that those tools support in the field.</p>
+                <div class="reveal-r">
+                    <div class="section-kicker" style="margin-bottom:10px;">Pin Grid Generator</div>
+                    <h3 style="margin-bottom:14px;">Drill-drawing &amp; CSV &rarr; inspection-ready grids</h3>
+                    <ul style="color:var(--text-dim); line-height:1.7; padding-left:18px;">
+                        <li>Converts drill-drawing and CSV nominal data into pin grids ready for fixtureless alignment.</li>
+                        <li>Feeds best-fit registration, radial tolerance scoring, and customer review packages.</li>
+                        <li>The nominal-geometry backbone behind patent-pending fixtureless grid inspection concepts.</li>
+                    </ul>
+                    <div class="tags" style="margin-top:18px;">
+                        <span class="tag">Nominal Models</span><span class="tag">Grid Synthesis</span>
+                        <span class="tag">Fixtureless</span>
+                    </div>
+                    <a class="btn btn-primary" href="projects/fixtureless-grid-inspection.html" style="margin-top:20px;">Related case study</a>
+                </div>
+            </div>
+
+            <div class="grid cols-2 mfg-block" style="align-items:center; gap:48px;">
+                <div class="reveal-r" style="order:2;">
+                    <img src="images/web/scan-tray-dual-grid.jpg" alt="3D scan mesh of a dual pin-grid inspection tray" width="960" height="515" loading="lazy" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" />
+                </div>
+                <div class="reveal-l" style="order:1;">
+                    <div class="section-kicker" style="margin-bottom:10px;">From Model to Mesh</div>
+                    <h3 style="margin-bottom:14px;">Real tray geometry that the grids describe</h3>
+                    <p style="color:var(--text-dim); line-height:1.7; margin-bottom:16px;">
+                        Coordinate models are not abstract — they map to physical connector trays and scan meshes
+                        used in production inspection. More of these captures live in the gallery under Engineering.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">3D Scan Mesh</span><span class="tag">Dual Pin Grid</span>
+                    </div>
+                    <a class="btn btn-ghost" href="photography.html?filter=engineering" style="margin-top:20px;">Engineering gallery</a>
                 </div>
             </div>
         </div>
@@ -379,19 +408,66 @@
         </div>
     </section>
 
-    <!-- NFT strip (research portfolio) -->
+    <!-- AI art generation -->
     <section class="section alt">
         <div class="section-inner">
-            <div class="section-kicker reveal">On-Chain Art</div>
-            <h2 class="reveal">The TopX Doge Division</h2>
-            <p class="section-lead reveal">Original NFT character art from the TopX collection.</p>
+            <div class="section-kicker reveal">Generative Media</div>
+            <h2 class="reveal">AI art generation — from prompt to finished series</h2>
+            <p class="section-lead reveal">
+                Beyond manufacturing software, I build and run generative image pipelines — local diffusion
+                studios, curated visual series, and character work that started as experiments and became
+                a recognizable TopX aesthetic.
+            </p>
+
+            <div class="grid cols-2" style="gap:28px; margin-bottom:48px;">
+                <div class="card reveal">
+                    <h3>What I build</h3>
+                    <ul style="color:var(--text-dim); line-height:1.7; padding-left:18px;">
+                        <li><b>SceneForge</b> inside Knowledge Chat — a dedicated image-generation studio with a separate GPU worker for FLUX, Lens-Turbo, and Juggernaut so chat and image models do not fight for VRAM.</li>
+                        <li>Local, offline-capable generation workflows: prompt iteration, model switching, and export into curated sets for the portfolio gallery.</li>
+                        <li>Visual systems for TopX — brand motifs, character sheets, and atmospheric pieces that match the dark industrial / neon look of the site.</li>
+                    </ul>
+                    <div class="tags" style="margin-top:16px;">
+                        <span class="tag">SceneForge</span><span class="tag">FLUX / Lens-Turbo</span>
+                        <span class="tag">Local Diffusion</span><span class="tag">Curated Series</span>
+                    </div>
+                </div>
+                <div class="card reveal" style="--d:.08s">
+                    <h3>What I ship</h3>
+                    <ul style="color:var(--text-dim); line-height:1.7; padding-left:18px;">
+                        <li>Finished stills across landscapes, surreal architecture, neon cyber forms, and figurative studies — selected and sequenced for the public gallery.</li>
+                        <li>Character-driven series (the TopX Doge Division) — original NFT-ready character art used as a creative R&amp;D track alongside EVM / marketplace work.</li>
+                        <li>A continuous practice of generate → critique → regenerate, treating AI art like any other engineering loop: measurable improvement over a run of variants.</li>
+                    </ul>
+                    <div class="tags" style="margin-top:16px;">
+                        <span class="tag">Gallery Curation</span><span class="tag">Character Design</span>
+                        <span class="tag">NFT Experiments</span>
+                    </div>
+                    <a class="btn btn-primary" href="photography.html?filter=art" style="margin-top:20px;">Open AI Art gallery</a>
+                </div>
+            </div>
+
+            <h3 class="reveal" style="margin-bottom:18px; font-size:1.25rem;">Selected generative work</h3>
             <div class="grid cols-3">
-                <div class="g-item reveal"><img src="images/web/nft-chad.jpg" alt="TopX NFT — Chad of Chads" loading="lazy" /><div class="cap">Chad of Chads</div></div>
-                <div class="g-item reveal" style="--d:.06s"><img src="images/web/nft-laser.jpg" alt="TopX NFT — Laser Eyes Go David" loading="lazy" /><div class="cap">Laser Eyes Go David</div></div>
-                <div class="g-item reveal" style="--d:.12s"><img src="images/web/nft-wenmoon.jpg" alt="TopX NFT — Wen Moon Alex" loading="lazy" /><div class="cap">Wen Moon Alex</div></div>
-                <div class="g-item reveal"><img src="images/web/nft-miner.jpg" alt="TopX NFT — Doge Miner Elite" loading="lazy" /><div class="cap">Doge Miner Elite</div></div>
-                <div class="g-item reveal" style="--d:.06s"><img src="images/web/nft-coldstorage.jpg" alt="TopX NFT — Cold Storage Chad" loading="lazy" /><div class="cap">Cold Storage Chad</div></div>
-                <div class="g-item reveal" style="--d:.12s"><img src="images/web/nft-redcandle.jpg" alt="TopX NFT — Red Candle Basher" loading="lazy" /><div class="cap">Red Candle Basher</div></div>
+                <div class="g-item reveal"><img src="images/web/art-eye.jpg" alt="AI-generated painted eye" loading="lazy" /><div class="cap">Vision study</div></div>
+                <div class="g-item reveal" style="--d:.06s"><img src="images/web/art-cyber-lion.jpg" alt="AI art — cybernetic lion" loading="lazy" /><div class="cap">Cyber lion</div></div>
+                <div class="g-item reveal" style="--d:.12s"><img src="images/web/art-neon-ring.jpg" alt="AI art — neon ring over water" loading="lazy" /><div class="cap">Neon ring</div></div>
+                <div class="g-item reveal"><img src="images/web/art-crystal-world.jpg" alt="AI art — crystal ring world" loading="lazy" /><div class="cap">Crystal world</div></div>
+                <div class="g-item reveal" style="--d:.06s"><img src="images/web/art-milkyway.jpg" alt="AI art — milky way over mountains" loading="lazy" /><div class="cap">Milky way</div></div>
+                <div class="g-item reveal" style="--d:.12s"><img src="images/web/art-colosseum.jpg" alt="AI art — colosseum at night" loading="lazy" /><div class="cap">Night colosseum</div></div>
+            </div>
+
+            <div style="margin-top:56px;">
+                <h3 class="reveal" style="margin-bottom:10px; font-size:1.15rem;">Character series — TopX Doge Division</h3>
+                <p class="reveal" style="color:var(--text-dim); max-width:720px; margin-bottom:22px;">
+                    One generative track became a full character set — original NFT character art used to explore
+                    identity, humor, and on-chain collectible packaging under the TopX brand.
+                </p>
+                <div class="grid cols-3">
+                    <div class="g-item reveal"><img src="images/web/nft-chad.jpg" alt="TopX character — Chad of Chads" loading="lazy" /><div class="cap">Chad of Chads</div></div>
+                    <div class="g-item reveal" style="--d:.06s"><img src="images/web/nft-laser.jpg" alt="TopX character — Laser Eyes Go David" loading="lazy" /><div class="cap">Laser Eyes Go David</div></div>
+                    <div class="g-item reveal" style="--d:.12s"><img src="images/web/nft-wenmoon.jpg" alt="TopX character — Wen Moon Alex" loading="lazy" /><div class="cap">Wen Moon Alex</div></div>
+                </div>
             </div>
         </div>
     </section>
