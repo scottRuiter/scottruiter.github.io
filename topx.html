@@ -37,7 +37,7 @@
             <li><a href="topx.html" class="active">TopX</a></li>
             <li><a href="UI.html">Dashboard</a></li>
             <li><a href="overview.html">Snapshot</a></li>
-            <li><a href="notes/">Notes</a></li>
+            <li><a href="notes/index.html">Notes</a></li>
             <li><a href="photography.html">Gallery</a></li>
             <li><a class="btn-resume" href="resume.html">Resume</a></li>
         </ul>
@@ -84,25 +84,51 @@
         </div>
     </section>
 
-    <!-- TopX Analyzer -->
+    <!-- Manufacturing Meets TopX -->
     <section class="section alt">
         <div class="section-inner">
             <div class="section-kicker reveal">Manufacturing Meets TopX</div>
-            <h2 class="reveal">TopX Inspection Analyzer</h2>
+            <h2 class="reveal">Train, analyze, and answer on the factory floor</h2>
             <p class="section-lead reveal">
-                Where the portfolio touches the factory floor — software that makes inspection data easier
-                to understand, validate, and act on after measurement.
+                Three offline-capable products from the TopX / Rlab portfolio — Cognex VisionPro training,
+                inspection CSV analytics, and a local engineering knowledge base that runs without sending
+                documents to the cloud.
             </p>
-            <div class="grid cols-2" style="align-items:center; gap:48px;">
+
+            <!-- VisionPro Forge -->
+            <div class="grid cols-2" style="align-items:center; gap:48px; margin-bottom:72px;">
                 <div class="reveal-l">
-                    <img src="images/web/ai-tool-analyzer.jpg" alt="TopX Inspection Analyzer — 3D coplanarity, heatmaps, and tolerance-ring analytics" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" loading="lazy" />
+                    <img src="images/web/ai-tool-forge.jpg" alt="VisionPro Forge — offline Cognex VisionPro training with curriculum, quizzes, and certification" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" width="960" height="640" loading="lazy" />
                 </div>
                 <div class="reveal-r">
+                    <div class="section-kicker" style="margin-bottom:10px;">VisionPro Forge</div>
+                    <h3 style="margin-bottom:14px;">Offline Cognex VisionPro training</h3>
+                    <ul style="color:var(--text-dim); line-height:1.7; padding-left:18px;">
+                        <li>Self-contained Flask training app packaged with PyInstaller — no internet required for factory classrooms and customer sites.</li>
+                        <li>Curriculum across topics, 2D/3D tools, script families (VN1024, Smart Targeting, INGRASYS), Thyra 3D, AVP finals, guidelines, and demo labs.</li>
+                        <li>Learning paths, global search, quiz v2 with review-wrong-only, Mermaid flowcharts, trainee export reports, and in-app Help wiki.</li>
+                        <li>AVP certification finals for Fuzion and UFLEX Glass Slug — progress tracked locally in the browser.</li>
+                    </ul>
+                    <div class="tags" style="margin-top:18px;">
+                        <span class="tag">Python / Flask</span><span class="tag">PyInstaller</span>
+                        <span class="tag">Curriculum Engine</span><span class="tag">Certification</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TopX Inspection Analyzer -->
+            <div class="grid cols-2" style="align-items:center; gap:48px; margin-bottom:72px;">
+                <div class="reveal-r" style="order:2;">
+                    <img src="images/web/ai-tool-analyzer.jpg" alt="TopX Inspection Analyzer — 3D coplanarity, heatmaps, and tolerance-ring analytics" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" width="960" height="640" loading="lazy" />
+                </div>
+                <div class="reveal-l" style="order:1;">
+                    <div class="section-kicker" style="margin-bottom:10px;">TopX Inspection Analyzer</div>
+                    <h3 style="margin-bottom:14px;">Inspection CSV &rarr; process intelligence</h3>
                     <ul style="color:var(--text-dim); line-height:1.7; padding-left:18px;">
                         <li>Offline-first analytics suite that monitors inspection CSV output and aggregates pin-level data into interactive dashboards.</li>
                         <li>3D coplanarity and seating-plane analysis, spatial heatmaps, tolerance-ring pin maps, deviation analysis, and repeatability review.</li>
                         <li>Source correlation across inspection platforms, best-fit registration, drift timelines, and pin-risk reporting.</li>
-                        <li>Shareable interactive HTML reports, printable views, and customer-facing result communication — component-level reporting engineered for validation workflows.</li>
+                        <li>Shareable interactive HTML reports, printable views, and customer-facing result communication for validation workflows.</li>
                     </ul>
                     <div class="tags" style="margin-top:18px;">
                         <span class="tag">3D Coplanarity</span><span class="tag">Pin Maps</span>
@@ -111,26 +137,46 @@
                     <a class="btn btn-primary" href="projects/topx-inspection-analyzer.html" style="margin-top:20px;">Full case study</a>
                 </div>
             </div>
+
+            <!-- Knowledge Chat -->
+            <div class="grid cols-2" style="align-items:center; gap:48px;">
+                <div class="reveal-l">
+                    <img src="images/web/ai-tool-knowledge.jpg" alt="Knowledge Chat — offline local RAG over engineering Word and PDF libraries" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" width="960" height="640" loading="lazy" />
+                </div>
+                <div class="reveal-r">
+                    <div class="section-kicker" style="margin-bottom:10px;">Knowledge Chat</div>
+                    <h3 style="margin-bottom:14px;">Offline AI knowledge base for engineering orgs</h3>
+                    <ul style="color:var(--text-dim); line-height:1.7; padding-left:18px;">
+                        <li>Local RAG over Word/PDF libraries — upload, index, and chat with documents using streaming answers (SSE) and conversation history.</li>
+                        <li>Runs as an Electron desktop shell with FastAPI backend, React UI, and ChromaDB vector search — documents stay on the machine.</li>
+                        <li>Multi-provider LLM support, retrieval tuning, indexing watchdog, and scoped multi-file chat by document path.</li>
+                        <li>Manufacturing-oriented extensions: industry pulse / manufacturing-edge radar, evidence-weighted forecasts, and UIC process knowledge workflows.</li>
+                    </ul>
+                    <div class="tags" style="margin-top:18px;">
+                        <span class="tag">Offline / Electron</span><span class="tag">FastAPI + React</span>
+                        <span class="tag">ChromaDB RAG</span><span class="tag">Local LLMs</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Manufacturing software portfolio -->
     <section class="section">
         <div class="section-inner">
-            <div class="section-kicker reveal">Manufacturing Software</div>
-            <h2 class="reveal">Tools that accelerate vision engineering</h2>
-            <div class="grid cols-3" style="margin-top:32px;">
+            <div class="section-kicker reveal">Also in the Toolbox</div>
+            <h2 class="reveal">Coordinate models behind fixtureless inspection</h2>
+            <div class="grid cols-2" style="margin-top:32px; align-items:center; gap:40px;">
                 <div class="card project-card reveal">
-                    <div class="thumb"><img src="images/web/ai-tool-forge.jpg" alt="VisionPro Forge training platform" width="640" height="427" loading="lazy" /></div>
-                    <div class="body"><h3>VisionPro Forge</h3><p>Offline Cognex VisionPro training with curriculum, quizzes, and certification finals.</p></div>
-                </div>
-                <div class="card project-card reveal" style="--d:.08s">
-                    <div class="thumb"><img src="images/web/ai-tool-knowledge.jpg" alt="Knowledge Chat RAG system" width="640" height="427" loading="lazy" /></div>
-                    <div class="body"><h3>Knowledge Chat</h3><p>Local RAG knowledge base for engineering documents — FastAPI, React, vector search, streaming chat.</p></div>
-                </div>
-                <div class="card project-card reveal" style="--d:.16s">
                     <div class="thumb"><img src="images/web/ai-tool-gridgen.jpg" alt="Pin Grid Generator" width="640" height="427" loading="lazy" /></div>
-                    <div class="body"><h3>Pin Grid Generator</h3><p>Drill-drawing and CSV nominal data converted into inspection-ready coordinate grids.</p></div>
+                    <div class="body">
+                        <h3>Pin Grid Generator</h3>
+                        <p>Drill-drawing and CSV nominal data converted into inspection-ready coordinate grids — the nominal-geometry backbone behind fixtureless grid inspection.</p>
+                        <a class="card-link" href="projects/fixtureless-grid-inspection.html">Related case study &rarr;</a>
+                    </div>
+                </div>
+                <div class="reveal" style="--d:.08s; color:var(--text-dim); line-height:1.7;">
+                    <p>VisionPro Forge, TopX Inspection Analyzer, and Knowledge Chat are the three manufacturing products above. Pin Grid Generator feeds the fixtureless metrology workflow that those tools support in the field.</p>
                 </div>
             </div>
         </div>

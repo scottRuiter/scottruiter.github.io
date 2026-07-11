@@ -53,7 +53,7 @@
                     io.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+        }, { threshold: 0, rootMargin: "0px 0px -8% 0px" });
         revealEls.forEach(function (el) { io.observe(el); });
     } else {
         revealEls.forEach(function (el) { el.classList.add("in"); });
@@ -162,29 +162,6 @@
     });
 
     if (initialFilter) applyFilter(initialFilter);
-
-    /* ---------- Mobile section nav ---------- */
-    var sectionNav = document.querySelector(".section-nav");
-    var sectionNavLinks = sectionNav ? sectionNav.querySelectorAll("a") : [];
-
-    if (sectionNav && sections.length) {
-        window.addEventListener("scroll", function () {
-            sectionNav.classList.toggle("visible", window.scrollY > window.innerHeight * 0.45);
-        }, { passive: true });
-
-        if ("IntersectionObserver" in window) {
-            var snio = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        sectionNavLinks.forEach(function (a) {
-                            a.classList.toggle("active", a.getAttribute("href") === "#" + entry.target.id);
-                        });
-                    }
-                });
-            }, { rootMargin: "-45% 0px -50% 0px" });
-            sections.forEach(function (s) { snio.observe(s); });
-        }
-    }
 
     /* ---------- Lightbox ---------- */
     var lightbox = document.getElementById("lightbox");

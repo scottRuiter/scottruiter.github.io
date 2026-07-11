@@ -218,7 +218,7 @@
     function updateReadout(p) {
         if (!readout) return;
         if (!p) {
-            readout.textContent = "Click any pin to inspect its residual deviation.";
+            readout.textContent = "Tap a pin — or Inspect outlier — to read residual deviation.";
             readout.style.color = "";
             return;
         }
@@ -229,11 +229,12 @@
         readout.style.color = p.pass ? "#4fd1ff" : "#ff8060";
     }
 
-    canvas.addEventListener("click", function (e) {
-        var rect = canvas.getBoundingClientRect();
-        var x = e.clientX - rect.left;
-        var y = e.clientY - rect.top;
-        var best = -1, bestD = 14;
+    function hitRadius() {
+        return window.matchMedia("(pointer: coarse)").matches || window.innerWidth < 860 ? 28 : 16;
+    }
+
+    function selectNearest(x, y) {
+        var best = -1, bestD = hitRadius();
         pins.forEach(function (p, i) {
             var pos = pinPos(p, step);
             var d = Math.hypot(x - pos.x, y - pos.y);
@@ -242,7 +243,47 @@
         selected = best;
         updateReadout(best >= 0 ? pins[best] : null);
         draw(step);
+    }
+
+    function inspectOutlier() {
+        var fails = [];
+        pins.forEach(function (p, i) { if (!p.pass) fails.push(i); });
+        if (!fails.length) {
+            selected = -1;
+            updateReadout(null);
+            draw(step);
+            return;
+        }
+        var idx = fails.indexOf(selected);
+        selected = fails[(idx + 1) % fails.length];
+        updateReadout(pins[selected]);
+
+        var tolBtn = document.querySelector('[data-demo-step="1"]');
+        if (tolBtn) {
+            document.querySelectorAll("[data-demo-step]").forEach(function (b) {
+                b.classList.toggle("active", b === tolBtn);
+                b.setAttribute("aria-pressed", b === tolBtn ? "true" : "false");
+            });
+        }
+        if (step < 1) {
+            setStep(1);
+        } else {
+            draw(step);
+        }
+    }
+
+    canvas.addEventListener("pointerdown", function (e) {
+        var rect = canvas.getBoundingClientRect();
+        selectNearest(e.clientX - rect.left, e.clientY - rect.top);
     });
+
+    var inspectBtn = document.getElementById("demo-inspect");
+    if (inspectBtn) {
+        inspectBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            inspectOutlier();
+        });
+    }
 
     document.querySelectorAll("[data-demo-step]").forEach(function (btn) {
         btn.addEventListener("click", function () {

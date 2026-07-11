@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="assets/css/site.css?v=20260712i" />
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -42,8 +42,12 @@
             "Industrial Computer Vision",
             "3D Metrology",
             "Cognex VisionPro",
+            "Keyence LJ-X",
+            "Fixtureless Metrology",
             "Machine Vision",
             "Manufacturing Automation",
+            "C#",
+            "Python",
             "Applied AI"
         ]
     }
@@ -67,7 +71,7 @@
             <li><a href="#impact">Impact</a></li>
             <li><a href="#software">Software</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="notes/">Notes</a></li>
+            <li><a href="notes/index.html">Notes</a></li>
             <li><a href="topx.html">TopX</a></li>
             <li><a href="photography.html">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -75,45 +79,36 @@
         </ul>
     </nav>
 
-    <nav class="section-nav" aria-label="Page sections">
-        <a href="#about">About</a>
-        <a href="#impact">Impact</a>
-        <a href="#demo">Demo</a>
-        <a href="#software">Software</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
     <!-- Hero -->
     <header class="hero">
         <div class="hero-bg" data-parallax="0.18" style="background-image:url('images/web/ai-hero-vision.jpg')"></div>
         <div class="hero-inner">
-            <div class="hero-kicker reveal">Industrial Computer Vision &middot; 3D Metrology &middot; AI Automation</div>
+            <div class="hero-kicker reveal">
+                <span class="kicker-full">Industrial Computer Vision &middot; 3D Metrology &middot; AI Automation</span>
+                <span class="kicker-short">Vision &middot; Metrology &middot; AI</span>
+            </div>
             <h1 class="reveal" style="--d:.08s">Scott A. Ruiter<br /><span class="grad">From Pixels to Production Decisions</span></h1>
             <p class="hero-sub reveal" style="--d:.16s">
-                I design and execute <strong>advanced machine-vision, 3D metrology, and AI-assisted inspection
-                systems</strong> for complex manufacturing environments — combining Cognex VisionPro, industrial
-                software, 2D/3D inspection, traceability, AOI cross-validation, production deployment, and applied
-                AI research to turn difficult factory problems into reliable engineering systems.
+                I design and ship <strong>machine-vision, 3D metrology, and AI-assisted inspection systems</strong>
+                for complex factories — Cognex VisionPro, fixtureless metrology, traceability, and production deployment.
             </p>
             <div class="hero-ctas reveal" style="--d:.24s">
-                <a class="btn btn-primary" href="resume.html">View Resume &darr;</a>
-                <a class="btn btn-ghost" href="#impact">See Featured Work</a>
-                <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+                <a class="btn btn-primary" href="resume.html">View Resume</a>
+                <a class="btn btn-ghost" href="#impact">Featured Work</a>
             </div>
             <div class="recruiter-bar reveal" style="--d:.28s">
-                <div>
-                    <div class="meta"><b>Scott A. Ruiter</b> &middot; New York, USA &middot; open to relocation and international assignments</div>
-                    <div class="chips">
-                        <span class="tag">Machine Vision &amp; 3D Metrology</span>
-                        <span class="tag">Fixtureless Inspection</span>
-                        <span class="tag">Global Factory Deployment</span>
-                        <span class="tag">AI-Assisted Engineering Tools</span>
+                <div class="recruiter-top">
+                    <div class="meta"><b>New York, USA</b> &middot; open to relocation and international assignments</div>
+                    <div class="recruiter-actions">
+                        <a class="btn btn-ghost" href="https://www.linkedin.com/in/scottruiter" target="_blank" rel="noopener">LinkedIn</a>
+                        <a class="btn btn-primary" href="mailto:scott.a.ruiter@gmail.com">Email</a>
                     </div>
                 </div>
-                <div class="recruiter-actions">
-                    <a class="btn btn-ghost" href="https://www.linkedin.com/in/scottruiter" target="_blank" rel="noopener">LinkedIn</a>
-                    <a class="btn btn-primary" href="mailto:scott.a.ruiter@gmail.com">Email</a>
+                <div class="chips">
+                    <span class="tag">Machine Vision &amp; 3D Metrology</span>
+                    <span class="tag">Fixtureless Inspection</span>
+                    <span class="tag">Global Factory Deployment</span>
+                    <span class="tag chip-extra">AI Engineering Tools</span>
                 </div>
             </div>
             <div class="hero-stats">
@@ -125,13 +120,17 @@
                     <div class="num"><span data-count="6">0</span></div>
                     <div class="lbl">Countries of Factory Deployment</div>
                 </div>
-                <div class="stat reveal" style="--d:.46s">
+                <div class="stat reveal stat-extra" style="--d:.46s">
                     <div class="num">2D&hairsp;/&hairsp;3D</div>
                     <div class="lbl">Hybrid Coordinate Metrology</div>
                 </div>
-                <div class="stat reveal" style="--d:.54s">
+                <div class="stat reveal stat-extra" style="--d:.54s">
                     <div class="num">C#&hairsp;&middot;&hairsp;Py</div>
                     <div class="lbl">Vision Software &amp; Applied AI</div>
+                </div>
+                <div class="stat reveal stat-extra" style="--d:.62s">
+                    <div class="num"><span data-count="20">0</span><sup>+</sup></div>
+                    <div class="lbl">Site Deployment Locations</div>
                 </div>
             </div>
         </div>
@@ -185,8 +184,11 @@
                         <span class="tag">Applied AI</span>
                     </div>
                 </div>
-                <div class="reveal-r">
-                    <img src="images/web/connector-tray-2.jpg" alt="High-density connector array under inspection" width="960" height="720" loading="lazy" style="border-radius:var(--radius); border:1px solid var(--line); box-shadow:0 24px 60px rgba(0,0,0,.5);" />
+                <div class="about-media reveal-r">
+                    <picture>
+                        <source media="(max-width: 900px)" srcset="images/web/about-linescan-booth.jpg" width="1536" height="1024" />
+                        <img src="images/web/about-connector-scan.jpg" alt="High-density connector pin array under 3D line-scan inspection" width="1024" height="1536" loading="lazy" />
+                    </picture>
                 </div>
             </div>
         </div>
@@ -261,13 +263,74 @@
         </div>
     </section>
 
-    <!-- Client marquee -->
-    <div class="marquee" aria-label="Client programs supported">
+    <!-- Ecosystem marquee -->
+    <div class="marquee" aria-label="Customer programs, platforms, capabilities, and field sites">
         <div class="marquee-track">
-            <span>NVIDIA</span><span>Amazon</span><span>Cisco</span><span>Celestica</span>
-            <span>Fabrinet</span><span>Ingrasys</span><span>Amphenol</span><span>Raytheon</span><span>Arista</span>
-            <span>NVIDIA</span><span>Amazon</span><span>Cisco</span><span>Celestica</span>
-            <span>Fabrinet</span><span>Ingrasys</span><span>Amphenol</span><span>Raytheon</span><span>Arista</span>
+            <span>NVIDIA</span>
+            <span class="mq-meta">Cognex VisionPro</span>
+            <span>Amazon</span>
+            <span class="mq-meta">3D Line-Scan</span>
+            <span>Cisco</span>
+            <span class="mq-meta">Vietnam</span>
+            <span>Celestica</span>
+            <span class="mq-meta">Fixtureless Alignment</span>
+            <span>Fabrinet</span>
+            <span class="mq-meta">Keyence LJ-X</span>
+            <span>Ingrasys</span>
+            <span class="mq-meta">Guadalajara</span>
+            <span>Amphenol</span>
+            <span class="mq-meta">Weak-Lead Recovery</span>
+            <span>Raytheon</span>
+            <span class="mq-meta">Mexicali</span>
+            <span>Arista</span>
+            <span class="mq-meta">High-Density Connectors</span>
+            <span class="mq-meta">Houston</span>
+            <span class="mq-meta">Press-Fit Validation</span>
+            <span class="mq-meta">Taiwan</span>
+            <span class="mq-meta">Hybrid 2D/3D Metrology</span>
+            <span class="mq-meta">Thailand</span>
+            <span class="mq-meta">VisionPro Forge</span>
+            <span class="mq-meta">SMT / THT</span>
+            <span class="mq-meta">Inspection Analyzer</span>
+            <span class="mq-meta">Traceability CSV</span>
+            <span class="mq-meta">Knowledge Chat</span>
+            <span class="mq-meta">AOI Cross-Validation</span>
+            <span class="mq-meta">Odd-Form Automation</span>
+            <span class="mq-meta">NPI / PPAP</span>
+            <span class="mq-meta">Pin Grid Generator</span>
+            <!-- duplicate for seamless loop -->
+            <span>NVIDIA</span>
+            <span class="mq-meta">Cognex VisionPro</span>
+            <span>Amazon</span>
+            <span class="mq-meta">3D Line-Scan</span>
+            <span>Cisco</span>
+            <span class="mq-meta">Vietnam</span>
+            <span>Celestica</span>
+            <span class="mq-meta">Fixtureless Alignment</span>
+            <span>Fabrinet</span>
+            <span class="mq-meta">Keyence LJ-X</span>
+            <span>Ingrasys</span>
+            <span class="mq-meta">Guadalajara</span>
+            <span>Amphenol</span>
+            <span class="mq-meta">Weak-Lead Recovery</span>
+            <span>Raytheon</span>
+            <span class="mq-meta">Mexicali</span>
+            <span>Arista</span>
+            <span class="mq-meta">High-Density Connectors</span>
+            <span class="mq-meta">Houston</span>
+            <span class="mq-meta">Press-Fit Validation</span>
+            <span class="mq-meta">Taiwan</span>
+            <span class="mq-meta">Hybrid 2D/3D Metrology</span>
+            <span class="mq-meta">Thailand</span>
+            <span class="mq-meta">VisionPro Forge</span>
+            <span class="mq-meta">SMT / THT</span>
+            <span class="mq-meta">Inspection Analyzer</span>
+            <span class="mq-meta">Traceability CSV</span>
+            <span class="mq-meta">Knowledge Chat</span>
+            <span class="mq-meta">AOI Cross-Validation</span>
+            <span class="mq-meta">Odd-Form Automation</span>
+            <span class="mq-meta">NPI / PPAP</span>
+            <span class="mq-meta">Pin Grid Generator</span>
         </div>
     </div>
 
@@ -276,12 +339,12 @@
         <div class="section-inner">
             <div class="section-kicker reveal">Field &amp; Bench</div>
             <h2 class="reveal">Engineering photography</h2>
-            <p class="section-lead reveal">Real connector geometry from the bench and the factory floor — the physical context behind the inspection systems.</p>
+            <p class="section-lead reveal">Real connector geometry and 3D scan meshes from the bench and the factory floor — the physical context behind the inspection systems.</p>
             <div class="eng-strip reveal">
+                <a href="photography.html?filter=engineering"><img src="images/web/scan-fixture-iso.jpg" alt="3D mesh of fixtureless inspection plate" width="480" height="270" loading="lazy" /><span>Fixture mesh</span></a>
+                <a href="photography.html?filter=engineering"><img src="images/web/scan-overlay-2d3d.jpg" alt="2D and 3D inspection overlay comparison" width="480" height="172" loading="lazy" /><span>2D / 3D overlay</span></a>
                 <a href="photography.html?filter=engineering"><img src="images/web/connector-tray-1.jpg" alt="High-density connector tray macro" width="480" height="360" loading="lazy" /><span>Connector array</span></a>
-                <a href="photography.html?filter=engineering"><img src="images/web/connector-tray-2.jpg" alt="Pin field close-up" width="480" height="360" loading="lazy" /><span>Pin field</span></a>
-                <a href="photography.html?filter=engineering"><img src="images/web/connector-tray-3.jpg" alt="Connector tray detail" width="480" height="360" loading="lazy" /><span>Tray detail</span></a>
-                <a href="photography.html?filter=engineering"><img src="images/web/pc-build-1.jpg" alt="Custom engineering workstation build" width="480" height="360" loading="lazy" /><span>Engineering rig</span></a>
+                <a href="photography.html?filter=engineering"><img src="images/web/scan-spike-field.jpg" alt="3D pin-height spike field" width="480" height="270" loading="lazy" /><span>Spike field</span></a>
             </div>
         </div>
     </section>
@@ -382,11 +445,12 @@
                     <button type="button" class="active" aria-pressed="true" data-demo-step="0">1. Raw measured</button>
                     <button type="button" aria-pressed="false" data-demo-step="0.6">2. Best-fit align</button>
                     <button type="button" aria-pressed="false" data-demo-step="1">3. Tolerance scoring</button>
+                    <button type="button" class="demo-inspect" id="demo-inspect" aria-label="Inspect next outlier pin">Inspect outlier</button>
                 </div>
                 <div class="demo-canvas-wrap">
                     <canvas id="pin-demo-canvas" aria-label="Interactive pin grid: raw measured positions with pose error, best-fit alignment to nominal sites, and 120 micrometer tolerance-ring scoring"></canvas>
                 </div>
-                <p class="demo-readout" id="demo-readout" aria-live="polite">Click any pin to inspect its residual deviation.</p>
+                <p class="demo-readout" id="demo-readout" aria-live="polite">Tap a pin — or Inspect outlier — to read residual deviation.</p>
                 <p class="demo-caption">The raw measurement carries a systematic pose error (translation + rotation) that would fail every pin under naive comparison. Best-fit alignment removes the pose error so tolerance scoring judges only true per-pin deviation — grey dots are drill-drawing nominal sites, rings are 120&nbsp;&micro;m acceptance zones, and orange pins are genuine outliers.</p>
             </div>
         </div>
@@ -461,12 +525,11 @@
                     <div class="thumb"><img src="images/web/ai-tool-knowledge.jpg" alt="Documents streaming into a glowing knowledge sphere connected to a chat interface" width="640" height="427" loading="lazy" /></div>
                     <div class="body">
                         <h3>Knowledge Chat</h3>
-                        <p>Local retrieval-augmented knowledge base for engineering organizations — document
-                           ingestion, vector search, streaming chat over Word/PDF libraries, multi-provider LLM
-                           support, industry-signal radar, and evidence-weighted forecasting. Built with FastAPI,
-                           React, and a local vector database.</p>
+                        <p>Offline AI knowledge base for engineering organizations — Electron desktop shell with
+                           local RAG over Word/PDF libraries, streaming chat, multi-provider LLMs, ChromaDB vector
+                           search, industry-signal radar, and evidence-weighted forecasting. Documents stay on the machine.</p>
                         <div class="tags">
-                            <span class="tag">RAG</span><span class="tag">FastAPI + React</span><span class="tag">Local LLMs</span>
+                            <span class="tag">Offline / Electron</span><span class="tag">FastAPI + React</span><span class="tag">ChromaDB RAG</span>
                         </div>
                     </div>
                 </div>
@@ -548,27 +611,20 @@
         <div class="section-inner">
             <div class="section-kicker reveal">Career</div>
             <h2 class="reveal">Professional experience</h2>
-            <p class="section-lead reveal">More than a decade across vision engineering, SMT/THT process leadership, and founder-led R&amp;D.</p>
+            <p class="section-lead reveal">More than a decade across vision engineering, SMT/THT process leadership, and founder-led R&amp;D. Full bullets on the <a href="resume.html">web resume</a>.</p>
             <div class="timeline">
                 <div class="tl-item reveal">
                     <div class="when">Nov 2018 — Present</div>
                     <h3>Application Specialist III — Advanced Vision &amp; Field Engineering Support</h3>
                     <div class="where"><b>Universal Instruments Corporation</b> &middot; New York, USA</div>
                     <ul>
-                        <li>Lead advanced vision application development and deployment for SMT/THT, odd-form, press-fit, high-density connector, and precision automation inspection processes.</li>
-                        <li>Architect VisionPro, QuickBuild, and Designer workflows for rough pose alignment, calibrated fixture transforms, local feature search, per-feature measurement, pass/fail logic, operator review, customer acceptance, and production traceability.</li>
-                        <li>Develop 3D line-scan inspection workflows using range and height images, profile data, 3D rendering, and 2D tool-conversion methods to extract metrology from depth-based image data.</li>
-                        <li>Build the software and data systems around inspection: barcode-linked CSV files, bitmap graphics, measured/nominal/tolerance values, pass/fail flags, defect descriptions, review overlays, runtime diagnostics, and result archival.</li>
-                        <li>Solve instability in real deployments — isolating failures caused by lighting, clipping, calibration mismatch, weak-pixel response, data mapping, sensor behavior, fixture differences, and cross-platform measurement drift.</li>
-                        <li>Translate complex inspection requirements into build instructions, operator guides, engineering specifications, and acceptance criteria for engineers, vendors, operators, customers, and executives.</li>
-                        <li>Support the full technical path from pre-deployment engineering through onsite installation, machine qualification, customer training, repeatability review, and final handoff across Vietnam, Mexico, the US, Taiwan, and Thailand.</li>
+                        <li>Lead VisionPro / QuickBuild / Designer workflows for SMT/THT, press-fit, and high-density connector inspection — including 3D line-scan metrology and fixtureless alignment concepts.</li>
+                        <li>Build the software around inspection: barcode-linked CSV, overlays, runtime diagnostics, and customer-reviewable acceptance packages.</li>
+                        <li>Deploy and harden systems across Vietnam, Mexico, the US, Taiwan, and Thailand — from machine qualification through customer training and handoff.</li>
                     </ul>
                     <div class="tl-impact">
-                        <b>Selected impact:</b> expanded inspection capability from 2D-only vision into combined 2D/3D
-                        coordinate metrology with a production-ready laser line-scan / Cognex hybrid architecture,
-                        developed patent-pending fixtureless grid inspection concepts, and built inspection systems that
-                        help manufacturing teams improve yield, reduce deployment risk, and scale production for the
-                        hardware demands of the AI era.
+                        <b>Selected impact:</b> 2D/3D hybrid metrology with a production-ready laser line-scan / Cognex architecture,
+                        patent-pending fixtureless grid inspection, and systems that improve yield while reducing deployment risk.
                     </div>
                 </div>
                 <div class="tl-item reveal">
@@ -576,22 +632,17 @@
                     <h3>Founder — AI Systems &amp; Blockchain Research Developer</h3>
                     <div class="where"><b>Rlab Software Development / TopX Portfolio</b> &middot; United States</div>
                     <ul>
-                        <li>Build prototype systems and research concepts at the intersection of AI agents, manufacturing data systems, financial modeling, blockchain engineering, automation tooling, and technical documentation.</li>
-                        <li>Develop TopXFin — a financial LLM/ML data-processing platform concept using GPT models, machine-learning algorithms, and NLP extraction for large financial, legal, and document-heavy datasets.</li>
-                        <li>Develop TopXAgents — an AI-agent system concept for solving mechanical, electrical, mechatronic, mathematical, and software problems using adaptive learning and domain-specialized reasoning.</li>
-                        <li>Research algorithmic trading (indicators, price-action logic, backtesting, ML trend prediction, signal generation) and blockchain/EVM systems (Solidity, ERC-20/721/1155, DeFi architecture, layer-2 scaling) — see the <a href="topx.html">TopX page</a> for the full portfolio.</li>
+                        <li>Prototype AI agents, manufacturing data tools, financial LLM/ML pipelines, and EVM research under the TopX portfolio.</li>
+                        <li>See the <a href="topx.html">TopX page</a> for TopXFin, TopXAgents, and related systems.</li>
                     </ul>
                 </div>
                 <div class="tl-item reveal">
                     <div class="when">Jun 2013 — Sep 2018</div>
-                    <h3>SMT/THT Equipment &amp; Process Leader <span style="color:var(--text-dim); font-weight:500;">(prior: Equipment Leader / Programmer)</span></h3>
+                    <h3>SMT/THT Equipment &amp; Process Leader</h3>
                     <div class="where"><b>Ram Electronics Inc.</b> &middot; Fruitport, Michigan</div>
                     <ul>
-                        <li>Led SMT/THT process engineering, equipment programming, maintenance, CAD PCB registration, component vision programming, changeover flow, NPI support, production audits, and process improvement in a high-mix electronics manufacturing environment.</li>
-                        <li>Led engineering for dozens of NPIs across all SMT/THT phases, from PPAP and placement routing to ramp-up and AI-optimized routing with UPS+ software.</li>
-                        <li>Engineered processes aligned with ISO 9001, J-STD-001 Class 2/3 PCBA compliance, and DFMEA methodologies; certified IPC-A-610 and J-STD-001 (CIS).</li>
-                        <li>Built data models and a centralized data lake for enterprise analytics; deployed QuickBooks Enterprise as a full-scale manufacturing ERP; administered Windows Server, SQL Server, IIS, and Active Directory.</li>
-                        <li>4+ years of hands-on preventative maintenance and field repair — reducing OEM escalations, maximizing uptime, and minimizing repair cost.</li>
+                        <li>Led SMT/THT process engineering, equipment programming, NPI/PPAP, and production quality in a high-mix EMS environment (IPC-A-610 / J-STD-001 CIS).</li>
+                        <li>Built manufacturing data models and ERP systems; hands-on PM and field repair that cut OEM escalations.</li>
                     </ul>
                 </div>
                 <div class="tl-item reveal">
@@ -599,11 +650,13 @@
                     <h3>Chef</h3>
                     <div class="where"><b>Grand Theatre</b> &middot; Grand Haven, Michigan</div>
                     <ul>
-                        <li>Ran back-of-house operations as the Executive Chef's point person through $3M+ peak seasons — voluntarily stepping down from management to finish a Computer Science degree.</li>
-                        <li>Even here, the engineering showed up: restructured the POS database using object-oriented principles, significantly improving system organization.</li>
+                        <li>Ran peak-season BOH operations while finishing a CS degree — multitasking under pressure, event organization, and an OOP restructure of the POS database.</li>
                     </ul>
                 </div>
             </div>
+            <p class="reveal" style="margin-top:28px;">
+                <a class="btn btn-ghost" href="resume.html">Full experience on resume &rarr;</a>
+            </p>
         </div>
     </section>
 
@@ -611,41 +664,164 @@
     <section class="section" id="education">
         <div class="section-inner">
             <div class="section-kicker reveal">Foundation</div>
-            <h2 class="reveal">Education &amp; certifications</h2>
+            <h2 class="reveal">Education, skills &amp; certifications</h2>
+
             <div class="grid cols-2" style="margin-top:40px;">
                 <div class="card reveal">
                     <div class="icon">&#127891;</div>
                     <h3>B.S. Computer Science</h3>
                     <p>Baker College Center for Graduate Studies &middot; 2010 — 2013</p>
+                    <div class="tags" style="margin-top:14px;">
+                        <span class="tag">Dean's List</span>
+                    </div>
                 </div>
                 <div class="card reveal" style="--d:.08s">
                     <div class="icon">&#128200;</div>
                     <h3>A.S. Business, Management &amp; Marketing</h3>
                     <p>Baker College of Muskegon &middot; 2002 — 2006</p>
                 </div>
-                <div class="card reveal">
-                    <div class="icon">&#10004;</div>
-                    <h3>Certifications &amp; Technical Training</h3>
-                    <ul>
-                        <li>Cognex VisionPro SDK &amp; Cognex Designer — advanced tool scripting, PatMax/PatInspect, custom C# tool blocks</li>
-                        <li>Keyence LJ-X 3D SDK — laser profilometry &amp; calibrated range-image acquisition</li>
-                        <li>OpenCV image processing — custom convolution kernels, adaptive thresholding, sub-pixel feature extraction</li>
-                        <li>3D metrology &amp; calibration — hand-eye calibration, coplanarity fitting, gauge repeatability studies</li>
-                        <li>J-STD-001 Certified IPC Specialist (CIS) &amp; IPC-A-610</li>
-                        <li>CompTIA A+</li>
-                        <li>R programming series — Entry Level R, Introduction to R, Intro to Statistics with R</li>
-                        <li>Dean's List</li>
-                    </ul>
+            </div>
+
+            <div class="card reveal" style="margin-top:20px;">
+                <div class="icon">&#10004;</div>
+                <h3>Certifications &amp; Technical Training</h3>
+                <div class="cert-layout">
+                    <div class="cert-pair">
+                        <div class="cert-group">
+                            <div class="cert-label">2D Machine Vision</div>
+                            <ul>
+                                <li>Cognex VisionPro SDK, QuickBuild &amp; Designer — 2D tool scripting, PatMax/PatInspect, PMAlign, Blob, Caliper, custom C# tool blocks</li>
+                                <li>2D calibrated inspection — fixture transforms, overlay graphics, pass/fail logic, and production traceability outputs</li>
+                                <li>OpenCV image processing — custom convolution kernels, adaptive thresholding, sub-pixel 2D feature extraction</li>
+                            </ul>
+                        </div>
+                        <div class="cert-group">
+                            <div class="cert-label">3D Sensing &amp; Metrology</div>
+                            <ul>
+                                <li>Keyence LJ-X 3D SDK — laser line-scan profilometry, range/height image acquisition, VisionPro 3D integration</li>
+                                <li>Keyence LJ-D development — laser displacement sensor integration &amp; measurement workflows</li>
+                                <li>3D metrology &amp; validation — coplanarity fitting, gauge repeatability studies, hybrid 2D/3D acceptance</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cert-group cert-group-wide">
+                        <div class="cert-label">Calibration, Motion &amp; Analytics</div>
+                        <ul class="cert-list-2">
+                            <li>Machine calibration &amp; registration — fixture transforms, hand-eye calibration, coordinate system alignment</li>
+                            <li>Motion control development — axis coordination, trigger timing, encoder sync, and vision-guided motion for inspection cells</li>
+                            <li>Data modeling &amp; analytics with Python — inspection CSV pipelines, process intelligence, statistical review</li>
+                            <li>R programming series — Entry Level R, Introduction to R, Intro to Statistics with R</li>
+                        </ul>
+                    </div>
+                    <div class="cert-group cert-group-wide">
+                        <div class="cert-label">Manufacturing Standards &amp; Foundations</div>
+                        <div class="tags">
+                            <span class="tag">J-STD-001 CIS (Class 2/3)</span>
+                            <span class="tag">IPC-A-610</span>
+                            <span class="tag">AOI Acceptance Criteria</span>
+                            <span class="tag">SPI / AOI Cross-Validation</span>
+                            <span class="tag">ISO 9001 Process Alignment</span>
+                            <span class="tag">DFMEA</span>
+                            <span class="tag">NPI / PPAP</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="card reveal" style="--d:.08s">
-                    <div class="icon">&#127760;</div>
-                    <h3>Top Skills &amp; Languages</h3>
-                    <ul>
-                        <li>Process Optimization (Manufacturing)</li>
-                        <li>Computer Vision &amp; 3D Metrology</li>
-                        <li>Photophysics</li>
-                        <li>English (native) &middot; Spanish (elementary)</li>
-                    </ul>
+            </div>
+
+            <div class="skills-panel reveal" style="margin-top:28px;">
+                <h3>Top Skills</h3>
+                <p class="skills-lead">Technical depth plus the leadership and collaboration it takes to get inspection systems accepted, trained, and running in real factories.</p>
+                <div class="skill-groups">
+                    <div class="skill-group">
+                        <div class="skill-label">Machine Vision &amp; Metrology</div>
+                        <div class="tags">
+                            <span class="tag">Cognex VisionPro</span>
+                            <span class="tag">QuickBuild &amp; Designer</span>
+                            <span class="tag">2D Calibrated Inspection</span>
+                            <span class="tag">PMAlign / PatMax</span>
+                            <span class="tag">Blob / Caliper</span>
+                            <span class="tag">Keyence LJ-X</span>
+                            <span class="tag">Keyence LJ-D</span>
+                            <span class="tag">3D Line-Scan</span>
+                            <span class="tag">Range / Height Images</span>
+                            <span class="tag">Fixtureless Metrology</span>
+                            <span class="tag">Best-Fit Alignment</span>
+                            <span class="tag">Coplanarity</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">Weak-Feature Recovery</span>
+                            <span class="tag">Hand-Eye Calibration</span>
+                            <span class="tag">Gauge R&amp;R</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-label">Software &amp; Data</div>
+                        <div class="tags">
+                            <span class="tag">C# / .NET</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">VisionPro ToolBlocks</span>
+                            <span class="tag">Motion Control Development</span>
+                            <span class="tag">Vision-Guided Motion</span>
+                            <span class="tag">TCP/IP Integration</span>
+                            <span class="tag">CSV / BMP Traceability</span>
+                            <span class="tag">SQL Server</span>
+                            <span class="tag">Runtime Diagnostics</span>
+                            <span class="tag">Flask / FastAPI</span>
+                            <span class="tag">Windows Automation</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-label">Manufacturing Domain</div>
+                        <div class="tags">
+                            <span class="tag">SMT / THT</span>
+                            <span class="tag">Press-Fit Inspection</span>
+                            <span class="tag">High-Density Connectors</span>
+                            <span class="tag">AOI Cross-Validation</span>
+                            <span class="tag">NPI / PPAP</span>
+                            <span class="tag">Drift Detection</span>
+                            <span class="tag">Encoder Sync / Trigger Timing</span>
+                            <span class="tag">Process Optimization</span>
+                            <span class="tag">FAT / SAT Support</span>
+                            <span class="tag">IPC-A-610 / J-STD-001</span>
+                            <span class="tag">Global Factory Deployment</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-label">Leadership &amp; Collaboration</div>
+                        <div class="tags">
+                            <span class="tag">Technical Leadership</span>
+                            <span class="tag">Team Building</span>
+                            <span class="tag">Mentoring &amp; Coaching</span>
+                            <span class="tag">Cross-Functional Coordination</span>
+                            <span class="tag">Customer Training</span>
+                            <span class="tag">Operator Enablement</span>
+                            <span class="tag">Stakeholder Communication</span>
+                            <span class="tag">Technical Documentation</span>
+                            <span class="tag">Knowledge Transfer</span>
+                            <span class="tag">Onsite Field Support</span>
+                            <span class="tag">Problem Escalation &amp; Containment</span>
+                            <span class="tag">Curriculum / Training Design</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-label">Applied AI &amp; Systems</div>
+                        <div class="tags">
+                            <span class="tag">AI Agents</span>
+                            <span class="tag">LLM / RAG</span>
+                            <span class="tag">NLP Pipelines</span>
+                            <span class="tag">Offline Analytics Tools</span>
+                            <span class="tag">Reinforcement Learning</span>
+                            <span class="tag">Photophysics</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-label">Languages</div>
+                        <div class="tags">
+                            <span class="tag">English (native)</span>
+                            <span class="tag">Spanish (elementary)</span>
+                            <span class="tag">Vietnamese (elementary)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -657,7 +833,7 @@
             <div class="section-kicker reveal">Beyond the Factory</div>
             <h2 class="reveal">Independent R&amp;D and creative work</h2>
             <div class="grid cols-2" style="margin-top:40px;">
-                <a href="notes/" class="card project-card reveal" style="color:inherit;">
+                <a href="notes/index.html" class="card project-card reveal" style="color:inherit;">
                     <div class="thumb"><img src="images/web/hero-eye.jpg" alt="Engineering notes on vision systems" width="640" height="427" loading="lazy" /></div>
                     <div class="body">
                         <h3>Engineering Notes &rarr;</h3>
@@ -730,8 +906,8 @@
         </div>
     </footer>
 
-    <script src="assets/js/site.js"></script>
-    <script src="assets/js/demo.js"></script>
+    <script src="assets/js/site.js?v=20260711"></script>
+    <script src="assets/js/demo.js?v=20260711"></script>
 </body>
 
 </html>

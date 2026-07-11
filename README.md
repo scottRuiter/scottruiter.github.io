@@ -8,11 +8,11 @@ collaborators. Tagline: *From pixels to production decisions.*
 
 | Page | File | Description |
 | --- | --- | --- |
-| Home | `index.html` | Immersive one-pager: recruiter summary, core positioning, signature impact, interactive alignment demo, software & tools, global deployment, engineering notes links, experience, contact |
+| Home | `index.html` | Immersive one-pager: slim hero, core positioning, signature impact, interactive alignment demo, software & tools, global deployment, engineering notes links, condensed experience, contact |
 | Resume | `resume.html` | Web resume synced with site content (print-friendly); PDF at `resume.pdf` |
 | Projects | `projects/*.html` | Case studies: fixtureless grid inspection, 3D line-scan, TopX Inspection Analyzer |
 | Notes | `notes/` | Engineering write-ups on weak features, CSV acceptance, and global deployment |
-| TopX | `topx.html` | Independent R&D: blockchain engineering, financial LLMs, AI trading agents, EVM research, NFT art |
+| TopX | `topx.html` | Manufacturing Meets TopX (VisionPro Forge, Inspection Analyzer, offline Knowledge Chat), blockchain/EVM, TopXFin/Agents, trading research, NFT art |
 | Dashboard | `UI.html` | Live crypto market data and technical analysis (TradingView widgets) |
 | Snapshot | `overview.html` | Global market overview: indexes, forex, metals, crypto |
 | Gallery | `photography.html` | Filterable photo gallery (Travel / Engineering / AI Art / Life) with lightbox |
@@ -26,11 +26,14 @@ collaborators. Tagline: *From pixels to production decisions.*
   marquee, gallery, lightbox, reveal animations, and reduced-motion support.
 - `assets/js/site.js` — scroll behaviors: progress bar, sticky nav state, IntersectionObserver
   reveals, parallax backgrounds, count-up stats, gallery filters, and lightbox. Vanilla JS.
+  Mobile uses the hamburger menu only (no sticky section chip bar).
 - `images/web/` — web-optimized JPEGs (~70–300 KB) generated from the camera originals in `images/`.
   Regenerate with `python _tools/optimize_images.py` after adding new source photos.
 - `images/web/ai-*.jpg` — AI-generated section art (hero laser-scan scene, tool thumbnails for the
   Software & Tools section, global deployment map, weak-lead recovery band). Generated to match the
   site palette (navy `#070b12`, cyan `#4fd1ff`, violet `#7c6cff`).
+- `images/web/about-connector-scan.jpg` / `about-linescan-booth.jpg` — About-section art (portrait
+  desktop / landscape mobile) with cyan line-scan cue on a high-density connector field.
 - `assets/css/main.css`, `assets/js/main.js` and the jQuery plugins are legacy — only `testbed.html`
   still uses them.
 
