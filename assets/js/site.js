@@ -166,6 +166,21 @@
     /* ---------- Lightbox ---------- */
     var lightbox = document.getElementById("lightbox");
 
+    if (!lightbox && galleryItems.length) {
+        lightbox = document.createElement("div");
+        lightbox.id = "lightbox";
+        lightbox.className = "lightbox";
+        lightbox.setAttribute("role", "dialog");
+        lightbox.setAttribute("aria-label", "Image viewer");
+        lightbox.innerHTML =
+            '<button class="lb-close" type="button" aria-label="Close">&times;</button>' +
+            '<button class="lb-prev" type="button" aria-label="Previous image">&#10094;</button>' +
+            '<img src="" alt="" />' +
+            '<button class="lb-next" type="button" aria-label="Next image">&#10095;</button>' +
+            '<div class="lb-cap"></div>';
+        document.body.appendChild(lightbox);
+    }
+
     if (lightbox && galleryItems.length) {
         var lbImg = lightbox.querySelector("img");
         var lbCap = lightbox.querySelector(".lb-cap");
@@ -184,8 +199,9 @@
             var item = items[current];
             var img = item.querySelector("img");
             lbImg.src = img.getAttribute("data-full") || img.src;
-            lbImg.alt = img.alt;
-            lbCap.textContent = img.alt;
+            lbImg.alt = img.alt || "";
+            var cap = item.querySelector(".cap");
+            lbCap.textContent = (cap && cap.textContent.trim()) || img.alt || "";
             lightbox.classList.add("open");
             document.body.style.overflow = "hidden";
         }
@@ -196,8 +212,16 @@
         }
 
         galleryItems.forEach(function (item) {
+            item.setAttribute("tabindex", "0");
+            item.setAttribute("role", "button");
             item.addEventListener("click", function () {
                 openAt(visibleItems().indexOf(item));
+            });
+            item.addEventListener("keydown", function (e) {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    openAt(visibleItems().indexOf(item));
+                }
             });
         });
 
