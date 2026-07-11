@@ -281,7 +281,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; letter-spa
     max-width: 980px;
 }
 
-@media (max-width: 1100px) and (min-width: 761px) {
+@media (max-width: 1100px) and (min-width: 861px) {
     .hero-stats {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         max-width: 720px;
@@ -358,9 +358,14 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; letter-spa
     .hero-kicker .kicker-full { display: none; }
     .hero-kicker .kicker-short { display: inline; }
     .chip-extra, .stat-extra { display: none; }
-    .hero-stats { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .hero-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        max-width: none;
+    }
     .stat { padding: 14px 14px; }
-    .stat .num { font-size: 1.55rem; }
+    .stat .num { font-size: 1.45rem; }
+    .stat .lbl { font-size: .72rem; line-height: 1.35; }
     .scroll-cue { display: none; }
     .ev-row { grid-template-columns: 1fr; gap: 2px; }
     .contact-links { flex-direction: column; align-items: stretch; }
@@ -369,6 +374,62 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; letter-spa
     .demo-inspect {
         margin-left: 0;
         flex: 1 1 100%;
+    }
+
+    /* Marquee: denser ticker on phones */
+    .marquee { padding: 16px 0; }
+    .marquee-track {
+        gap: 28px;
+        animation-duration: 58s;
+    }
+    .marquee-track span { font-size: 1.05rem; }
+    .marquee-track span.mq-meta { font-size: .78rem; letter-spacing: .08em; }
+
+    /* About / feature rows */
+    .about-layout {
+        align-items: start;
+        gap: 28px !important;
+    }
+    .about-media { margin-top: 4px; }
+
+    .mfg-block {
+        margin-bottom: 48px !important;
+        gap: 28px !important;
+    }
+    .mfg-block .reveal-l,
+    .mfg-block .reveal-r {
+        order: unset !important;
+    }
+
+    .page-hero {
+        padding: calc(var(--nav-h) + 36px) 20px 36px;
+    }
+    .page-hero h1 { font-size: clamp(1.85rem, 8vw, 2.6rem); }
+
+    .section {
+        padding: 56px 18px;
+    }
+    .section-lead { margin-bottom: 28px; font-size: 1rem; }
+
+    .band { min-height: 38vh; padding: 56px 18px; }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .filters { gap: 8px; margin-bottom: 22px; }
+    .filter-btn { padding: 8px 12px; font-size: .82rem; }
+
+    .recruiter-bar { margin-bottom: 22px; padding: 16px 16px; }
+    .recruiter-top { align-items: stretch; }
+    .recruiter-actions {
+        width: 100%;
+    }
+    .recruiter-actions .btn {
+        flex: 1 1 0;
+        justify-content: center;
     }
 }
 
@@ -575,6 +636,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; letter-spa
         grid-template-columns: 1fr 1fr;
         gap: 0 36px;
     }
+}
+
+.mfg-block {
+    align-items: center;
 }
 
 .about-media {
@@ -993,18 +1058,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; letter-spa
     flex-wrap: nowrap;
     gap: 10px;
     flex-shrink: 0;
-}
-
-@media (max-width: 760px) {
-    .recruiter-top { align-items: stretch; }
-    .recruiter-actions {
-        width: 100%;
-        justify-content: stretch;
-    }
-    .recruiter-actions .btn {
-        flex: 1 1 0;
-        justify-content: center;
-    }
 }
 
 /* ---------- Mobile section nav (removed from homepage; keep styles inert) ---------- */

@@ -17,6 +17,7 @@
 - [x] Hero 5th stat: 20+ Site Deployment Locations (replaced IP/patent card)
 - [x] Marquee expanded: customers + platforms, regions, capabilities, tools
 - [x] Gallery: 7 fixtureless 3D scan / mesh / overlay images under Engineering
+- [x] Mobile pass: hero shows 20+ sites + 2D/3D (2×2); denser marquee; about/TopX spacing; recruiter CTAs; cache-bust CSS sitewide
 
 ## Urgent — before next push
 
