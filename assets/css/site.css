@@ -996,6 +996,12 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; letter-spa
     margin-bottom: 26px;
 }
 
+/* TradingView needs a visible, sized box at init — never wait on scroll-reveal */
+.widget-block.reveal {
+    opacity: 1;
+    transform: none;
+}
+
 .widget-block h3 {
     font-size: 1rem;
     letter-spacing: .08em;
@@ -1005,7 +1011,251 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; letter-spa
     border-bottom: 1px solid var(--line);
 }
 
-.widget-block .tradingview-widget-container { padding: 0; }
+.widget-block .tradingview-widget-container {
+    padding: 0;
+    width: 100%;
+    min-height: 72px;
+}
+
+.widget-block .tradingview-widget-container iframe {
+    width: 100% !important;
+}
+
+#tv-advanced-chart {
+    width: 100%;
+    height: 560px;
+    min-height: 560px;
+}
+
+.tv-ticker-tape {
+    width: 100%;
+    min-height: 46px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(13, 19, 30, .85);
+}
+
+.tv-mount {
+    width: 100%;
+    min-height: 72px;
+}
+
+#tv-ta {
+    min-height: 450px;
+}
+
+.tv-mount .tradingview-widget-container {
+    width: 100%;
+}
+
+.ticker-picker-body {
+    padding: 18px 20px 20px;
+}
+
+.ticker-picker-hint {
+    margin: 0 0 16px;
+    color: var(--text-dim);
+    font-size: .92rem;
+    max-width: 62ch;
+}
+
+.ticker-picker {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ticker-group {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 10px 14px;
+    align-items: start;
+}
+
+.ticker-group-label {
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding-top: 10px;
+}
+
+.ticker-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ticker-chip {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: rgba(16, 24, 38, .7);
+    color: var(--text);
+    font: inherit;
+    font-size: .88rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    min-height: 40px;
+    transition: border-color .15s ease, background .15s ease, color .15s ease, transform .15s ease;
+}
+
+.ticker-chip:hover {
+    border-color: rgba(79, 209, 255, .45);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.ticker-chip.is-active {
+    border-color: var(--accent);
+    background: rgba(79, 209, 255, .14);
+    color: var(--accent);
+}
+
+.ticker-chip:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.ticker-custom {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+}
+
+.ticker-custom-label {
+    display: block;
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+}
+
+.ticker-custom-row {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.ticker-custom-input {
+    flex: 1;
+    min-width: 0;
+    appearance: none;
+    border: 1px solid var(--line);
+    background: rgba(8, 14, 24, .85);
+    color: var(--text);
+    font: inherit;
+    font-size: 16px; /* keep ≥16px to avoid iOS zoom */
+    padding: 12px 14px;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.ticker-custom-input::placeholder {
+    color: #6d7f96;
+}
+
+.ticker-custom-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(79, 209, 255, .15);
+}
+
+.ticker-custom-go {
+    flex-shrink: 0;
+    min-height: 48px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.ticker-custom-status {
+    margin: 10px 0 0;
+    color: var(--text-dim);
+    font-size: .85rem;
+    line-height: 1.45;
+}
+
+.ticker-custom-status.is-error {
+    color: #ff8f8f;
+}
+
+@media (max-width: 760px) {
+    .ticker-picker-body {
+        padding: 14px 14px 16px;
+    }
+
+    .ticker-picker-hint {
+        font-size: .88rem;
+        margin-bottom: 12px;
+    }
+
+    .ticker-group {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .ticker-group-label {
+        padding-top: 0;
+    }
+
+    .ticker-chips {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 4px;
+        margin: 0 -2px;
+        scrollbar-width: thin;
+    }
+
+    .ticker-chip {
+        flex: 0 0 auto;
+        padding: 10px 14px;
+        font-size: .9rem;
+        min-height: 44px;
+    }
+
+    .ticker-custom-row {
+        flex-direction: column;
+    }
+
+    .ticker-custom-go {
+        width: 100%;
+    }
+
+    .widget-block h3 {
+        font-size: .88rem;
+        padding: 14px 14px;
+        letter-spacing: .06em;
+    }
+
+    .widget-block {
+        margin-bottom: 18px;
+        border-radius: 12px;
+    }
+
+    .widget-block .tradingview-widget-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #tv-advanced-chart {
+        height: 420px;
+        min-height: 420px;
+    }
+
+    #tv-ta {
+        min-height: 400px;
+    }
+
+    .tv-ticker-tape {
+        min-height: 42px;
+        overflow: hidden;
+    }
+}
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
@@ -1279,7 +1529,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; letter-spa
 .metric .lbl { font-size: .78rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .06em; }
 
 /* ---------- Keyboard focus ---------- */
-a:focus-visible, button:focus-visible, .filter-btn:focus-visible {
+a:focus-visible, button:focus-visible, .filter-btn:focus-visible, .ticker-custom-input:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
     border-radius: 6px;

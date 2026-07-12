@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/site.css?v=20260712m" />
+    <link rel="stylesheet" href="assets/css/site.css?v=20260712ai" />
 </head>
 
 <body>
@@ -49,7 +49,7 @@
             <div class="section-kicker reveal">Global Overview</div>
             <h1 class="reveal" style="--d:.08s">Market Snapshot</h1>
             <p class="reveal" style="--d:.16s">
-                Indexes, forex, metals, and crypto — the whole board in one scroll.
+                Indexes, forex, metals, crypto, and the AI stack — majors and infrastructure partners in one scroll.
             </p>
         </div>
     </header>
@@ -57,7 +57,7 @@
     <section class="section" style="padding-top:40px;">
         <div class="section-inner">
 
-            <div class="widget-block reveal">
+            <div class="widget-block">
                 <h3>Market Indexes</h3>
                 <div class="tradingview-widget-container">
                     <div class="tradingview-widget-container__widget"></div>
@@ -65,9 +65,8 @@
                         {
                             "symbols": [
                                 { "description": "S&P 500", "proName": "OANDA:SPX500USD" },
-                                { "description": "TA 35", "proName": "TASE:TA35" },
+                                { "description": "NASDAQ 100", "proName": "OANDA:NAS100USD" },
                                 { "description": "SMI", "proName": "SIX:SMI" },
-                                { "description": "XU 100", "proName": "BIST:XU100" },
                                 { "description": "NI 225", "proName": "OANDA:JP225USD" }
                             ],
                             "colorTheme": "dark",
@@ -79,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="widget-block reveal">
+            <div class="widget-block">
                 <h3>Forex &amp; Metals</h3>
                 <div class="tradingview-widget-container">
                     <div class="tradingview-widget-container__widget"></div>
@@ -87,10 +86,9 @@
                         {
                             "symbols": [
                                 { "description": "USD/CHF", "proName": "FX_IDC:USDCHF" },
-                                { "description": "FEDERAL FUNDS RATE", "proName": "ECONOMICS:USINTR" },
+                                { "description": "USD/JPY", "proName": "FX_IDC:USDJPY" },
                                 { "description": "USD/EUR", "proName": "FX_IDC:USDEUR" },
-                                { "description": "1kg Gold/CHF", "proName": "FX_IDC:INGCHF" },
-                                { "description": "1kg Silver/CHF", "proName": "FX_IDC:SBNCHF" }
+                                { "description": "Gold/CHF", "proName": "FX_IDC:INGCHF" }
                             ],
                             "colorTheme": "dark",
                             "isTransparent": true,
@@ -101,7 +99,7 @@
                 </div>
             </div>
 
-            <div class="widget-block reveal">
+            <div class="widget-block">
                 <h3>Crypto Majors</h3>
                 <div class="tradingview-widget-container">
                     <div class="tradingview-widget-container__widget"></div>
@@ -111,8 +109,7 @@
                                 { "description": "BTC/USD", "proName": "COINBASE:BTCUSD" },
                                 { "description": "ETH/USD", "proName": "COINBASE:ETHUSD" },
                                 { "description": "SOL/USD", "proName": "COINBASE:SOLUSD" },
-                                { "description": "ADA/USD", "proName": "COINBASE:ADAUSD" },
-                                { "description": "LINK/USD", "proName": "COINBASE:LINKUSD" }
+                                { "description": "ADA/USD", "proName": "COINBASE:ADAUSD" }
                             ],
                             "colorTheme": "dark",
                             "isTransparent": true,
@@ -123,18 +120,17 @@
                 </div>
             </div>
 
-            <div class="widget-block reveal">
-                <h3>DeFi &amp; Data</h3>
+            <div class="widget-block">
+                <h3>DeFi Majors</h3>
                 <div class="tradingview-widget-container">
                     <div class="tradingview-widget-container__widget"></div>
                     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
                         {
                             "symbols": [
-                                { "description": "0x/USD", "proName": "BINANCE:ZRXUSD" },
-                                { "description": "KNC/USD", "proName": "BINANCE:KNCUSD" },
-                                { "description": "BNT/USD", "proName": "BINANCE:BNTUSD" },
-                                { "description": "UFT/USD", "proName": "BINANCE:UFTBUSD" },
-                                { "description": "DATA/USD", "proName": "BINANCE:DATAUSD" }
+                                { "description": "UNI/USD", "proName": "COINBASE:UNIUSD" },
+                                { "description": "AAVE/USD", "proName": "COINBASE:AAVEUSD" },
+                                { "description": "LINK/USD", "proName": "COINBASE:LINKUSD" },
+                                { "description": "LDO/USD", "proName": "COINBASE:LDOUSD" }
                             ],
                             "colorTheme": "dark",
                             "isTransparent": true,
@@ -145,7 +141,49 @@
                 </div>
             </div>
 
-            <div class="widget-block reveal">
+            <div class="widget-block">
+                <h3>AI Majors</h3>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                        {
+                            "symbols": [
+                                { "description": "NVIDIA", "proName": "NASDAQ:NVDA" },
+                                { "description": "Microsoft", "proName": "NASDAQ:MSFT" },
+                                { "description": "Alphabet", "proName": "NASDAQ:GOOGL" },
+                                { "description": "Meta", "proName": "NASDAQ:META" }
+                            ],
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "showSymbolLogo": true,
+                            "locale": "en"
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <div class="widget-block">
+                <h3>AI Partners &amp; Infra</h3>
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                        {
+                            "symbols": [
+                                { "description": "AMD", "proName": "NASDAQ:AMD" },
+                                { "description": "Broadcom", "proName": "NASDAQ:AVGO" },
+                                { "description": "TSMC", "proName": "NYSE:TSM" },
+                                { "description": "Arm", "proName": "NASDAQ:ARM" }
+                            ],
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "showSymbolLogo": true,
+                            "locale": "en"
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <div class="widget-block">
                 <h3>Long-Range Charts</h3>
                 <div class="tradingview-widget-container">
                     <div class="tradingview-widget-container__widget"></div>
@@ -153,15 +191,15 @@
                         {
                             "symbols": [
                                 ["S&P 500", "OANDA:SPX500USD|ALL"],
-                                ["FEDERAL FUNDS RATE", "ECONOMICS:USINTR|ALL"],
-                                ["TA 35", "TASE:TA35|ALL"],
-                                ["SMI", "SIX:SMI|ALL"],
-                                ["XU 100", "BIST:XU100|ALL"],
-                                ["NI 225", "OANDA:JP225USD|ALL"],
+                                ["NASDAQ 100", "OANDA:NAS100USD|ALL"],
+                                ["NVIDIA", "NASDAQ:NVDA|ALL"],
+                                ["Microsoft", "NASDAQ:MSFT|ALL"],
+                                ["Alphabet", "NASDAQ:GOOGL|ALL"],
+                                ["TSMC", "NYSE:TSM|ALL"],
                                 ["BTC/USD", "COINBASE:BTCUSD|ALL"],
                                 ["ETH/USD", "COINBASE:ETHUSD|ALL"],
-                                ["1kg Gold/CHF", "FX_IDC:INGCHF|ALL"],
-                                ["1kg Silver/CHF", "FX_IDC:SBNCHF|ALL"]
+                                ["USD/JPY", "FX_IDC:USDJPY|ALL"],
+                                ["Gold/CHF", "FX_IDC:INGCHF|ALL"]
                             ],
                             "chartOnly": false,
                             "width": "100%",

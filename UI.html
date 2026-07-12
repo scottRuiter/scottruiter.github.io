@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/site.css?v=20260712m" />
+    <link rel="stylesheet" href="assets/css/site.css?v=20260712ai" />
 </head>
 
 <body>
@@ -49,43 +49,38 @@
             <div class="section-kicker reveal">Live Markets</div>
             <h1 class="reveal" style="--d:.08s">TopX Dashboard</h1>
             <p class="reveal" style="--d:.16s">
-                Real-time crypto tickers, technical analysis, and multi-timeframe charts —
-                the market at a glance, powered by TradingView.
+                Pick a ticker, then dig into quote, technical analysis, and the advanced chart —
+                powered by TradingView.
             </p>
         </div>
     </header>
 
     <!-- Ticker tape -->
-    <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container tv-ticker-tape">
         <div class="tradingview-widget-container__widget"></div>
         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
             {
                 "symbols": [
-                    { "description": "", "proName": "COINBASE:BTCUSD" },
-                    { "description": "", "proName": "COINBASE:ETHUSD" },
-                    { "description": "", "proName": "COINBASE:LINKUSD" },
-                    { "description": "", "proName": "COINBASE:LTCUSD" },
-                    { "description": "", "proName": "COINBASE:BCHUSD" },
-                    { "description": "", "proName": "COINBASE:ETCUSD" },
-                    { "description": "", "proName": "COINBASE:ALGOUSD" },
-                    { "description": "", "proName": "COINBASE:XLMUSD" },
-                    { "description": "", "proName": "BINANCE:XRPUSD" },
-                    { "description": "", "proName": "COINBASE:EOSUSD" },
-                    { "description": "", "proName": "COINBASE:ATOMUSD" },
-                    { "description": "", "proName": "COINBASE:ADAUSD" },
-                    { "description": "", "proName": "COINBASE:DOTUSD" },
-                    { "description": "", "proName": "COINBASE:UNIUSD" },
-                    { "description": "", "proName": "COINBASE:MATICUSD" },
-                    { "description": "", "proName": "COINBASE:SOLUSD" },
-                    { "description": "", "proName": "COINBASE:DOGEUSD" },
-                    { "description": "", "proName": "BINANCE:VETUSD" },
-                    { "description": "", "proName": "COINBASE:ICPUSD" },
-                    { "description": "", "proName": "COINBASE:FILUSD" },
-                    { "description": "", "proName": "BINANCE:TRXUSD" },
-                    { "description": "", "proName": "COINBASE:AAVEUSD" },
-                    { "description": "", "proName": "COINBASE:XTZUSD" },
-                    { "description": "", "proName": "COINBASE:GRTUSD" },
-                    { "description": "", "proName": "COINBASE:MKRUSD" }
+                    { "description": "NVDA", "proName": "NASDAQ:NVDA" },
+                    { "description": "MSFT", "proName": "NASDAQ:MSFT" },
+                    { "description": "GOOGL", "proName": "NASDAQ:GOOGL" },
+                    { "description": "META", "proName": "NASDAQ:META" },
+                    { "description": "AMD", "proName": "NASDAQ:AMD" },
+                    { "description": "AVGO", "proName": "NASDAQ:AVGO" },
+                    { "description": "TSM", "proName": "NYSE:TSM" },
+                    { "description": "ARM", "proName": "NASDAQ:ARM" },
+                    { "description": "BTC", "proName": "COINBASE:BTCUSD" },
+                    { "description": "ETH", "proName": "COINBASE:ETHUSD" },
+                    { "description": "SOL", "proName": "COINBASE:SOLUSD" },
+                    { "description": "BNB", "proName": "BINANCE:BNBUSD" },
+                    { "description": "XRP", "proName": "BINANCE:XRPUSD" },
+                    { "description": "ADA", "proName": "COINBASE:ADAUSD" },
+                    { "description": "DOGE", "proName": "COINBASE:DOGEUSD" },
+                    { "description": "LINK", "proName": "COINBASE:LINKUSD" },
+                    { "description": "AVAX", "proName": "COINBASE:AVAXUSD" },
+                    { "description": "POL", "proName": "COINBASE:POLUSD" },
+                    { "description": "UNI", "proName": "COINBASE:UNIUSD" },
+                    { "description": "AAVE", "proName": "COINBASE:AAVEUSD" }
                 ],
                 "colorTheme": "dark",
                 "isTransparent": true,
@@ -95,96 +90,78 @@
         </script>
     </div>
 
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+
     <section class="section" style="padding-top:40px;">
         <div class="section-inner">
 
-            <div class="widget-block reveal">
-                <h3>Majors</h3>
-                <div class="tradingview-widget-container">
-                    <div class="tradingview-widget-container__widget"></div>
-                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-                        {
-                            "symbols": [
-                                { "description": "", "proName": "COINBASE:BTCUSD" },
-                                { "description": "", "proName": "COINBASE:ETHUSD" }
-                            ],
-                            "colorTheme": "dark",
-                            "isTransparent": true,
-                            "locale": "en"
-                        }
-                    </script>
+            <div class="widget-block ticker-picker-block">
+                <h3>Choose ticker for analytics</h3>
+                <div class="ticker-picker-body">
+                    <p class="ticker-picker-hint">Tap a chip or enter any symbol. Updates quote, technical analysis, and the advanced chart. Remembers your last pick on this device.</p>
+                    <div id="ticker-picker" class="ticker-picker"></div>
+                    <form id="ticker-custom-form" class="ticker-custom" autocomplete="off">
+                        <label class="ticker-custom-label" for="ticker-custom-input">Custom ticker</label>
+                        <div class="ticker-custom-row">
+                            <input
+                                id="ticker-custom-input"
+                                class="ticker-custom-input"
+                                type="text"
+                                name="ticker"
+                                inputmode="text"
+                                enterkeyhint="go"
+                                autocapitalize="characters"
+                                autocorrect="off"
+                                spellcheck="false"
+                                placeholder="NVDA · NASDAQ:MSFT · BINANCE:NEARUSDT"
+                                aria-describedby="ticker-custom-status"
+                            />
+                            <button type="submit" class="btn btn-primary ticker-custom-go">Load</button>
+                        </div>
+                        <p id="ticker-custom-status" class="ticker-custom-status">Or type any symbol — stock (NVDA), crypto (NEARUSD), or full id (NASDAQ:PLTR).</p>
+                    </form>
                 </div>
             </div>
 
-            <div class="widget-block reveal">
-                <h3>Technical Analysis — BTC/USD</h3>
-                <div class="tradingview-widget-container">
-                    <div class="tradingview-widget-container__widget"></div>
-                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-                        {
-                            "showIntervalTabs": true,
-                            "width": "100%",
-                            "colorTheme": "dark",
-                            "isTransparent": true,
-                            "locale": "en",
-                            "symbol": "COINBASE:BTCUSD",
-                            "interval": "1W",
-                            "height": 450
-                        }
-                    </script>
-                </div>
+            <div class="widget-block">
+                <h3 id="tv-quote-title">Quote</h3>
+                <div id="tv-quote" class="tv-mount"></div>
             </div>
 
-            <div class="widget-block reveal">
-                <h3>Advanced Chart — ETH/USD</h3>
+            <div class="widget-block">
+                <h3 id="tv-ta-title">Technical Analysis</h3>
+                <div id="tv-ta" class="tv-mount"></div>
+            </div>
+
+            <div class="widget-block">
+                <h3 id="tv-chart-title">Advanced Chart</h3>
                 <div class="tradingview-widget-container">
                     <div id="tv-advanced-chart"></div>
-                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                    <script type="text/javascript">
-                        new TradingView.widget({
-                            "container_id": "tv-advanced-chart",
-                            "symbol": "BINANCE:ETHUSD",
-                            "interval": "D",
-                            "width": "100%",
-                            "height": 560,
-                            "timezone": "Etc/UTC",
-                            "theme": "dark",
-                            "style": "1",
-                            "locale": "en",
-                            "enable_publishing": false,
-                            "hide_side_toolbar": false,
-                            "allow_symbol_change": true,
-                            "studies": [
-                                "RSI@tv-basicstudies",
-                                "StochasticRSI@tv-basicstudies"
-                            ]
-                        });
-                    </script>
                 </div>
             </div>
 
-            <div class="widget-block reveal">
+            <div class="widget-block">
                 <h3>12-Month Overview — Top Assets</h3>
                 <div class="tradingview-widget-container">
                     <div class="tradingview-widget-container__widget"></div>
                     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
                         {
                             "symbols": [
+                                ["NVDA", "NASDAQ:NVDA|12M"],
+                                ["MSFT", "NASDAQ:MSFT|12M"],
+                                ["GOOGL", "NASDAQ:GOOGL|12M"],
+                                ["META", "NASDAQ:META|12M"],
+                                ["AMD", "NASDAQ:AMD|12M"],
+                                ["AVGO", "NASDAQ:AVGO|12M"],
+                                ["TSM", "NYSE:TSM|12M"],
+                                ["ARM", "NASDAQ:ARM|12M"],
                                 ["BTC", "COINBASE:BTCUSD|12M"],
                                 ["ETH", "COINBASE:ETHUSD|12M"],
                                 ["SOL", "COINBASE:SOLUSD|12M"],
                                 ["ADA", "COINBASE:ADAUSD|12M"],
-                                ["DOGE", "COINBASE:DOGEUSD|12M"],
                                 ["BNB", "BINANCE:BNBUSD|12M"],
-                                ["AVAX", "COINBASE:AVAXUSD|12M"],
-                                ["MATIC", "COINBASE:MATICUSD|12M"],
-                                ["ATOM", "COINBASE:ATOMUSD|12M"],
-                                ["UNI", "COINBASE:UNIUSD|12M"],
-                                ["XLM", "COINBASE:XLMUSD|12M"],
-                                ["ICP", "COINBASE:ICPUSD|12M"],
-                                ["BCH", "COINBASE:BCHUSD|12M"],
-                                ["ETC", "COINBASE:ETCUSD|12M"],
-                                ["TRX", "BINANCE:TRXUSD|12M"]
+                                ["LINK", "COINBASE:LINKUSD|12M"],
+                                ["AAVE", "COINBASE:AAVEUSD|12M"]
                             ],
                             "chartOnly": false,
                             "width": "100%",
@@ -202,7 +179,7 @@
                 </div>
             </div>
 
-            <div class="widget-block reveal">
+            <div class="widget-block">
                 <h3>ETH Dominance</h3>
                 <div class="tradingview-widget-container">
                     <div class="tradingview-widget-container__widget"></div>
@@ -255,6 +232,7 @@
     </footer>
 
     <script src="assets/js/site.js?v=20260712lb"></script>
+    <script src="assets/js/dashboard.js?v=20260712ai"></script>
 </body>
 
 </html>

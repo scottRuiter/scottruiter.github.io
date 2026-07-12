@@ -13,8 +13,8 @@ collaborators. Tagline: *From pixels to production decisions.*
 | Projects | `projects/*.html` | Case studies: fixtureless grid inspection, 3D line-scan, TopX Inspection Analyzer |
 | Notes | `notes/` | Engineering write-ups on weak features, CSV acceptance, and global deployment |
 | TopX | `topx.html` | Manufacturing Meets TopX, blockchain/EVM, TopXFin/Agents, trading research, AI art generation (SceneForge) + character series |
-| Dashboard | `UI.html` | Live crypto market data and technical analysis (TradingView widgets) |
-| Snapshot | `overview.html` | Global market overview: indexes, forex, metals, crypto |
+| Dashboard | `UI.html` | Live crypto dashboard: ticker chips + custom symbol input for quote / TA / chart (TradingView) |
+| Snapshot | `overview.html` | Global market overview: indexes, forex, metals, crypto, AI majors & partners |
 | Gallery | `photography.html` | Filterable photo gallery (Travel / Engineering / AI Art / Life) with lightbox |
 | Resume | `resume.pdf` | Downloadable resume |
 | Testbed | `testbed.html` | Scratch page for widget experiments (not linked from navigation, still on the old template) |

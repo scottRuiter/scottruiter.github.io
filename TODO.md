@@ -21,6 +21,11 @@
 - [x] TopX toolbox: replace text-only column with full image feature rows (Pin Grid + scan mesh)
 - [x] TopX generative section: AI art / SceneForge focus; Doge Division as character series subset
 - [x] Lightbox: auto-inject viewer on any page with `.g-item` (TopX art grids, gallery)
+- [x] Dashboard/Snapshot TradingView: visible widgets, ETH chart boot wait, stale symbols fixed (POL, NASDAQ 100, USD/JPY, LDO for MKR, DeFi)
+- [x] Dashboard ticker picker: choose symbol for quote / TA / advanced chart (localStorage)
+- [x] Strip dead tickers (XU100, Fed Funds, MATIC, MKR, ZRX/KNC/BNT/UFT/DATA); Snapshot rows = 4 proven symbols only
+- [x] Dashboard custom ticker input + mobile picker/chart layout
+- [x] AI majors + partners on Snapshot and Dashboard (NVDA, MSFT, GOOGL, META, AMD, AVGO, TSM, ARM, …)
 
 ## Urgent — before next push
 
